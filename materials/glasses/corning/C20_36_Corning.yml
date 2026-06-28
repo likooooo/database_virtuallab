@@ -1,0 +1,12 @@
+REFERENCES: |
+
+COMMENTS: |
+    VirtualLab material: C20-36_Corning
+    VirtualLab Schott -> refractiveindex.info formula 3
+
+CONDITIONS: |
+
+DATA:
+  - type: formula 3
+    wavelength_range: 0.3 2.5
+    coefficients: 2.5531 -0.00784034 2 0.0239755 -2 4.221211E-04 -4 3.900575E-05 -6 1.374479E-06 -8

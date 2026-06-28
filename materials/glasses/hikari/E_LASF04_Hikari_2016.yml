@@ -1,0 +1,12 @@
+REFERENCES: |
+
+COMMENTS: |
+    VirtualLab material: E-LASF04_Hikari_2016
+    VirtualLab Schott -> refractiveindex.info formula 3
+
+CONDITIONS: |
+
+DATA:
+  - type: formula 3
+    wavelength_range: 0.3 2.5
+    coefficients: 3.20361 -0.00877555 2 0.0332446 -2 -4.328880E-04 -4 1.347160E-04 -6 -4.716471E-06 -8

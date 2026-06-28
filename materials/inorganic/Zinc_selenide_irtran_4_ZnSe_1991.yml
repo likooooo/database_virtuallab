@@ -1,0 +1,32 @@
+REFERENCES: |
+
+COMMENTS: |
+    VirtualLab material: Zinc_selenide(irtran-4)-ZnSe_(1991)
+    Dispersion from VirtualLab SampledRefractiveIndex table; parameters field ignored (placeholder).
+
+CONDITIONS: |
+
+DATA:
+  - type: tabulated nk
+    data: |
+        2.99976 2.445 0
+        3.99935 2.438 0
+        4.99919 2.434 0
+        6.00097 2.43 0
+        7.00056 2.425 0
+        7.99871 2.422 0
+        8.9971 2.417 0
+        9.99839 2.41 0
+        11.0009 2.405 0
+        12.0019 2.398 0
+        13.0272 2.39 0
+        13.9995 2.38 0
+        28.5734 2 0
+        33.328 2 0
+        39.9936 0.2 1.5
+        44.4373 0.5 2.8
+        47.6114 2.5 7.9
+        48.7726 5 4.8
+        49.9919 8.4 3.2
+        57.1336 3.5 0.4
+        66.6559 3.4 0.5

@@ -1,0 +1,18 @@
+REFERENCES: |
+
+COMMENTS: |
+    VirtualLab material: Titanium(sputtered_thinFilm)-Ti_(1989)
+    Dispersion from VirtualLab SampledRefractiveIndex table; parameters field ignored (placeholder).
+
+CONDITIONS: |
+
+DATA:
+  - type: tabulated nk
+    data: |
+        0.002 0.999098 5.050001E-04
+        0.0025 0.99938 7.400001E-04
+        0.0028 0.999324 3.240001E-04
+        0.0032 0.998542 3.250000E-04
+        0.0035 0.9979 4.169999E-04
+        0.004 0.996708 5.020002E-04
+        0.0045 0.99593 7.349999E-04

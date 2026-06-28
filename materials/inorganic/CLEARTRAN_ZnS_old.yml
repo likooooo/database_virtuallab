@@ -1,0 +1,12 @@
+REFERENCES: |
+
+COMMENTS: |
+    VirtualLab material: CLEARTRAN-ZnS_old
+    VirtualLab Herzberger -> refractiveindex.info formula 7
+
+CONDITIONS: |
+
+DATA:
+  - type: formula 7
+    wavelength_range: 0.3 2.5
+    coefficients: 2.25963 0.0311098 0.00102518 -5.943553E-04 4.497966E-07 -4.128528E-09

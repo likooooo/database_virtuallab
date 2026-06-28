@@ -1,0 +1,12 @@
+REFERENCES: |
+
+COMMENTS: |
+    VirtualLab material: Cesium_bromide-CsBr
+    VirtualLab Sellmeier1 -> refractiveindex.info formula 2
+
+CONDITIONS: |
+
+DATA:
+  - type: formula 2
+    wavelength_range: 0.3 2.5
+    coefficients: 0 0.953379 0.00820189 0.830381 0.0279397 2.84717 1.416469E+04

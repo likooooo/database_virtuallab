@@ -1,0 +1,12 @@
+REFERENCES: |
+
+COMMENTS: |
+    VirtualLab material: Fused_Silica
+    VirtualLab Sellmeier1 -> refractiveindex.info formula 2
+
+CONDITIONS: |
+
+DATA:
+  - type: formula 2
+    wavelength_range: 0.3 2.5
+    coefficients: 0 0.696166 0.00467915 0.407943 0.0135121 0.897479 97.934

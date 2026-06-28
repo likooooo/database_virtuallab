@@ -1,0 +1,46 @@
+REFERENCES: |
+
+COMMENTS: |
+    VirtualLab material: Q-LASFPH3S_Hikari_2016
+    VirtualLab PowerSeries -> refractiveindex.info formula 3
+    Absorption: tabulated k from VirtualLab sampled alpha (or constant absorption converted alpha->k).
+
+CONDITIONS: |
+
+DATA:
+  - type: formula 3
+    wavelength_range: 0.3 2.5
+    coefficients: 3.14195 -0.0129889 2 -1.597366E-04 4 0.0279148 -2 5.098872E-04 -4 1.326588E-05 -6 5.148390E-07 -8
+  - type: tabulated k
+    data: |
+        0.3 6.716524E-06
+        0.31 4.096860E-06
+        0.32 2.333315E-06
+        0.33 1.522636E-06
+        0.34 1.003963E-06
+        0.35 6.565365E-07
+        0.36 3.989565E-07
+        0.365 3.384815E-07
+        0.37 2.647713E-07
+        0.38 1.742672E-07
+        0.39 1.299264E-07
+        0.4 1.002379E-07
+        0.42 7.093479E-08
+        0.44 6.003571E-08
+        0.46 4.789935E-08
+        0.48 3.838947E-08
+        0.5 3.195900E-08
+        0.55 3.074506E-08
+        0.6 3.354007E-08
+        0.65 3.633507E-08
+        0.7 4.474260E-08
+        0.8 9.621642E-08
+        0.9 5.752619E-08
+        1 5.590011E-08
+        1.2 9.554071E-09
+        1.4 6.704641E-08
+        1.6 1.151103E-07
+        1.8 2.893825E-07
+        2 5.835254E-07
+        2.2 1.459765E-06
+        2.4 6.010532E-06

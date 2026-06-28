@@ -1,0 +1,12 @@
+REFERENCES: |
+
+COMMENTS: |
+    VirtualLab material: BAL50_Ohara_2016
+    VirtualLab Schott -> refractiveindex.info formula 3
+
+CONDITIONS: |
+
+DATA:
+  - type: formula 3
+    wavelength_range: 0.3 2.5
+    coefficients: 2.39827 -0.0102228 2 0.0121104 -2 3.776758E-04 -4 -2.733902E-05 -6 1.570189E-06 -8

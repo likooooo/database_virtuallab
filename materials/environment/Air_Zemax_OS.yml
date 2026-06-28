@@ -1,0 +1,12 @@
+REFERENCES: |
+
+COMMENTS: |
+    VirtualLab material: Air (Zemax OS)
+
+CONDITIONS: |
+
+DATA:
+  - type: tabulated nk
+    data: |
+        0.193 1 0
+        50 1 0

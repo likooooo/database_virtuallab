@@ -1,0 +1,12 @@
+REFERENCES: |
+
+COMMENTS: |
+    VirtualLab material: Beryllium_oxide(ordinaryRay)-BeO
+    VirtualLab Sellmeier1 -> refractiveindex.info formula 2
+
+CONDITIONS: |
+
+DATA:
+  - type: formula 2
+    wavelength_range: 0.3 2.5
+    coefficients: 0 1.92274 0.00625365 1.24209 94.3443

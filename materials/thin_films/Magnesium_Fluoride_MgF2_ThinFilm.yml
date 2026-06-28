@@ -1,0 +1,12 @@
+REFERENCES: |
+
+COMMENTS: |
+    VirtualLab material: Magnesium_Fluoride-MgF2-ThinFilm
+    VirtualLab Cauchy -> refractiveindex.info formula 5
+
+CONDITIONS: |
+
+DATA:
+  - type: formula 5
+    wavelength_range: 0.3 2.5
+    coefficients: 1.384 -0.003651 6.429000E-04

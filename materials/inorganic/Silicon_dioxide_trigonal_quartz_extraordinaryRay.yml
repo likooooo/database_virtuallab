@@ -1,0 +1,12 @@
+REFERENCES: |
+
+COMMENTS: |
+    VirtualLab material: Silicon_dioxide(trigonal_quartz_extraordinaryRay)
+
+CONDITIONS: |
+
+DATA:
+  - type: tabulated nk
+    data: |
+        0.18 1 0
+        0.71 1 0

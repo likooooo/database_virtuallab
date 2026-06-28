@@ -1,0 +1,12 @@
+REFERENCES: |
+
+COMMENTS: |
+    VirtualLab material: Tellurium_dioxide-TeO2_(1994)
+    VirtualLab Sellmeier1 -> refractiveindex.info formula 2
+
+CONDITIONS: |
+
+DATA:
+  - type: formula 2
+    wavelength_range: 0.3 2.5
+    coefficients: 0 2.584 0.0180096 1.157 0.0695904

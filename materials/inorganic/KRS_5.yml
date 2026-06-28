@@ -1,0 +1,12 @@
+REFERENCES: |
+
+COMMENTS: |
+    VirtualLab material: KRS-5
+    VirtualLab Sellmeier5 -> refractiveindex.info formula 2
+
+CONDITIONS: |
+
+DATA:
+  - type: formula 2
+    wavelength_range: 0.3 2.5
+    coefficients: 0 1.8294 0.0225 1.66756 0.0625 1.12104 0.1225 0.0451337 0.2025 12.3802 2.708987E+04

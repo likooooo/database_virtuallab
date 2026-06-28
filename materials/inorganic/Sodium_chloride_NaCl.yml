@@ -1,0 +1,12 @@
+REFERENCES: |
+
+COMMENTS: |
+    VirtualLab material: Sodium_chloride-NaCl
+    VirtualLab Herzberger -> refractiveindex.info formula 7
+
+CONDITIONS: |
+
+DATA:
+  - type: formula 7
+    wavelength_range: 0.3 2.5
+    coefficients: 1.52623 0.00603188 -1.200917E-04 -3.033908E-04 -1.139829E-07 -6.999662E-11

@@ -1,0 +1,12 @@
+REFERENCES: |
+
+COMMENTS: |
+    VirtualLab material: Strontium_titanate-SrTiO3
+    VirtualLab Sellmeier1 -> refractiveindex.info formula 2
+
+CONDITIONS: |
+
+DATA:
+  - type: formula 2
+    wavelength_range: 0.3 2.5
+    coefficients: 0 3.04214 0.0217829 1.17006 0.0872072 30.8333 1101.31

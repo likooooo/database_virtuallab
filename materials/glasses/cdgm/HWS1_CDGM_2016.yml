@@ -1,0 +1,46 @@
+REFERENCES: |
+
+COMMENTS: |
+    VirtualLab material: HWS1_CDGM_2016
+    VirtualLab Herzberger -> refractiveindex.info formula 7
+    Absorption: tabulated k from VirtualLab sampled alpha (or constant absorption converted alpha->k).
+
+CONDITIONS: |
+
+DATA:
+  - type: formula 7
+    wavelength_range: 0.3 2.5
+    coefficients: 2.62096 0.0654863 0.0989151 -2.050585E-04 3.495596E-07 -1.272553E-09
+  - type: tabulated k
+    data: |
+        0.85 1.064179E-04
+        0.9 6.584900E-05
+        0.95 3.444662E-05
+        1 2.429683E-05
+        1.5 2.617134E-05
+        2 3.330718E-05
+        2.5 4.133208E-05
+        3 5.068862E-05
+        3.5 5.807609E-05
+        4 6.613133E-05
+        4.5 7.575934E-05
+        5 8.417705E-05
+        5.5 9.059926E-05
+        6 9.883555E-05
+        6.5 1.070719E-04
+        7 1.153081E-04
+        7.5 1.258103E-04
+        8 1.317807E-04
+        8.5 1.395058E-04
+        9 1.482533E-04
+        9.5 1.564896E-04
+        10 1.647259E-04
+        11 1.885434E-04
+        12 2.559896E-04
+        13 3.774974E-04
+        14 2.662862E-04
+        15 3.038827E-04
+        16 4.861035E-04
+        17 0.00139581
+        18 0.00246517
+        19 0.00241476

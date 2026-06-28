@@ -1,0 +1,42 @@
+REFERENCES: |
+
+COMMENTS: |
+    VirtualLab material: LZ_BF28_LZOS_2014
+    VirtualLab PowerSeries -> refractiveindex.info formula 3
+    Absorption: tabulated k from VirtualLab sampled alpha (or constant absorption converted alpha->k).
+
+CONDITIONS: |
+
+DATA:
+  - type: formula 3
+    wavelength_range: 0.3 2.5
+    coefficients: 2.69197 -0.00957849 2 9.863125E-05 4 -9.962439E-06 6 0.0250421 -2 0.00109524 -4 -4.422978E-05 -6 6.679295E-06 -8
+  - type: tabulated k
+    data: |
+        0.38 6.747737E-07
+        0.4 3.389115E-07
+        0.42 1.573921E-07
+        0.44 9.583776E-08
+        0.46 5.904262E-08
+        0.48 3.838947E-08
+        0.5 2.795006E-08
+        0.52 2.074204E-08
+        0.54 1.722320E-08
+        0.56 1.786110E-08
+        0.58 1.849899E-08
+        0.6 2.393313E-08
+        0.62 2.969198E-08
+        0.64 3.577607E-08
+        0.66 3.160759E-08
+        0.68 2.712421E-08
+        0.7 2.792198E-08
+        0.75 2.392111E-08
+        0.8 3.191083E-08
+        0.9 4.310127E-08
+        1 5.590011E-08
+        1.05 5.028481E-08
+        1.1 5.267932E-08
+        1.2 5.746835E-08
+        1.3 5.185510E-08
+        1.4 8.948519E-08
+        1.5 9.587699E-08

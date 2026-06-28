@@ -1,0 +1,28 @@
+REFERENCES: |
+
+COMMENTS: |
+    VirtualLab material: AMTIR-1_AMI
+    Dispersion from VirtualLab SampledRefractiveIndex table; parameters field ignored (placeholder).
+
+CONDITIONS: |
+
+DATA:
+  - type: tabulated nk
+    data: |
+        1 2.5977 5.490846E-07
+        1.064 2.5862 5.588248E-07
+        1.5 2.5466 3.580986E-07
+        2 2.5306 4.774648E-07
+        2.4 2.525 1.909859E-07
+        3 2.5192 2.387324E-07
+        4 2.5146 3.183099E-07
+        5 2.5117 7.957747E-07
+        6 2.5092 4.774648E-07
+        7 2.5068 5.570423E-07
+        8 2.5042 6.366198E-07
+        9 2.5013 7.161972E-07
+        10 2.4981 7.957747E-07
+        11 2.4946 2.626057E-06
+        12 2.4905 1.432394E-05
+        13 2.486 1.551761E-05
+        14 2.4825 1.448310E-05

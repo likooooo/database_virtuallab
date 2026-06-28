@@ -1,0 +1,12 @@
+REFERENCES: |
+
+COMMENTS: |
+    VirtualLab material: Zinc_sulfide-ZnS_4-18µm
+    VirtualLab Herzberger -> refractiveindex.info formula 7
+
+CONDITIONS: |
+
+DATA:
+  - type: formula 7
+    wavelength_range: 0.3 2.5
+    coefficients: 2.25783 0.0363264 -0.00254894 -5.048720E-04 -7.674947E-07 2.153892E-10

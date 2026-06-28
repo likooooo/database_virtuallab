@@ -1,0 +1,12 @@
+REFERENCES: |
+
+COMMENTS: |
+    VirtualLab material: Air
+    air/vacuum n=1
+
+CONDITIONS: |
+
+DATA:
+  - type: formula 5
+    wavelength_range: 0.3 2.5
+    coefficients: 1 0 0

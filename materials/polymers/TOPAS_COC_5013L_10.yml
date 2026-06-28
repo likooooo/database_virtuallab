@@ -1,0 +1,20 @@
+REFERENCES: |
+
+COMMENTS: |
+    VirtualLab material: TOPAS-COC_5013L-10
+    Dispersion from VirtualLab SampledRefractiveIndex table; parameters field ignored (placeholder).
+
+CONDITIONS: |
+
+DATA:
+  - type: tabulated nk
+    data: |
+        0.365 1.5571 1.365152E-06
+        0.405 1.5495 1.514757E-06
+        0.436 1.545 1.630702E-06
+        0.486 1.5398 1.817709E-06
+        0.546 1.5353 2.042117E-06
+        0.588 1.5331 2.199203E-06
+        0.656 1.5303 2.453533E-06
+        0.785 1.527 2.936011E-06
+        0.83 1.5263 3.104317E-06

@@ -1,0 +1,12 @@
+REFERENCES: |
+
+COMMENTS: |
+    VirtualLab material: Calcite(ordinaryRay)-CaCO3
+    VirtualLab Sellmeier3 -> refractiveindex.info formula 1
+
+CONDITIONS: |
+
+DATA:
+  - type: formula 1
+    wavelength_range: 0.3 2.5
+    coefficients: 0 0.8559 1.195389E-05 0.8391 3.952542E-04 9.000000E-04 0.00150614 0.6845 2407.87

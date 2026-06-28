@@ -1,0 +1,42 @@
+REFERENCES: |
+
+COMMENTS: |
+    VirtualLab material: B10-63_Corning
+    VirtualLab Schott -> refractiveindex.info formula 3
+    Absorption: tabulated k from VirtualLab sampled alpha (or constant absorption converted alpha->k).
+
+CONDITIONS: |
+
+DATA:
+  - type: formula 3
+    wavelength_range: 0.3 2.5
+    coefficients: 2.25062 -0.00924759 2 0.0109929 -2 6.033767E-05 -4 1.460288E-05 -6 -7.160412E-07 -8
+  - type: tabulated k
+    data: |
+        0.28 5.684162E-06
+        0.29 4.158121E-06
+        0.3 2.406084E-06
+        0.31 1.479294E-06
+        0.32 9.783394E-07
+        0.33 5.533653E-07
+        0.34 2.581450E-07
+        0.35 1.224153E-07
+        0.36 4.912013E-08
+        0.37 3.852774E-08
+        0.38 2.733871E-08
+        0.39 1.867722E-08
+        0.4 1.915612E-08
+        0.42 2.011392E-08
+        0.44 2.107173E-08
+        0.46 1.834873E-08
+        0.48 1.914650E-08
+        0.5 1.594741E-08
+        0.55 1.754215E-08
+        0.6 1.913689E-08
+        0.7 1.673639E-08
+        0.8 2.551585E-08
+        1 4.789030E-08
+        1.2 6.708013E-08
+        1.4 2.820618E-07
+        1.6 2.053656E-07
+        1.8 6.745376E-07

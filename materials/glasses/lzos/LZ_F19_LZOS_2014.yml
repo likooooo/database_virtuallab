@@ -1,0 +1,12 @@
+REFERENCES: |
+
+COMMENTS: |
+    VirtualLab material: LZ_F19_LZOS_2014
+    VirtualLab PowerSeries -> refractiveindex.info formula 3
+
+CONDITIONS: |
+
+DATA:
+  - type: formula 3
+    wavelength_range: 0.3 2.5
+    coefficients: 2.54645 -0.0229859 2 1.608729E-04 4 0.00538468 6 0.0166429 -2 0.00243042 -4 -2.067268E-04 -6 1.603321E-05 -8

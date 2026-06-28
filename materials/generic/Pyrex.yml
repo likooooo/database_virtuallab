@@ -1,0 +1,12 @@
+REFERENCES: |
+
+COMMENTS: |
+    VirtualLab material: Pyrex
+    VirtualLab Conrady approximated as refractiveindex.info formula 7
+
+CONDITIONS: |
+
+DATA:
+  - type: formula 7
+    wavelength_range: 0.3 2.5
+    coefficients: 1.45217 0.01258 6.659000E-05 0

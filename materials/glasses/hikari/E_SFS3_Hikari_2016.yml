@@ -1,0 +1,28 @@
+REFERENCES: |
+
+COMMENTS: |
+    VirtualLab material: E-SFS3_Hikari_2016
+    VirtualLab Schott -> refractiveindex.info formula 3
+    Absorption: tabulated k from VirtualLab sampled alpha (or constant absorption converted alpha->k).
+
+CONDITIONS: |
+
+DATA:
+  - type: formula 3
+    wavelength_range: 0.3 2.5
+    coefficients: 3.05701 -0.0132252 2 0.0390853 -2 0.0025148 -4 -1.318765E-04 -6 2.248990E-05 -8
+  - type: tabulated k
+    data: |
+        0.37 5.788957E-06
+        0.38 2.348180E-06
+        0.39 1.106948E-06
+        0.4 6.316888E-07
+        0.42 2.605673E-07
+        0.44 1.465837E-07
+        0.46 1.001940E-07
+        0.48 6.938125E-08
+        0.5 3.998903E-08
+        0.55 4.378949E-09
+        0.6 4.777036E-09
+        0.65 5.175122E-09
+        0.7 1.673639E-08

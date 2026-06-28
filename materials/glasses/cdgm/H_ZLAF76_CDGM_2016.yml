@@ -1,0 +1,42 @@
+REFERENCES: |
+
+COMMENTS: |
+    VirtualLab material: H-ZLAF76_CDGM_2016
+    VirtualLab Schott -> refractiveindex.info formula 3
+    Absorption: tabulated k from VirtualLab sampled alpha (or constant absorption converted alpha->k).
+
+CONDITIONS: |
+
+DATA:
+  - type: formula 3
+    wavelength_range: 0.3 2.5
+    coefficients: 3.2976 -0.0171679 2 0.0386912 -2 0.00268189 -4 -2.039032E-04 -6 2.433250E-05 -8
+  - type: tabulated k
+    data: |
+        0.36 1.120712E-05
+        0.37 4.201952E-06
+        0.38 1.919836E-06
+        0.39 1.106948E-06
+        0.4 7.503274E-07
+        0.42 4.272517E-07
+        0.44 2.805540E-07
+        0.46 2.032078E-07
+        0.48 1.559285E-07
+        0.5 1.170935E-07
+        0.55 6.170760E-08
+        0.6 3.835080E-08
+        0.65 3.112869E-08
+        0.7 2.232637E-08
+        0.8 1.912730E-08
+        0.85 1.354172E-08
+        0.9 1.433829E-08
+        0.95 1.513486E-08
+        1 1.593143E-08
+        1.06 1.688732E-08
+        1.2 1.911772E-08
+        1.4 2.230401E-08
+        1.6 2.549029E-08
+        1.8 1.150524E-07
+        2 4.683741E-07
+        2.2 1.574316E-06
+        2.4 5.750684E-06

@@ -1,0 +1,12 @@
+REFERENCES: |
+
+COMMENTS: |
+    VirtualLab material: Germanium-Ge_(1985)_2-12µm
+    VirtualLab Herzberger -> refractiveindex.info formula 7
+
+CONDITIONS: |
+
+DATA:
+  - type: formula 7
+    wavelength_range: 0.3 2.5
+    coefficients: 4.00227 0.357829 0.261273 -7.436566E-05 6.254106E-07 -1.571007E-09

@@ -1,0 +1,24 @@
+REFERENCES: |
+
+COMMENTS: |
+    VirtualLab material: PolyMethylMethAcrylate-PMMA
+    Dispersion from VirtualLab SampledRefractiveIndex table; parameters field ignored (placeholder).
+
+CONDITIONS: |
+
+DATA:
+  - type: tabulated nk
+    data: |
+        0.365 1.5136 0
+        0.4047 1.5066 0
+        0.4358 1.5026 0
+        0.48 1.4983 0
+        0.4861 1.4978 0
+        0.5461 1.4938 0
+        0.5876 1.4918 0
+        0.5893 1.4917 0
+        0.6439 1.4896 0
+        0.6563 1.4892 0
+        0.7065 1.4878 0
+        0.8521 1.485 0
+        1.014 1.4831 0

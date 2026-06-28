@@ -1,0 +1,12 @@
+REFERENCES: |
+
+COMMENTS: |
+    VirtualLab material: Lead(II)_fluoride-PbF2
+    VirtualLab Herzberger -> refractiveindex.info formula 7
+
+CONDITIONS: |
+
+DATA:
+  - type: formula 7
+    wavelength_range: 0.3 2.5
+    coefficients: 1.73041 0.0115731 9.124291E-07 -8.874462E-04 -8.821195E-07 3.632372E-09

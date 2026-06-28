@@ -1,0 +1,38 @@
+REFERENCES: |
+
+COMMENTS: |
+    VirtualLab material: P-SK57_Schott_2015
+    VirtualLab Sellmeier1 -> refractiveindex.info formula 2
+    Absorption: tabulated k from VirtualLab sampled alpha (or constant absorption converted alpha->k).
+
+CONDITIONS: |
+
+DATA:
+  - type: formula 2
+    wavelength_range: 0.3 2.5
+    coefficients: 0 1.31053 0.00740877 0.169376 0.0254563 1.10988 107.751
+  - type: tabulated k
+    data: |
+        0.32 1.866652E-06
+        0.334 5.255135E-07
+        0.35 1.551497E-07
+        0.365 5.959415E-08
+        0.37 4.807797E-08
+        0.38 3.310759E-08
+        0.39 2.507981E-08
+        0.4 2.053657E-08
+        0.405 1.948382E-08
+        0.42 1.749368E-08
+        0.436 1.535073E-08
+        0.46 1.323769E-08
+        0.5 7.977709E-09
+        0.546 5.221754E-09
+        0.58 5.546918E-09
+        0.62 5.929464E-09
+        0.66 6.312011E-09
+        0.7 6.694557E-09
+        1.06 1.013747E-08
+        1.53 1.083393E-07
+        1.97 7.307492E-07
+        2.325 3.419388E-06
+        2.5 7.291610E-06

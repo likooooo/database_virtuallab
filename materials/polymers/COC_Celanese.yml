@@ -1,0 +1,12 @@
+REFERENCES: |
+
+COMMENTS: |
+    VirtualLab material: COC-(Celanese)
+    VirtualLab Schott -> refractiveindex.info formula 3
+
+CONDITIONS: |
+
+DATA:
+  - type: formula 3
+    wavelength_range: 0.3 2.5
+    coefficients: 2.28449 0.0102952 2 0.0373494 -2 -0.0092841 -4 0.0017329 -6 -1.152030E-04 -8

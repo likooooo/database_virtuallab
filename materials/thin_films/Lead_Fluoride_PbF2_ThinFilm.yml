@@ -1,0 +1,28 @@
+REFERENCES: |
+
+COMMENTS: |
+    VirtualLab material: Lead_Fluoride-PbF2-ThinFilm
+    Dispersion from VirtualLab SampledRefractiveIndex table; parameters field ignored (placeholder).
+
+CONDITIONS: |
+
+DATA:
+  - type: tabulated nk
+    data: |
+        0.3088 1.915 0.00638912
+        0.3645 1.849 0.00141108
+        0.381 1.826 0.00111569
+        0.4045 1.824 0.00130805
+        0.4266 1.804 0.00179923
+        0.4565 1.801 0.00210697
+        0.4876 1.787 0.00139687
+        0.5277 1.785 0.00138577
+        0.5711 1.771 0.00139112
+        0.6259 1.764 8.965357E-04
+        0.693 1.758 2.977948E-04
+        0.7775 1.753 1.979887E-04
+        0.8861 1.748 0
+        1.031 1.744 -0.0010131
+        1.237 1.743 -0.00373508
+        1.545 1.742 -0.00850143
+        2.058 1.74 0

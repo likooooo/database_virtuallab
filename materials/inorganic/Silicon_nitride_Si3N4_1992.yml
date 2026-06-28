@@ -1,0 +1,18 @@
+REFERENCES: |
+
+COMMENTS: |
+    VirtualLab material: Silicon_nitride-Si3N4_(1992)
+    Dispersion from VirtualLab SampledRefractiveIndex table; parameters field ignored (placeholder).
+
+CONDITIONS: |
+
+DATA:
+  - type: tabulated nk
+    data: |
+        0.0114 0.98546 0.0166
+        0.01355 0.97518 0.009688
+        0.01714 0.95236 0.019663
+        0.0243 0.92148 0.049155
+        0.03038 0.8623 0.07279
+        0.03568 0.8351 0.12423
+        0.04059 0.7899 0.16563

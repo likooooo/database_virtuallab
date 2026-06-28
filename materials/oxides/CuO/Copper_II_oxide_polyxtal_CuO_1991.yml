@@ -1,0 +1,33 @@
+REFERENCES: |
+
+COMMENTS: |
+    VirtualLab material: Copper(II)_oxide(polyxtal)-CuO_(1991)
+    Dispersion from VirtualLab SampledRefractiveIndex table; parameters field ignored (placeholder).
+
+CONDITIONS: |
+
+DATA:
+  - type: tabulated nk
+    data: |
+        0.299976 2.18 1.5
+        0.350028 2.24 1.03
+        0.399935 2.34 0.87
+        0.449855 2.45 0.77
+        0.499919 2.54 0.68
+        0.5498 2.58 0.59
+        0.599806 2.65 0.5
+        0.64979 2.72 0.4
+        0.700056 2.88 0.31
+        0.75003 2.97 0.22
+        0.799871 2.94 0.11
+        0.84976 2.81 0.04
+        0.89971 2.74 0.03
+        0.950038 2.69 0.02
+        0.999839 2.65 0.01
+        1.10009 2.61 0
+        1.20019 2.58 0
+        1.29958 2.57 0
+        1.39932 2.56 0
+        1.49915 2.56 0
+        1.99968 2.55 0
+        2.4996 2.55 0

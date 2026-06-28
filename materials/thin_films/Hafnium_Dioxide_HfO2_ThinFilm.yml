@@ -1,0 +1,12 @@
+REFERENCES: |
+
+COMMENTS: |
+    VirtualLab material: Hafnium_Dioxide-HfO2-ThinFilm
+    VirtualLab Cauchy -> refractiveindex.info formula 5
+
+CONDITIONS: |
+
+DATA:
+  - type: formula 5
+    wavelength_range: 0.3 2.5
+    coefficients: 1.9165 0.02198 -3.276000E-04

@@ -1,0 +1,42 @@
+REFERENCES: |
+
+COMMENTS: |
+    VirtualLab material: S-FTL10_Ohara_2016
+    VirtualLab Sellmeier1 -> refractiveindex.info formula 2
+    Absorption: tabulated k from VirtualLab sampled alpha (or constant absorption converted alpha->k).
+
+CONDITIONS: |
+
+DATA:
+  - type: formula 2
+    wavelength_range: 0.3 2.5
+    coefficients: 0 1.10543 0.00669004 0.116184 0.0360841 1.15396 137.546
+  - type: tabulated k
+    data: |
+        0.33 8.452950E-06
+        0.34 2.283474E-06
+        0.35 6.565365E-07
+        0.36 2.048210E-07
+        0.37 8.968308E-08
+        0.38 6.109186E-08
+        0.39 3.119145E-08
+        0.4 2.556720E-08
+        0.42 3.021646E-08
+        0.44 3.519035E-08
+        0.46 3.678991E-08
+        0.48 3.068064E-08
+        0.5 2.394515E-08
+        0.55 1.754215E-08
+        0.6 1.913689E-08
+        0.65 2.592755E-08
+        0.7 1.673639E-08
+        0.8 6.369381E-09
+        0.9 7.165553E-09
+        1 1.593143E-08
+        1.2 1.911772E-08
+        1.4 1.007215E-07
+        1.6 7.662447E-08
+        1.8 1.150524E-07
+        2 1.921411E-07
+        2.2 9.903796E-07
+        2.4 1.592471E-06

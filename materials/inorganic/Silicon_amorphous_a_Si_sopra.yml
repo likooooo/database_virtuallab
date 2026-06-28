@@ -1,0 +1,12 @@
+REFERENCES: |
+
+COMMENTS: |
+    VirtualLab material: Silicon(amorphous)-a-Si_sopra
+
+CONDITIONS: |
+
+DATA:
+  - type: tabulated nk
+    data: |
+        0.24 1 0
+        0.84 1 0

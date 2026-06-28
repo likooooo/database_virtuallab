@@ -1,0 +1,12 @@
+REFERENCES: |
+
+COMMENTS: |
+    VirtualLab material: Zinc_sulfide-ZnS_0.42-1.1µm
+    VirtualLab Schott -> refractiveindex.info formula 3
+
+CONDITIONS: |
+
+DATA:
+  - type: formula 3
+    wavelength_range: 0.3 2.5
+    coefficients: 5.10215 -0.00251681 2 0.144901 -2 0.0101952 -4 -6.387069E-04 -6 1.896828E-04 -8

@@ -1,0 +1,44 @@
+REFERENCES: |
+
+COMMENTS: |
+    VirtualLab material: LITHOSIL-Q_Schott_2015
+    VirtualLab Sellmeier1 -> refractiveindex.info formula 2
+    Absorption: tabulated k from VirtualLab sampled alpha (or constant absorption converted alpha->k).
+
+CONDITIONS: |
+
+DATA:
+  - type: formula 2
+    wavelength_range: 0.3 2.5
+    coefficients: 0 0.670711 0.00449192 0.433323 0.0132813 0.877379 95.89
+  - type: tabulated k
+    data: |
+        0.25 7.961728E-10
+        0.26 8.280197E-10
+        0.27 8.598666E-10
+        0.28 8.917135E-10
+        0.29 9.235605E-10
+        0.3 9.554074E-10
+        0.31 9.872543E-10
+        0.32 1.019101E-09
+        0.334 1.063687E-09
+        0.35 1.114642E-09
+        0.365 1.162412E-09
+        0.37 1.178336E-09
+        0.38 1.210183E-09
+        0.39 1.242030E-09
+        0.4 1.273876E-09
+        0.405 1.289800E-09
+        0.42 1.337570E-09
+        0.436 1.388525E-09
+        0.46 1.464958E-09
+        0.5 1.592346E-09
+        0.546 1.738841E-09
+        0.58 1.847121E-09
+        0.62 1.974509E-09
+        0.66 2.101896E-09
+        0.7 2.229284E-09
+        1.06 1.886641E-09
+        1.53 2.723170E-09
+        1.97 8.850559E-08
+        2.325 1.681648E-06
