@@ -3,6 +3,7 @@
 
 from __future__ import annotations
 
+import importlib.util
 import sys
 import tempfile
 from pathlib import Path
@@ -10,11 +11,15 @@ from pathlib import Path
 import yaml
 from yaml import BaseLoader
 
-ROOT = Path(__file__).resolve().parents[1]
-if str(ROOT) not in sys.path:
-    sys.path.insert(0, str(ROOT))
-
-from common.yml_emit import tabulated_k_block, write_formula_yml
+_VL_ROOT = Path(__file__).resolve().parent
+_spec = importlib.util.spec_from_file_location(
+    "vl_update", _VL_ROOT / "update_current_database.py"
+)
+_mod = importlib.util.module_from_spec(_spec)
+assert _spec.loader is not None
+_spec.loader.exec_module(_mod)
+write_formula_yml = _mod.write_formula_yml
+tabulated_k_block = _mod.tabulated_k_block
 
 
 def test_write_formula_plus_k_block() -> None:

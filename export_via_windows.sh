@@ -3,24 +3,15 @@
 #   1. stage + scp PowerShell scripts to Windows temp dir
 #   2. ssh + run export_materials.ps1 (reads VirtualLab catalog -> CSV + meta.json)
 #   3. scp csv_export/ back to WSL
-#   4. run export.py locally to convert CSV -> YAML
+#   4. run update_current_database.py locally to convert CSV -> YAML
 #
 # Requires: OpenSSH client (WSL), OpenSSH Server on Windows, passwordless SSH or agent.
 #
-# Config (optional): simulation_database/config.yaml
-#   virtuallab:
-#     virtuallab_dir: "C:\\Program Files\\..."
-#     windows_ssh:
-#       host: auto          # detect via cmd.exe ipconfig (WSL vEthernet IP preferred)
-#       user: like               # default: $USER
-#       remote_dir: /c/Users/like/AppData/Local/Temp/virtuallab_export
-#
-# Env overrides: WINDOWS_SSH_HOST, WINDOWS_SSH_USER, WINDOWS_REMOTE_DIR, VIRTUALLAB_DIR
+# Config: pass --config PATH (parent update_all supplies parent config.yaml).
 
 set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-REPO_ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
 LOCAL_OUT="$SCRIPT_DIR"
 
 # Discover Windows host IP for SSH from WSL (not 127.0.0.53 systemd stub).
@@ -97,9 +88,15 @@ to_scp_path() {
 
 LIMIT=""
 KEEP_REMOTE=0
-CONFIG_PATH="${SIMULATION_DATABASE_CONFIG:-$REPO_ROOT/config.yaml}"
-if [[ ! -f "$CONFIG_PATH" && -f "$REPO_ROOT/config.example.yaml" ]]; then
-  CONFIG_PATH="$REPO_ROOT/config.example.yaml"
+CONFIG_PATH="${SIMULATION_DATABASE_CONFIG:-}"
+
+if [[ -z "$CONFIG_PATH" || ! -f "$CONFIG_PATH" ]]; then
+  for candidate in "$SCRIPT_DIR/../config.yaml" "$SCRIPT_DIR/../config.example.yaml"; do
+    if [[ -f "$candidate" ]]; then
+      CONFIG_PATH="$candidate"
+      break
+    fi
+  done
 fi
 
 usage() {
@@ -109,8 +106,8 @@ Usage: $(basename "$0") [OPTIONS]
 Run VirtualLab catalog export on Windows (PowerShell) and convert CSV to YAML in WSL.
 
 Options:
-  --limit N         Export at most N materials (passed to export.py)
-  --config PATH     Config YAML (default: config.yaml or config.example.yaml)
+  --limit N         Export at most N materials (passed to update_current_database.py)
+  --config PATH     Config YAML (virtuallab.* and windows_ssh.*)
   --keep-remote     Do not delete remote staging directory after sync
   -h, --help        Show this help
 
@@ -166,7 +163,21 @@ def emit(name, value):
         return
     print(f"export {name}={value!r}")
 
-emit("VIRTUALLAB_DIR", vl.get("virtuallab_dir"))
+def wsl_path_to_windows(path: str) -> str:
+    import re
+    s = path.replace("\\\\", "/").replace("\\", "/")
+    m = re.match(r"^/mnt/([a-zA-Z])(?:/(.*))?$", s)
+    if m:
+        drive = m.group(1).upper()
+        rest = (m.group(2) or "").replace("/", "\\\\")
+        return f"{drive}:\\\\{rest}" if rest else f"{drive}:\\\\"
+    return path
+
+vl_dir = vl.get("virtuallab_dir")
+if isinstance(vl_dir, str) and vl_dir.replace("\\\\", "/").startswith("/mnt/"):
+    vl_dir = wsl_path_to_windows(vl_dir)
+
+emit("VIRTUALLAB_DIR", vl_dir)
 emit("WINDOWS_SSH_HOST", ssh.get("host"))
 emit("WINDOWS_SSH_USER", ssh.get("user"))
 emit("WINDOWS_REMOTE_DIR", ssh.get("remote_dir"))
@@ -203,15 +214,21 @@ REMOTE_CSV="${REMOTE_DIR_SCP}/csv_export"
 SSH_OPTS=(-o BatchMode=yes -o ConnectTimeout=15 -o StrictHostKeyChecking=accept-new)
 SCP_OPTS=(-o BatchMode=yes -o ConnectTimeout=15 -o StrictHostKeyChecking=accept-new)
 
+STAGE="$(mktemp -d)"
+CACHE_ROOT="$SCRIPT_DIR/.cache"
+mkdir -p "$CACHE_ROOT"
+CSV_STAGING="$(mktemp -d "$CACHE_ROOT/vl_csv_export.XXXXXX")"
+
+cleanup_stage() { rm -rf "$STAGE"; }
+cleanup_csv_staging() { rm -rf "$CSV_STAGING"; }
+trap 'cleanup_stage; cleanup_csv_staging' EXIT
+
 echo "==> Windows SSH target: $SSH_TARGET"
 echo "==> Remote staging (scp): $REMOTE_DIR_SCP"
 echo "==> Remote staging (ps):  $REMOTE_DIR_WIN"
 echo "==> VirtualLab install: $VL_DIR"
-echo "==> Local output:       $LOCAL_OUT"
-
-STAGE="$(mktemp -d)"
-cleanup_stage() { rm -rf "$STAGE"; }
-trap cleanup_stage EXIT
+echo "==> Local YAML output: $LOCAL_OUT"
+echo "==> WSL CSV staging:   $CSV_STAGING"
 
 mkdir -p "$STAGE/simulation_database/vl"
 cp "$SCRIPT_DIR/export_materials.ps1" \
@@ -240,12 +257,11 @@ if ! ssh "${SSH_OPTS[@]}" "$SSH_TARGET" "$REMOTE_CMD"; then
   exit 1
 fi
 
-echo "==> Downloading csv_export/ from Windows..."
-rm -rf "$LOCAL_OUT/csv_export"
-scp "${SCP_OPTS[@]}" -r "${SSH_TARGET}:${REMOTE_CSV}" "$LOCAL_OUT/"
+echo "==> Downloading csv_export/ from Windows to WSL staging..."
+scp "${SCP_OPTS[@]}" -r "${SSH_TARGET}:${REMOTE_CSV}" "$CSV_STAGING/"
 
-CSV_SOURCE="$LOCAL_OUT/csv_export/materials"
-INDEX_CSV="$LOCAL_OUT/csv_export/materials_export/index.csv"
+CSV_SOURCE="$CSV_STAGING/csv_export/materials"
+INDEX_CSV="$CSV_STAGING/csv_export/materials_export/index.csv"
 if [[ ! -d "$CSV_SOURCE" ]]; then
   echo "error: remote CSV export missing: $CSV_SOURCE" >&2
   exit 1
@@ -256,7 +272,7 @@ echo "==> Downloaded $CSV_COUNT material CSV dirs"
 
 echo "==> Converting CSV to YAML in WSL..."
 EXPORT_ARGS=(
-  "$SCRIPT_DIR/export.py"
+  "$SCRIPT_DIR/update_current_database.py"
   --csv-source "$CSV_SOURCE"
   --index-csv "$INDEX_CSV"
   --output "$LOCAL_OUT"
