@@ -1,0 +1,110 @@
+TAGS:
+  - vl
+  - 'vendor:corning'
+  - 'spectrum:Infrared'
+  - 'category:glass'
+  - 'state:Solid'
+REFERENCES: |
+COMMENTS: |
+  VirtualLab material: D20-50_Corning
+  Absorption: tabulated k from sampled alpha (α→k same points).
+  DispersionFormula Schott → formula_vl_schott
+CONDITIONS: |
+DATA:
+  type: isotropic_dispersion
+  T_ref_C: 20.0
+  refractive_index_absolute: false
+  n: 
+    type: analytic_formula
+    formula: formula_vl_schott
+    wl_min: 0.28
+    wl_max: 1.8
+    coefficients: 
+      - 2.895596
+      - -0.01254631
+      - 0.02238463
+      - 0.0001886262
+      - 3.29758e-5
+      - -1.100849e-6
+  k: 
+    type: tabulated
+    curve: 
+      type: tabulated_curve
+      x: 
+        - 0.28
+        - 0.29
+        - 0.3
+        - 0.31
+        - 0.32
+        - 0.33
+        - 0.34
+        - 0.35
+        - 0.36
+        - 0.37
+        - 0.38
+        - 0.39
+        - 0.4
+        - 0.42
+        - 0.44
+        - 0.46
+        - 0.48
+        - 0.5
+        - 0.55
+        - 0.6
+        - 0.7
+        - 0.8
+        - 1.0
+        - 1.2
+        - 1.4
+        - 1.6
+        - 1.8
+      x_unit: um
+      interpolator: linear
+      endpoint_low: clamp
+      endpoint_high: clamp
+      interpolator_params: {}
+      channels: 
+        k: 
+          - 9.35765351741813e-6
+          - 7.54672191110233e-6
+          - 6.12097940402628e-6
+          - 4.63115722679555e-6
+          - 3.35312293773454e-6
+          - 2.16191646806012e-6
+          - 1.31970100495365e-6
+          - 8.0125541771838e-7
+          - 5.02898156076689e-7
+          - 3.06950265052904e-7
+          - 1.83892499114759e-7
+          - 1.20232989357671e-7
+          - 8.38554779197729e-8
+          - 5.39084881263196e-8
+          - 4.93660971600834e-8
+          - 3.67898945088245e-8
+          - 2.68320525728414e-8
+          - 2.39451489624473e-8
+          - 1.31500177089801e-8
+          - 1.43454738643419e-8
+          - 2.79219783035178e-8
+          - 3.19108323468774e-8
+          - 4.78902979248946e-8
+          - 5.74683575098736e-8
+          - 1.23228311327221e-7
+          - 1.40832355802538e-7
+          - 2.74773647935689e-7
+  thermal_dispersion: 
+    type: schott_formula_a
+    coefficients: 
+      - "NaN"
+      - "NaN"
+      - "NaN"
+      - "NaN"
+      - "NaN"
+      - "NaN"
+  partial_pressure_water_Pa: "NaN"
+  relative_air: 
+    $ref: vl/Air_Zemax_OS
+  nd: 1.72
+  Vd: 50.299999
+  density: 3.94
+  name: vl/D20_50_Corning

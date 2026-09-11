@@ -1,0 +1,27 @@
+TAGS:
+  - vl
+  - 'category:Standard-AR'
+  - 'state:Solid'
+REFERENCES: |
+COMMENTS: |
+  VirtualLab coating: VCoat03_632.8nm
+CONDITIONS: |
+DATA:
+  type: films
+  layers: 
+    - type: coating
+      depth: 0.11469864
+      background_material: 
+        $ref: vl/Magnesium_Fluoride_MgF2_ThinFilm
+      is_incoherent: false
+    - type: coating
+      depth: 0.098930457
+      background_material: 
+        $ref: vl/Lanthanum_Fluoride_LaF3_ThinFilm
+      is_incoherent: false
+    - type: coating
+      depth: 0.11469864
+      background_material: 
+        $ref: vl/Magnesium_Fluoride_MgF2_ThinFilm
+      is_incoherent: false
+  name: vl/VCoat03_632_8nm

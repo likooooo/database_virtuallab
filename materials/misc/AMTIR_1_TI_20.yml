@@ -1,0 +1,46 @@
+TAGS:
+  - vl
+  - 'spectrum:Infrared'
+  - 'category:misc'
+  - 'state:Solid'
+REFERENCES: |
+COMMENTS: |
+  VirtualLab material: AMTIR-1/TI-20
+  DispersionFormula Sellmeier4 → formula_vl_sellmeier_4
+CONDITIONS: |
+DATA:
+  type: isotropic_dispersion
+  T_ref_C: 20.0
+  refractive_index_absolute: false
+  n: 
+    type: analytic_formula
+    formula: formula_vl_sellmeier_4
+    wl_min: 1.0
+    wl_max: 14.0
+    coefficients: 
+      - 1.0
+      - 5.298
+      - 0.0841406049
+      - 0.6039
+      - 1025.408484
+  k: 
+    type: analytic_formula
+    formula: formula_vl_constant
+    wl_min: "-Infinity"
+    wl_max: "Infinity"
+    coefficients: 
+      - 0.0
+  thermal_dispersion: 
+    type: schott_formula_a
+    coefficients: 
+      - 7.05e-5
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  partial_pressure_water_Pa: "NaN"
+  relative_air: 
+    $ref: vl/Air_Zemax_OS
+  density: 4.41
+  name: vl/AMTIR_1_TI_20

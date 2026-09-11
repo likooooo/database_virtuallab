@@ -1,0 +1,74 @@
+TAGS:
+  - vl
+  - 'vendor:ohara'
+  - 'category:glass'
+  - 'state:Solid'
+REFERENCES: |
+  Imported from ZEMAX - Glass Catalog file: Ohara_2016.agf
+COMMENTS: |
+  VirtualLab material: S-LAH75_Ohara_2016
+  Absorption: tabulated k from sampled alpha (α→k same points).
+  DispersionFormula Schott → formula_vl_schott
+CONDITIONS: |
+DATA:
+  type: isotropic_dispersion
+  T_ref_C: 25.0
+  refractive_index_absolute: false
+  n: 
+    type: analytic_formula
+    formula: formula_vl_schott
+    wl_min: 0.365
+    wl_max: 0.9
+    coefficients: 
+      - 3.397212
+      - -0.0158255
+      - 0.03681892
+      - 0.001759645
+      - -8.404167e-5
+      - 1.052281e-5
+  k: 
+    type: tabulated
+    curve: 
+      type: tabulated_curve
+      x: 
+        - 0.42
+        - 0.44
+        - 0.46
+        - 0.48
+        - 0.5
+        - 0.55
+        - 0.6
+        - 0.65
+        - 0.7
+      x_unit: um
+      interpolator: linear
+      endpoint_low: clamp
+      endpoint_high: clamp
+      interpolator_params: {}
+      channels: 
+        k: 
+          - 2.28205215303894e-7
+          - 1.57554170707812e-7
+          - 1.07726035887443e-7
+          - 7.71686576021287e-8
+          - 5.6097837681913e-8
+          - 2.63396638586921e-8
+          - 2.39331242601581e-8
+          - 2.59275512818379e-8
+          - 2.23263746102737e-8
+  thermal_dispersion: 
+    type: schott_formula_a
+    coefficients: 
+      - 4.6897e-6
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  partial_pressure_water_Pa: "NaN"
+  relative_air: 
+    $ref: vl/Air_Zemax_OS
+  nd: 1.873996
+  Vd: 35.258594
+  density: 4.57
+  name: vl/S_LAH75_Ohara_2016

@@ -1,0 +1,22 @@
+TAGS:
+  - vl
+  - 'category:Standard-AR'
+  - 'state:Solid'
+REFERENCES: |
+COMMENTS: |
+  VirtualLab coating: VCoat01_450nm
+CONDITIONS: |
+DATA:
+  type: films
+  layers: 
+    - type: coating
+      depth: 0.061095171
+      background_material: 
+        $ref: vl/Yttrium_Oxide_Y2O3_ThinFilm
+      is_incoherent: false
+    - type: coating
+      depth: 0.081402031
+      background_material: 
+        $ref: vl/Magnesium_Fluoride_MgF2_ThinFilm
+      is_incoherent: false
+  name: vl/VCoat01_450nm

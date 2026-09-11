@@ -1,0 +1,95 @@
+TAGS:
+  - vl
+  - 'vendor:ohara'
+  - 'spectrum:Infrared'
+  - 'category:glass'
+  - 'state:Solid'
+REFERENCES: |
+  Imported from ZEMAX - Glass Catalog file: Ohara_2016.agf
+COMMENTS: |
+  VirtualLab material: PBM9_Ohara_2016
+  Absorption: tabulated k from sampled alpha (α→k same points).
+  DispersionFormula Schott → formula_vl_schott
+CONDITIONS: |
+DATA:
+  type: isotropic_dispersion
+  T_ref_C: 25.0
+  refractive_index_absolute: false
+  n: 
+    type: analytic_formula
+    formula: formula_vl_schott
+    wl_min: 0.3
+    wl_max: 2.4
+    coefficients: 
+      - 2.5602323
+      - -0.0095632018
+      - 0.021495089
+      - 0.00085071191
+      - -3.3535727e-5
+      - 4.8953255e-6
+  k: 
+    type: tabulated
+    curve: 
+      type: tabulated_curve
+      x: 
+        - 0.33
+        - 0.34
+        - 0.35
+        - 0.36
+        - 0.37
+        - 0.38
+        - 0.39
+        - 0.4
+        - 0.42
+        - 0.44
+        - 0.46
+        - 0.48
+        - 0.5
+        - 0.55
+        - 0.6
+        - 0.65
+        - 0.7
+        - 0.8
+        - 0.9
+      x_unit: um
+      interpolator: linear
+      endpoint_low: clamp
+      endpoint_high: clamp
+      interpolator_params: {}
+      channels: 
+        k: 
+          - 6.04671869075528e-6
+          - 2.41233821490268e-6
+          - 1.15729839465664e-6
+          - 6.03671287451547e-7
+          - 3.43118258548201e-7
+          - 2.09710747040268e-7
+          - 1.23460781006184e-7
+          - 7.40663399271896e-8
+          - 4.03496305655605e-8
+          - 3.16553424136651e-8
+          - 2.57140503823063e-8
+          - 1.91464994081265e-8
+          - 1.59474104359097e-8
+          - 1.31500177089801e-8
+          - 1.43454738643419e-8
+          - 2.07316335666827e-8
+          - 1.67363861750655e-8
+          - 1.27451448448319e-8
+          - 2.15182107965128e-8
+  thermal_dispersion: 
+    type: schott_formula_a
+    coefficients: 
+      - 7.208e-6
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  partial_pressure_water_Pa: "NaN"
+  relative_air: 
+    $ref: vl/Air_Zemax_OS
+  nd: 1.620451
+  Vd: 38.119955
+  density: 3.56
+  name: vl/PBM9_Ohara_2016

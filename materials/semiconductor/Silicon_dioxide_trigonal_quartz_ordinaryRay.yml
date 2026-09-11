@@ -1,0 +1,50 @@
+TAGS:
+  - vl
+  - 'category:semiconductor'
+  - 'state:Solid'
+REFERENCES: |
+COMMENTS: |
+  VirtualLab material: Silicon_dioxide(trigonal_quartz_ordinaryRay)
+  DispersionFormula Sellmeier5 → formula_vl_sellmeier_5
+  SampledRefractiveIndex present but unused; keeping formula.
+CONDITIONS: |
+DATA:
+  type: isotropic_dispersion
+  T_ref_C: 20.0
+  refractive_index_absolute: false
+  n: 
+    type: analytic_formula
+    formula: formula_vl_sellmeier_5
+    wl_min: 0.18
+    wl_max: 0.71
+    coefficients: 
+      - 0.663044
+      - 0.0036
+      - 0.517852
+      - 0.011236
+      - 0.175912
+      - 0.014161
+      - 0.56538
+      - 78.216336
+      - 1.675299
+      - 430.230564
+  k: 
+    type: analytic_formula
+    formula: formula_vl_constant
+    wl_min: "-Infinity"
+    wl_max: "Infinity"
+    coefficients: 
+      - 0.0
+  thermal_dispersion: 
+    type: schott_formula_a
+    coefficients: 
+      - -1.4e-5
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  partial_pressure_water_Pa: "NaN"
+  relative_air: 
+    $ref: vl/Air_Zemax_OS
+  name: vl/Silicon_dioxide_trigonal_quartz_ordinaryRay

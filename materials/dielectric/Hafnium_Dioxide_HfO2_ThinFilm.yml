@@ -1,0 +1,44 @@
+TAGS:
+  - vl
+  - 'category:dielectric'
+  - 'category:metal'
+  - 'state:Solid'
+REFERENCES: |
+COMMENTS: |
+  VirtualLab material: Hafnium_Dioxide-HfO2-ThinFilm
+  DispersionFormula Cauchy → formula_vl_cauchy
+CONDITIONS: |
+DATA:
+  type: isotropic_dispersion
+  T_ref_C: 20.0
+  refractive_index_absolute: false
+  n: 
+    type: analytic_formula
+    formula: formula_vl_cauchy
+    wl_min: 0.32
+    wl_max: 0.71
+    coefficients: 
+      - 1.9165
+      - 0.02198
+      - -0.0003276
+      - 0.0
+  k: 
+    type: analytic_formula
+    formula: formula_vl_constant
+    wl_min: "-Infinity"
+    wl_max: "Infinity"
+    coefficients: 
+      - 0.0
+  thermal_dispersion: 
+    type: schott_formula_a
+    coefficients: 
+      - "NaN"
+      - "NaN"
+      - "NaN"
+      - "NaN"
+      - "NaN"
+      - "NaN"
+  partial_pressure_water_Pa: "NaN"
+  relative_air: 
+    $ref: vl/Air
+  name: vl/Hafnium_Dioxide_HfO2_ThinFilm

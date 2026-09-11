@@ -1,0 +1,169 @@
+TAGS:
+  - vl
+  - 'category:dielectric'
+  - 'category:metal'
+  - 'spectrum:Infrared'
+  - 'state:Solid'
+REFERENCES: |
+COMMENTS: |
+  VirtualLab material: Ta2O5-ThinFilm_MSO-measured
+  Dispersion from VirtualLab SampledRefractiveIndex table.
+  Absorption: tabulated k from sampled alpha (α→k same points).
+CONDITIONS: |
+DATA:
+  type: isotropic_dispersion
+  T_ref_C: 20.0
+  refractive_index_absolute: false
+  n: 
+    type: tabulated
+    curve: 
+      type: tabulated_curve
+      x: 
+        - 0.3
+        - 0.325
+        - 0.35
+        - 0.375
+        - 0.4
+        - 0.425
+        - 0.45
+        - 0.475
+        - 0.5
+        - 0.525
+        - 0.55
+        - 0.575
+        - 0.6
+        - 0.625
+        - 0.65
+        - 0.675
+        - 0.7
+        - 0.725
+        - 0.75
+        - 0.775
+        - 0.8
+        - 0.825
+        - 0.85
+        - 0.875
+        - 0.9
+        - 0.925
+        - 0.95
+        - 0.975
+        - 1.0
+      x_unit: um
+      interpolator: linear
+      endpoint_low: clamp
+      endpoint_high: clamp
+      interpolator_params: {}
+      channels: 
+        n: 
+          - 2.4529
+          - 2.3675
+          - 2.3098
+          - 2.2685
+          - 2.2376
+          - 2.2137
+          - 2.1949
+          - 2.1796
+          - 2.1671
+          - 2.1566
+          - 2.1478
+          - 2.1403
+          - 2.1339
+          - 2.1282
+          - 2.1233
+          - 2.119
+          - 2.1152
+          - 2.1118
+          - 2.1087
+          - 2.106
+          - 2.1035
+          - 2.1012
+          - 2.0992
+          - 2.0973
+          - 2.0956
+          - 2.094
+          - 2.0925
+          - 2.0911
+          - 2.0899
+  k: 
+    type: tabulated
+    curve: 
+      type: tabulated_curve
+      x: 
+        - 0.3
+        - 0.325
+        - 0.35
+        - 0.375
+        - 0.4
+        - 0.425
+        - 0.45
+        - 0.475
+        - 0.5
+        - 0.525
+        - 0.55
+        - 0.575
+        - 0.6
+        - 0.625
+        - 0.65
+        - 0.675
+        - 0.7
+        - 0.725
+        - 0.75
+        - 0.775
+        - 0.8
+        - 0.825
+        - 0.85
+        - 0.875
+        - 0.9
+        - 0.925
+        - 0.95
+        - 0.975
+        - 1.0
+      x_unit: um
+      interpolator: linear
+      endpoint_low: clamp
+      endpoint_high: clamp
+      interpolator_params: {}
+      channels: 
+        k: 
+          - 0.0195044382759118
+          - 0.00320697210330169
+          - 0.000838348662736559
+          - 0.000378987708237576
+          - 0.000303667631419336
+          - 0.00028003312237019
+          - 0.000260337698162568
+          - 0.000244561464428584
+          - 0.000230376780125519
+          - 0.000219335405948518
+          - 0.000209646848787799
+          - 0.000202246143934026
+          - 0.000195283115173756
+          - 0.000189493854118788
+          - 0.000184142269157323
+          - 0.000179944557533274
+          - 0.000175468324758815
+          - 0.00017192712727502
+          - 0.000168903183356274
+          - 0.000165899133805414
+          - 0.000162974661726101
+          - 0.000160845964362247
+          - 0.00015827959090489
+          - 0.000156668147106084
+          - 0.000153982407441409
+          - 0.000150898780419003
+          - 0.000148173252018555
+          - 0.000145865505343722
+          - 1.44035223498165e-5
+  thermal_dispersion: 
+    type: schott_formula_a
+    coefficients: 
+      - "NaN"
+      - "NaN"
+      - "NaN"
+      - "NaN"
+      - "NaN"
+      - "NaN"
+  partial_pressure_water_Pa: "NaN"
+  relative_air: 
+    $ref: vl/Air
+  name: vl/Ta2O5_ThinFilm_MSO_measured

@@ -1,0 +1,109 @@
+TAGS:
+  - vl
+  - 'vendor:sumita'
+  - 'spectrum:Infrared'
+  - 'category:glass'
+  - 'state:Solid'
+REFERENCES: |
+  Imported from ZEMAX - Glass Catalog file: Sumita_2016.agf
+COMMENTS: |
+  VirtualLab material: K-SK16RH_Sumita_2016
+  Absorption: tabulated k from sampled alpha (α→k same points).
+  DispersionFormula Schott → formula_vl_schott
+CONDITIONS: |
+DATA:
+  type: isotropic_dispersion
+  T_ref_C: 20.0
+  refractive_index_absolute: false
+  n: 
+    type: analytic_formula
+    formula: formula_vl_schott
+    wl_min: 0.36
+    wl_max: 1.55
+    coefficients: 
+      - 2.5853303
+      - -0.011740187
+      - 0.014496524
+      - 0.0003287161
+      - -1.5804639e-5
+      - 1.1016183e-6
+  k: 
+    type: tabulated
+    curve: 
+      type: tabulated_curve
+      x: 
+        - 0.28
+        - 0.29
+        - 0.3
+        - 0.31
+        - 0.32
+        - 0.33
+        - 0.34
+        - 0.35
+        - 0.36
+        - 0.37
+        - 0.38
+        - 0.39
+        - 0.4
+        - 0.42
+        - 0.44
+        - 0.46
+        - 0.48
+        - 0.5
+        - 0.55
+        - 0.6
+        - 0.65
+        - 0.7
+        - 0.8
+        - 1.06
+        - 1.5
+        - 2.0
+      x_unit: um
+      interpolator: linear
+      endpoint_low: clamp
+      endpoint_high: clamp
+      interpolator_params: {}
+      channels: 
+        k: 
+          - 1.0261098384312e-5
+          - 5.66184411414946e-6
+          - 3.30000375352015e-6
+          - 1.98634100341617e-6
+          - 1.19685441384943e-6
+          - 6.79546570577441e-7
+          - 4.08071543355269e-7
+          - 2.47413718339557e-7
+          - 1.25912882852793e-7
+          - 6.54992245820218e-8
+          - 4.5702793145825e-8
+          - 9.32455801182223e-9
+          - 9.56364924289459e-9
+          - 1.00418317050393e-8
+          - 1.05200141671841e-8
+          - 7.32845828577832e-9
+          - 7.64708690689911e-9
+          - 7.96571552801991e-9
+          - 8.7622870808219e-9
+          - 9.55885863362389e-9
+          - 1.03554301864259e-8
+          - 1.11520017392279e-8
+          - 1.27451448448319e-8
+          - 6.77530709572686e-8
+          - 2.65537396954142e-7
+          - 7.66177869573998e-7
+  thermal_dispersion: 
+    type: schott_formula_a
+    coefficients: 
+      - 3.39e-7
+      - 1.49e-8
+      - -2.68e-10
+      - 3.99e-7
+      - 1.11e-9
+      - 1.74e-7
+  partial_pressure_water_Pa: "NaN"
+  relative_air: 
+    $ref: vl/Air_Zemax_OS
+  nd: 1.62041
+  Vd: 60.3
+  density: 3.5
+  name: vl/K_SK16RH_Sumita_2016

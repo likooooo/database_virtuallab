@@ -1,0 +1,90 @@
+TAGS:
+  - vl
+  - 'vendor:schott'
+  - 'spectrum:Infrared'
+  - 'category:glass'
+  - 'state:Solid'
+REFERENCES: |
+  Imported from ZEMAX - Glass Catalog file: Schott_2015.agf
+COMMENTS: |
+  VirtualLab material: LF5G19_Schott_2015
+  Absorption: tabulated k from sampled alpha (α→k same points).
+  DispersionFormula Sellmeier1 → formula_vl_sellmeier_1
+CONDITIONS: |
+DATA:
+  type: isotropic_dispersion
+  T_ref_C: 20.0
+  refractive_index_absolute: false
+  n: 
+    type: analytic_formula
+    formula: formula_vl_sellmeier_1
+    wl_min: 0.4
+    wl_max: 2.5
+    coefficients: 
+      - 1.34611327
+      - 0.0097174385
+      - 0.142428018
+      - 0.0501911619
+      - 0.900477176
+      - 111.959703
+  k: 
+    type: tabulated
+    curve: 
+      type: tabulated_curve
+      x: 
+        - 0.4
+        - 0.405
+        - 0.42
+        - 0.436
+        - 0.46
+        - 0.5
+        - 0.546
+        - 0.58
+        - 0.62
+        - 0.66
+        - 0.7
+        - 1.06
+        - 1.53
+        - 1.97
+        - 2.325
+        - 2.5
+      x_unit: um
+      interpolator: linear
+      endpoint_low: clamp
+      endpoint_high: clamp
+      interpolator_params: {}
+      channels: 
+        k: 
+          - 4.09839998981421e-6
+          - 3.10421521513828e-6
+          - 1.40350879604208e-6
+          - 6.81456987162892e-7
+          - 2.69304505335383e-7
+          - 1.08669150144712e-7
+          - 6.01189617076248e-8
+          - 4.295847715777e-8
+          - 3.38383095769417e-8
+          - 2.74900633353731e-8
+          - 1.56520306674908e-8
+          - 6.75492676776088e-9
+          - 1.03362107540849e-7
+          - 2.17420768092918e-6
+          - 8.52570868468051e-6
+          - 1.28074999681694e-5
+  thermal_dispersion: 
+    type: schott_formula_a
+    coefficients: 
+      - -8.15e-6
+      - 1.34e-8
+      - -9.22e-12
+      - 8.57e-7
+      - 8.26e-10
+      - 2.43e-7
+  partial_pressure_water_Pa: "NaN"
+  relative_air: 
+    $ref: vl/Air_Zemax_OS
+  nd: 1.59655
+  Vd: 39.89
+  density: 3.3
+  glass_code: inquiry
+  name: vl/LF5G19_Schott_2015

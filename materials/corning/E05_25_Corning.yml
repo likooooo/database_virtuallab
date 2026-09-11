@@ -1,0 +1,94 @@
+TAGS:
+  - vl
+  - 'vendor:corning'
+  - 'spectrum:Infrared'
+  - 'category:glass'
+  - 'state:Solid'
+REFERENCES: |
+COMMENTS: |
+  VirtualLab material: E05-25_Corning
+  Absorption: tabulated k from sampled alpha (α→k same points).
+  DispersionFormula Schott → formula_vl_schott
+CONDITIONS: |
+DATA:
+  type: isotropic_dispersion
+  T_ref_C: 20.0
+  refractive_index_absolute: false
+  n: 
+    type: analytic_formula
+    formula: formula_vl_schott
+    wl_min: 0.36
+    wl_max: 1.8
+    coefficients: 
+      - 3.118458
+      - -0.01049513
+      - 0.0420297
+      - 0.002946385
+      - -0.0001971788
+      - 2.63318e-5
+  k: 
+    type: tabulated
+    curve: 
+      type: tabulated_curve
+      x: 
+        - 0.36
+        - 0.37
+        - 0.38
+        - 0.39
+        - 0.4
+        - 0.42
+        - 0.44
+        - 0.46
+        - 0.48
+        - 0.5
+        - 0.55
+        - 0.6
+        - 0.7
+        - 0.8
+        - 1.0
+        - 1.2
+        - 1.4
+        - 1.6
+        - 1.8
+      x_unit: um
+      interpolator: linear
+      endpoint_low: clamp
+      endpoint_high: clamp
+      interpolator_params: {}
+      channels: 
+        k: 
+          - 9.29393015428309e-6
+          - 3.47702451268512e-6
+          - 1.43581449496765e-6
+          - 6.92530784609361e-7
+          - 4.10525473917154e-7
+          - 1.5039261749382e-7
+          - 6.71668917176129e-8
+          - 4.04893022932297e-8
+          - 3.06806359051782e-8
+          - 1.99442702167984e-8
+          - 8.7622870808219e-9
+          - 1.43454738643419e-8
+          - 2.23263746102737e-8
+          - 1.27451448448319e-8
+          - 1.59314310560398e-8
+          - 2.86909477286838e-8
+          - 6.70464170948525e-8
+          - 2.54902896896637e-8
+          - 1.43960456773661e-7
+  thermal_dispersion: 
+    type: schott_formula_a
+    coefficients: 
+      - 1.7e-5
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  partial_pressure_water_Pa: "NaN"
+  relative_air: 
+    $ref: vl/Air_Zemax_OS
+  nd: 1.8051
+  Vd: 25.5
+  density: 5.18
+  name: vl/E05_25_Corning

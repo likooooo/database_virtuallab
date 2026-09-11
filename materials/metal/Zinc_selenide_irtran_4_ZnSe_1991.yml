@@ -1,0 +1,134 @@
+TAGS:
+  - vl
+  - 'category:metal'
+  - 'spectrum:Infrared'
+  - 'state:Solid'
+REFERENCES: |
+COMMENTS: |
+  VirtualLab material: Zinc_selenide(irtran-4)-ZnSe_(1991)
+  Dispersion from VirtualLab SampledRefractiveIndex table.
+  Absorption: tabulated k from sampled alpha (α→k same points).
+CONDITIONS: |
+DATA:
+  type: isotropic_dispersion
+  T_ref_C: 20.0
+  refractive_index_absolute: true
+  n: 
+    type: tabulated
+    curve: 
+      type: tabulated_curve
+      x: 
+        - 2.9997599995113
+        - 3.99935015593655
+        - 4.99918996865745
+        - 6.00097018832457
+        - 7.00055989000248
+        - 7.99871031631483
+        - 8.99709993973374
+        - 9.99838994175661
+        - 11.0008995761746
+        - 12.0019003588823
+        - 13.0272001115372
+        - 13.9994999699411
+        - 28.5734004137339
+        - 33.3280004269909
+        - 39.9935997847933
+        - 44.4372999481857
+        - 47.6114000775851
+        - 48.7725992570631
+        - 49.9919005960692
+        - 57.1335986023769
+        - 66.6558989905752
+      x_unit: um
+      interpolator: linear
+      endpoint_low: clamp
+      endpoint_high: clamp
+      interpolator_params: {}
+      channels: 
+        n: 
+          - 2.4449999332428
+          - 2.43799996376038
+          - 2.43400001525879
+          - 2.4300000667572
+          - 2.42499995231628
+          - 2.42199993133545
+          - 2.41700005531311
+          - 2.41000008583069
+          - 2.40499997138977
+          - 2.39800000190735
+          - 2.39000010490417
+          - 2.38000011444092
+          - 2.0
+          - 2.0
+          - 0.200000002980232
+          - 0.5
+          - 2.5
+          - 5.0
+          - 8.39999961853027
+          - 3.5
+          - 3.40000009536743
+  k: 
+    type: tabulated
+    curve: 
+      type: tabulated_curve
+      x: 
+        - 2.9997599995113
+        - 3.99935015593655
+        - 4.99918996865745
+        - 6.00097018832457
+        - 7.00055989000248
+        - 7.99871031631483
+        - 8.99709993973374
+        - 9.99838994175661
+        - 11.0008995761746
+        - 12.0019003588823
+        - 13.0272001115372
+        - 13.9994999699411
+        - 28.5734004137339
+        - 33.3280004269909
+        - 39.9935997847933
+        - 44.4372999481857
+        - 47.6114000775851
+        - 48.7725992570631
+        - 49.9919005960692
+        - 57.1335986023769
+        - 66.6558989905752
+      x_unit: um
+      interpolator: linear
+      endpoint_low: clamp
+      endpoint_high: clamp
+      interpolator_params: {}
+      channels: 
+        k: 
+          - 0.0
+          - 0.0
+          - 0.0
+          - 0.0
+          - 0.0
+          - 0.0
+          - 0.0
+          - 0.0
+          - 0.0
+          - 0.0
+          - 0.0
+          - 0.0
+          - 0.0
+          - 0.0
+          - 1.50000000520685
+          - 2.79999997218607
+          - 7.90000000794859
+          - 4.80000003233137
+          - 3.19999992453792
+          - 0.399999976012968
+          - 0.499999976076546
+  thermal_dispersion: 
+    type: schott_formula_a
+    coefficients: 
+      - "NaN"
+      - "NaN"
+      - "NaN"
+      - "NaN"
+      - "NaN"
+      - "NaN"
+  partial_pressure_water_Pa: "NaN"
+  name: vl/Zinc_selenide_irtran_4_ZnSe_1991

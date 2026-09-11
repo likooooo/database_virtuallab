@@ -1,0 +1,91 @@
+TAGS:
+  - vl
+  - 'vendor:sumita'
+  - 'spectrum:Infrared'
+  - 'category:glass'
+  - 'state:Solid'
+REFERENCES: |
+  Imported from ZEMAX - Glass Catalog file: Sumita_2016.agf
+COMMENTS: |
+  VirtualLab material: K-BOC20_Sumita_2016
+  Absorption: tabulated k from sampled alpha (α→k same points).
+  DispersionFormula Schott → formula_vl_schott
+CONDITIONS: |
+DATA:
+  type: isotropic_dispersion
+  T_ref_C: 20.0
+  refractive_index_absolute: false
+  n: 
+    type: analytic_formula
+    formula: formula_vl_schott
+    wl_min: 0.36
+    wl_max: 1.55
+    coefficients: 
+      - 3.8410887
+      - -0.015801048
+      - 0.055983447
+      - 0.0030905124
+      - -0.00016655999
+      - 2.7794823e-5
+  k: 
+    type: tabulated
+    curve: 
+      type: tabulated_curve
+      x: 
+        - 0.37
+        - 0.38
+        - 0.39
+        - 0.4
+        - 0.42
+        - 0.44
+        - 0.46
+        - 0.48
+        - 0.5
+        - 0.55
+        - 0.6
+        - 0.65
+        - 0.7
+        - 0.8
+        - 1.06
+        - 1.5
+        - 2.0
+      x_unit: um
+      interpolator: linear
+      endpoint_low: clamp
+      endpoint_high: clamp
+      interpolator_params: {}
+      channels: 
+        k: 
+          - 1.12378011823649e-5
+          - 6.3615743443147e-6
+          - 3.98410763739442e-6
+          - 2.68644017017977e-6
+          - 1.37864534634202e-6
+          - 8.29795211202858e-7
+          - 5.56355739971074e-7
+          - 3.98205749257821e-7
+          - 2.80202082437695e-7
+          - 1.1979718488225e-7
+          - 6.73174052182956e-8
+          - 5.19857205015999e-8
+          - 3.35232085474263e-8
+          - 2.55158566974556e-8
+          - 3.38085101241287e-8
+          - 4.78422313077293e-8
+          - 1.11800219053506e-7
+  thermal_dispersion: 
+    type: schott_formula_a
+    coefficients: 
+      - -3.96e-7
+      - 1.14e-8
+      - -3.48e-10
+      - 1.0e-6
+      - 9.73e-10
+      - 2.75e-7
+  partial_pressure_water_Pa: "NaN"
+  relative_air: 
+    $ref: vl/Air_Zemax_OS
+  nd: 2.0054
+  Vd: 27.7
+  density: 4.95
+  name: vl/K_BOC20_Sumita_2016

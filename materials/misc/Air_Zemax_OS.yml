@@ -1,0 +1,43 @@
+TAGS:
+  - vl
+  - 'category:misc'
+  - 'spectrum:Infrared'
+  - 'state:GasOrVacuum'
+REFERENCES: |
+COMMENTS: |
+  VirtualLab material: Air (Zemax OS)
+  Zemax air: using standard 5 formula coeffs; dump params are T/P not coeffs.
+CONDITIONS: |
+DATA:
+  type: isotropic_dispersion
+  T_ref_C: 20.0
+  refractive_index_absolute: true
+  n: 
+    type: analytic_formula_gas
+    formula: formula_vl_gases_zemax
+    wl_min: 0.193
+    wl_max: 50.0
+    coefficients: 
+      - 287.6155
+      - 1.62887
+      - 0.0136
+      - 1.0e-6
+      - 0.003661
+  k: 
+    type: analytic_formula
+    formula: formula_vl_constant
+    wl_min: "-Infinity"
+    wl_max: "Infinity"
+    coefficients: 
+      - 0.0
+  thermal_dispersion: 
+    type: schott_formula_a
+    coefficients: 
+      - "NaN"
+      - "NaN"
+      - "NaN"
+      - "NaN"
+      - "NaN"
+      - "NaN"
+  partial_pressure_water_Pa: "NaN"
+  name: vl/Air_Zemax_OS

@@ -1,0 +1,71 @@
+TAGS:
+  - vl
+  - 'category:misc'
+  - 'spectrum:Infrared'
+  - 'state:Solid'
+REFERENCES: |
+COMMENTS: |
+  VirtualLab material: PolyMethylMethAcrylate-PMMA
+  Dispersion from VirtualLab SampledRefractiveIndex table.
+CONDITIONS: |
+DATA:
+  type: isotropic_dispersion
+  T_ref_C: 20.0
+  refractive_index_absolute: true
+  n: 
+    type: tabulated
+    curve: 
+      type: tabulated_curve
+      x: 
+        - 0.365
+        - 0.4047
+        - 0.4358
+        - 0.48
+        - 0.4861
+        - 0.5461
+        - 0.5876
+        - 0.5893
+        - 0.6439
+        - 0.6563
+        - 0.7065
+        - 0.8521
+        - 1.014
+      x_unit: um
+      interpolator: linear
+      endpoint_low: clamp
+      endpoint_high: clamp
+      interpolator_params: {}
+      channels: 
+        n: 
+          - 1.5136
+          - 1.5066
+          - 1.5026
+          - 1.4983
+          - 1.4978
+          - 1.4938
+          - 1.4918
+          - 1.4917
+          - 1.4896
+          - 1.48919999599457
+          - 1.48780000209808
+          - 1.485
+          - 1.4831
+  k: 
+    type: analytic_formula
+    formula: formula_vl_constant
+    wl_min: "-Infinity"
+    wl_max: "Infinity"
+    coefficients: 
+      - 0.0
+  thermal_dispersion: 
+    type: schott_formula_a
+    coefficients: 
+      - -0.00026
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  partial_pressure_water_Pa: "NaN"
+  Vd: 57.4
+  name: vl/PolyMethylMethAcrylate_PMMA

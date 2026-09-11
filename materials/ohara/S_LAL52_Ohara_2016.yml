@@ -1,0 +1,100 @@
+TAGS:
+  - vl
+  - 'vendor:ohara'
+  - 'category:glass'
+  - 'state:Solid'
+REFERENCES: |
+  Imported from ZEMAX - Glass Catalog file: Ohara_2016.agf
+COMMENTS: |
+  VirtualLab material: S-LAL52_Ohara_2016
+  Absorption: tabulated k from sampled alpha (α→k same points).
+  DispersionFormula Schott → formula_vl_schott
+CONDITIONS: |
+DATA:
+  type: isotropic_dispersion
+  T_ref_C: 25.0
+  refractive_index_absolute: false
+  n: 
+    type: analytic_formula
+    formula: formula_vl_schott
+    wl_min: 0.28
+    wl_max: 2.4
+    coefficients: 
+      - 2.7418702
+      - -0.012719153
+      - 0.016306977
+      - 0.00061414226
+      - -4.8242632e-5
+      - 2.8875864e-6
+  k: 
+    type: tabulated
+    curve: 
+      type: tabulated_curve
+      x: 
+        - 0.28
+        - 0.29
+        - 0.3
+        - 0.31
+        - 0.32
+        - 0.33
+        - 0.34
+        - 0.35
+        - 0.36
+        - 0.37
+        - 0.38
+        - 0.39
+        - 0.4
+        - 0.42
+        - 0.44
+        - 0.46
+        - 0.48
+        - 0.5
+        - 0.55
+        - 0.6
+        - 0.65
+        - 0.7
+      x_unit: um
+      interpolator: linear
+      endpoint_low: clamp
+      endpoint_high: clamp
+      interpolator_params: {}
+      channels: 
+        k: 
+          - 8.71664918324343e-6
+          - 5.31378309187585e-6
+          - 3.72577205342337e-6
+          - 2.66131729907086e-6
+          - 1.81653057295597e-6
+          - 1.21333125009571e-6
+          - 7.78362405783569e-7
+          - 4.8561105965586e-7
+          - 2.79640156020595e-7
+          - 1.72801911668899e-7
+          - 1.10869832577473e-7
+          - 8.17590909717786e-8
+          - 6.10608106523754e-8
+          - 4.71221836528069e-8
+          - 3.8728897845698e-8
+          - 2.94022760757958e-8
+          - 2.29873430039494e-8
+          - 1.59474104359097e-8
+          - 8.7622870808219e-9
+          - 1.43454738643419e-8
+          - 1.55409300197037e-8
+          - 1.11520017392279e-8
+  thermal_dispersion: 
+    type: schott_formula_a
+    coefficients: 
+      - -4.1e-6
+      - 1.15e-8
+      - 3.8e-11
+      - 2.44e-7
+      - 2.82e-10
+      - 2.99e-7
+  partial_pressure_water_Pa: "NaN"
+  relative_air: 
+    $ref: vl/Air_Zemax_OS
+  nd: 1.669999
+  Vd: 57.327972
+  density: 3.96
+  name: vl/S_LAL52_Ohara_2016

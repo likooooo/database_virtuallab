@@ -1,0 +1,89 @@
+TAGS:
+  - vl
+  - 'vendor:sumita'
+  - 'spectrum:Infrared'
+  - 'category:glass'
+  - 'state:Solid'
+REFERENCES: |
+  Imported from ZEMAX - Glass Catalog file: Sumita_2016.agf
+COMMENTS: |
+  VirtualLab material: K-PSFn2(M)_Sumita_2016
+  Absorption: tabulated k from sampled alpha (α→k same points).
+  DispersionFormula Schott → formula_vl_schott
+CONDITIONS: |
+DATA:
+  type: isotropic_dispersion
+  T_ref_C: 20.0
+  refractive_index_absolute: false
+  n: 
+    type: analytic_formula
+    formula: formula_vl_schott
+    wl_min: 0.4
+    wl_max: 1.55
+    coefficients: 
+      - 3.7527514
+      - -0.013079452
+      - 0.07043447
+      - 0.0041015753
+      - -0.00012706916
+      - 4.6413732e-5
+  k: 
+    type: tabulated
+    curve: 
+      type: tabulated_curve
+      x: 
+        - 0.38
+        - 0.39
+        - 0.4
+        - 0.42
+        - 0.44
+        - 0.46
+        - 0.48
+        - 0.5
+        - 0.55
+        - 0.6
+        - 0.65
+        - 0.7
+        - 0.8
+        - 1.06
+        - 1.5
+        - 2.0
+      x_unit: um
+      interpolator: linear
+      endpoint_low: clamp
+      endpoint_high: clamp
+      interpolator_params: {}
+      channels: 
+        k: 
+          - 2.14562104804429e-5
+          - 1.13755727056845e-5
+          - 6.6763785569854e-6
+          - 2.94079949978537e-6
+          - 1.62537806943043e-6
+          - 1.08390771843996e-6
+          - 7.74284206798987e-7
+          - 5.55241251742992e-7
+          - 2.35314829122824e-7
+          - 2.24391350727652e-7
+          - 2.60586101270055e-7
+          - 1.8661540692882e-7
+          - 8.50528556581853e-8
+          - 5.62910563980074e-8
+          - 7.96571552801991e-8
+          - 3.19268652832631e-7
+  thermal_dispersion: 
+    type: schott_formula_a
+    coefficients: 
+      - 8.11e-6
+      - 2.15e-8
+      - -1.06e-10
+      - 2.16e-6
+      - 2.01e-9
+      - 2.91e-7
+  partial_pressure_water_Pa: "NaN"
+  relative_air: 
+    $ref: vl/Air_Zemax_OS
+  nd: 1.9967
+  Vd: 20.6
+  density: 5.48
+  name: vl/K_PSFn2_M_Sumita_2016

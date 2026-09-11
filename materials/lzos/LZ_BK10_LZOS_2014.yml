@@ -1,0 +1,122 @@
+TAGS:
+  - vl
+  - 'vendor:lzos'
+  - 'spectrum:Infrared'
+  - 'category:glass'
+  - 'state:Solid'
+REFERENCES: |
+  Imported from ZEMAX - Glass Catalog file: LZOS_2014.agf
+COMMENTS: |
+  VirtualLab material: LZ_BK10_LZOS_2014
+  Absorption: tabulated k from sampled alpha (α→k same points).
+  DispersionFormula PowerSeries → formula_vl_power_series
+CONDITIONS: |
+DATA:
+  type: isotropic_dispersion
+  T_ref_C: 20.0
+  refractive_index_absolute: false
+  n: 
+    type: analytic_formula
+    formula: formula_vl_power_series
+    wl_min: 0.365
+    wl_max: 2.3254
+    coefficients: 
+      - 2.42043058
+      - -0.00783635639
+      - -0.000169401521
+      - 4.19375429e-6
+      - 0.0146212502
+      - 0.00011274048
+      - 1.89649511e-5
+      - -6.69731826e-7
+      - 0.0
+      - 0.0
+  k: 
+    type: tabulated
+    curve: 
+      type: tabulated_curve
+      x: 
+        - 0.32
+        - 0.34
+        - 0.36
+        - 0.38
+        - 0.4
+        - 0.42
+        - 0.44
+        - 0.46
+        - 0.48
+        - 0.5
+        - 0.52
+        - 0.54
+        - 0.56
+        - 0.58
+        - 0.6
+        - 0.62
+        - 0.64
+        - 0.66
+        - 0.68
+        - 0.7
+        - 0.75
+        - 0.8
+        - 0.9
+        - 1.0
+        - 1.05
+        - 1.1
+        - 1.2
+        - 1.3
+        - 1.4
+        - 1.5
+      x_unit: um
+      interpolator: linear
+      endpoint_low: clamp
+      endpoint_high: clamp
+      interpolator_params: {}
+      channels: 
+        k: 
+          - 4.74747777356197e-6
+          - 1.3285285300194e-6
+          - 4.68954761640933e-7
+          - 2.09710747040268e-7
+          - 7.08099725211046e-8
+          - 6.07085999429672e-8
+          - 4.22782155190448e-8
+          - 2.94022760757958e-8
+          - 2.29873430039494e-8
+          - 1.99442702167984e-8
+          - 1.65853068533461e-8
+          - 1.72232032707825e-8
+          - 2.23375826428142e-8
+          - 2.77763727964389e-8
+          - 2.87341787549368e-8
+          - 3.46580679065868e-8
+          - 3.57760700971218e-8
+          - 3.68940722876569e-8
+          - 3.8012074478192e-8
+          - 3.9130076668727e-8
+          - 4.7938493601841e-8
+          - 6.39824252327383e-8
+          - 9.37161250069536e-8
+          - 1.12195675363826e-7
+          - 1.26284033692411e-7
+          - 1.23415242900209e-7
+          - 1.34634810436591e-7
+          - 1.45854377972974e-7
+          - 1.68378711589882e-7
+          - 2.04667195021825e-7
+  thermal_dispersion: 
+    type: schott_formula_a
+    coefficients: 
+      - 3.325e-6
+      - 1.7678e-8
+      - -6.2606e-14
+      - 6.4516e-7
+      - 1.6376e-10
+      - 1.13e-7
+  partial_pressure_water_Pa: "NaN"
+  relative_air: 
+    $ref: vl/Air_Zemax_OS
+  nd: 1.56889
+  Vd: 56.062614
+  density: 3.12
+  glass_code: 'alpha(*E-006)=TCE+0.67*(T-20)'
+  name: vl/LZ_BK10_LZOS_2014

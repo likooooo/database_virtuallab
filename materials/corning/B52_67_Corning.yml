@@ -1,0 +1,98 @@
+TAGS:
+  - vl
+  - 'vendor:corning'
+  - 'spectrum:Infrared'
+  - 'category:glass'
+  - 'state:Solid'
+REFERENCES: |
+COMMENTS: |
+  VirtualLab material: B52-67_Corning
+  Absorption: tabulated k from sampled alpha (α→k same points).
+  DispersionFormula Schott → formula_vl_schott
+CONDITIONS: |
+DATA:
+  type: isotropic_dispersion
+  T_ref_C: 20.0
+  refractive_index_absolute: false
+  n: 
+    type: analytic_formula
+    formula: formula_vl_schott
+    wl_min: 0.34
+    wl_max: 1.8
+    coefficients: 
+      - 2.377061
+      - -0.006667104
+      - 0.0112323
+      - 0.0002814452
+      - -1.927477e-5
+      - 1.857631e-6
+  k: 
+    type: tabulated
+    curve: 
+      type: tabulated_curve
+      x: 
+        - 0.34
+        - 0.35
+        - 0.36
+        - 0.37
+        - 0.38
+        - 0.39
+        - 0.4
+        - 0.42
+        - 0.44
+        - 0.46
+        - 0.48
+        - 0.5
+        - 0.55
+        - 0.6
+        - 0.7
+        - 0.8
+        - 1.0
+        - 1.2
+        - 1.4
+        - 1.6
+        - 1.8
+      x_unit: um
+      interpolator: linear
+      endpoint_low: clamp
+      endpoint_high: clamp
+      interpolator_params: {}
+      channels: 
+        k: 
+          - 2.54764811079223e-6
+          - 4.52471966675676e-6
+          - 1.74937181150902e-6
+          - 7.31561289744222e-7
+          - 3.320739962504e-7
+          - 1.72284882701631e-7
+          - 1.068145594576e-7
+          - 6.41138511849941e-8
+          - 5.29190236425342e-8
+          - 4.04893022932297e-8
+          - 3.45331008149074e-8
+          - 2.79500547633764e-8
+          - 2.19386972384782e-8
+          - 2.39331242601581e-8
+          - 3.35232085474263e-8
+          - 2.55158566974556e-8
+          - 2.39091231072365e-8
+          - 1.91177172672478e-8
+          - 1.11464201558437e-8
+          - 3.82545969715784e-8
+          - 8.62025362648103e-8
+  thermal_dispersion: 
+    type: schott_formula_a
+    coefficients: 
+      - -1.6e-5
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  partial_pressure_water_Pa: "NaN"
+  relative_air: 
+    $ref: vl/Air_Zemax_OS
+  nd: 1.5522
+  Vd: 67.029999
+  density: 3.71
+  name: vl/B52_67_Corning

@@ -1,0 +1,206 @@
+TAGS:
+  - vl
+  - 'category:metal'
+  - 'spectrum:Infrared'
+  - 'state:Solid'
+REFERENCES: |
+COMMENTS: |
+  VirtualLab material: Iron-Fe_(1994)
+  Dispersion from VirtualLab SampledRefractiveIndex table.
+  Absorption: tabulated k from sampled alpha (α→k same points).
+CONDITIONS: |
+DATA:
+  type: isotropic_dispersion
+  T_ref_C: 20.0
+  refractive_index_absolute: true
+  n: 
+    type: tabulated
+    curve: 
+      type: tabulated_curve
+      x: 
+        - 0.000124
+        - 0.000175
+        - 0.000343
+        - 0.000787
+        - 0.0014
+        - 0.0015
+        - 0.00388
+        - 0.00587
+        - 0.00812
+        - 0.0132
+        - 0.0191
+        - 0.0219
+        - 0.023
+        - 0.024
+        - 0.0413
+        - 0.0559
+        - 0.0606
+        - 0.0689
+        - 0.0785
+        - 0.1078
+        - 0.1127
+        - 0.12
+        - 0.155
+        - 0.248
+        - 0.4133
+        - 0.539
+        - 0.5903
+        - 0.8265
+        - 1.0
+        - 2.5
+        - 5.0
+        - 10.0
+        - 20.0
+        - 33.3
+        - 50.0
+        - 80.0
+        - 125.0
+        - 200.0
+        - 287.0
+      x_unit: um
+      interpolator: linear
+      endpoint_low: clamp
+      endpoint_high: clamp
+      interpolator_params: {}
+      channels: 
+        n: 
+          - 1.0
+          - 1.0
+          - 1.0
+          - 1.0
+          - 1.0
+          - 1.0
+          - 0.99
+          - 0.98
+          - 0.97
+          - 0.94
+          - 0.9
+          - 0.98
+          - 1.11
+          - 0.97
+          - 0.82
+          - 0.71
+          - 0.74
+          - 0.78
+          - 0.77
+          - 0.93
+          - 0.91
+          - 0.87
+          - 0.94
+          - 1.14
+          - 1.88
+          - 2.65
+          - 2.8
+          - 3.05
+          - 3.23
+          - 4.13
+          - 4.59
+          - 5.81
+          - 9.87
+          - 22.5
+          - 45.7
+          - 75.2
+          - 120.0
+          - 183.0
+          - 238.0
+  k: 
+    type: tabulated
+    curve: 
+      type: tabulated_curve
+      x: 
+        - 0.000124
+        - 0.000175
+        - 0.000343
+        - 0.000787
+        - 0.0014
+        - 0.0015
+        - 0.00388
+        - 0.00587
+        - 0.00812
+        - 0.0132
+        - 0.0191
+        - 0.0219
+        - 0.023
+        - 0.024
+        - 0.0413
+        - 0.0559
+        - 0.0606
+        - 0.0689
+        - 0.0785
+        - 0.1078
+        - 0.1127
+        - 0.12
+        - 0.155
+        - 0.248
+        - 0.4133
+        - 0.539
+        - 0.5903
+        - 0.8265
+        - 1.0
+        - 2.5
+        - 5.0
+        - 10.0
+        - 20.0
+        - 33.3
+        - 50.0
+        - 80.0
+        - 125.0
+        - 200.0
+        - 287.0
+      x_unit: um
+      interpolator: linear
+      endpoint_low: clamp
+      endpoint_high: clamp
+      interpolator_params: {}
+      channels: 
+        k: 
+          - 0.0
+          - 0.0
+          - 0.0
+          - 0.0
+          - 0.0
+          - 0.0
+          - 0.0
+          - 0.01
+          - 0.02
+          - 0.05
+          - 0.12
+          - 0.19
+          - 0.18
+          - 0.05
+          - 0.13
+          - 0.35
+          - 0.42
+          - 0.51
+          - 0.61
+          - 0.84
+          - 0.83
+          - 0.91
+          - 1.18
+          - 1.87
+          - 3.12
+          - 3.34
+          - 3.34
+          - 3.77
+          - 4.35
+          - 8.59
+          - 15.4
+          - 30.4
+          - 60.1
+          - 100.0
+          - 141.0
+          - 158.0
+          - 207.0
+          - 260.0
+          - 306.0
+  thermal_dispersion: 
+    type: schott_formula_a
+    coefficients: 
+      - "NaN"
+      - "NaN"
+      - "NaN"
+      - "NaN"
+      - "NaN"
+      - "NaN"
+  partial_pressure_water_Pa: "NaN"
+  name: vl/Iron_Fe_1994

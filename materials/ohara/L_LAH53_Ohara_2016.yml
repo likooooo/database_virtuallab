@@ -1,0 +1,89 @@
+TAGS:
+  - vl
+  - 'vendor:ohara'
+  - 'category:glass'
+  - 'state:Solid'
+REFERENCES: |
+  Imported from ZEMAX - Glass Catalog file: Ohara_2016.agf
+COMMENTS: |
+  VirtualLab material: L-LAH53_Ohara_2016
+  Absorption: tabulated k from sampled alpha (α→k same points).
+  DispersionFormula Sellmeier1 → formula_vl_sellmeier_1
+CONDITIONS: |
+DATA:
+  type: isotropic_dispersion
+  T_ref_C: 25.0
+  refractive_index_absolute: false
+  n: 
+    type: analytic_formula
+    formula: formula_vl_sellmeier_1
+    wl_min: 0.34
+    wl_max: 0.7
+    coefficients: 
+      - 1.87409991
+      - 0.00993318344
+      - 0.297921402
+      - 0.0405501825
+      - 1.35064285
+      - 100.5022
+  k: 
+    type: tabulated
+    curve: 
+      type: tabulated_curve
+      x: 
+        - 0.34
+        - 0.35
+        - 0.36
+        - 0.37
+        - 0.38
+        - 0.39
+        - 0.4
+        - 0.42
+        - 0.44
+        - 0.46
+        - 0.48
+        - 0.5
+        - 0.55
+        - 0.6
+        - 0.65
+        - 0.7
+      x_unit: um
+      interpolator: linear
+      endpoint_low: clamp
+      endpoint_high: clamp
+      interpolator_params: {}
+      channels: 
+        k: 
+          - 5.52009090760374e-6
+          - 2.04425939009416e-6
+          - 1.02179844728773e-6
+          - 5.13360263064767e-7
+          - 2.91843550299354e-7
+          - 1.92031638972035e-7
+          - 1.33257900418318e-7
+          - 8.11923441708792e-8
+          - 6.00357105397353e-8
+          - 4.41924525241853e-8
+          - 3.45331008149074e-8
+          - 1.99442702167984e-8
+          - 8.7622870808219e-9
+          - 9.55885863362389e-9
+          - 5.17512364378457e-9
+          - 5.57321007792184e-9
+  thermal_dispersion: 
+    type: schott_formula_a
+    coefficients: 
+      - 7.31e-6
+      - 1.04e-8
+      - -8.93e-12
+      - 7.66e-7
+      - 7.96e-10
+      - 2.29e-7
+  partial_pressure_water_Pa: "NaN"
+  relative_air: 
+    $ref: vl/Air_Zemax_OS
+  nd: 1.806249
+  Vd: 40.907302
+  density: 4.49
+  glass_code: Low
+  name: vl/L_LAH53_Ohara_2016

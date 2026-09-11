@@ -1,0 +1,118 @@
+TAGS:
+  - vl
+  - 'vendor:cdgm'
+  - 'spectrum:Infrared'
+  - 'category:glass'
+  - 'state:Solid'
+REFERENCES: |
+  Imported from ZEMAX - Glass Catalog file: CDGM_2016.agf
+COMMENTS: |
+  VirtualLab material: HWS1_CDGM_2016
+  Absorption: tabulated k from sampled alpha (α→k same points).
+  DispersionFormula Herzberger → formula_vl_herzberger
+CONDITIONS: |
+DATA:
+  type: isotropic_dispersion
+  T_ref_C: 20.0
+  refractive_index_absolute: false
+  n: 
+    type: analytic_formula
+    formula: formula_vl_herzberger
+    wl_min: 0.85
+    wl_max: 20.0
+    coefficients: 
+      - 2.6209608
+      - 0.065486281
+      - 0.098915134
+      - -0.0002050585
+      - 3.4955962e-7
+      - -1.2725532e-9
+  k: 
+    type: tabulated
+    curve: 
+      type: tabulated_curve
+      x: 
+        - 0.85
+        - 0.9
+        - 0.95
+        - 1.0
+        - 1.5
+        - 2.0
+        - 2.5
+        - 3.0
+        - 3.5
+        - 4.0
+        - 4.5
+        - 5.0
+        - 5.5
+        - 6.0
+        - 6.5
+        - 7.0
+        - 7.5
+        - 8.0
+        - 8.5
+        - 9.0
+        - 9.5
+        - 10.0
+        - 11.0
+        - 12.0
+        - 13.0
+        - 14.0
+        - 15.0
+        - 16.0
+        - 17.0
+        - 18.0
+        - 19.0
+      x_unit: um
+      interpolator: linear
+      endpoint_low: clamp
+      endpoint_high: clamp
+      interpolator_params: {}
+      channels: 
+        k: 
+          - 0.000106417834189099
+          - 6.58490036572151e-5
+          - 3.44466217579048e-5
+          - 2.42968307154031e-5
+          - 2.61713371133567e-5
+          - 3.33071783812071e-5
+          - 4.13320855234516e-5
+          - 5.06886125544921e-5
+          - 5.80760806151481e-5
+          - 6.61313368375225e-5
+          - 7.5759352222403e-5
+          - 8.41770580248922e-5
+          - 9.05992662915583e-5
+          - 9.88355632271545e-5
+          - 0.000107071860162751
+          - 0.000115308157098347
+          - 0.000125810338255992
+          - 0.000131780750969539
+          - 0.000139505779094133
+          - 0.000148253344840732
+          - 0.000156489641776328
+          - 0.000164725938711924
+          - 0.000188543383863052
+          - 0.000255989632107928
+          - 0.000377497426873153
+          - 0.000266286162432401
+          - 0.000303882696169128
+          - 0.000486103533495334
+          - 0.00139581508255115
+          - 0.00246516479071881
+          - 0.00241475772503203
+  thermal_dispersion: 
+    type: schott_formula_a
+    coefficients: 
+      - "NaN"
+      - "NaN"
+      - "NaN"
+      - "NaN"
+      - "NaN"
+      - "NaN"
+  partial_pressure_water_Pa: "NaN"
+  relative_air: 
+    $ref: vl/Air_Zemax_OS
+  density: 4.68
+  glass_code: Infrared
+  name: vl/HWS1_CDGM_2016

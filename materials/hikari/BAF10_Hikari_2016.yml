@@ -1,0 +1,86 @@
+TAGS:
+  - vl
+  - 'vendor:hikari'
+  - 'category:glass'
+  - 'state:Solid'
+REFERENCES: |
+  Imported from ZEMAX - Glass Catalog file: Hikari_2016.agf
+COMMENTS: |
+  VirtualLab material: BAF10_Hikari_2016
+  Absorption: tabulated k from sampled alpha (α→k same points).
+  DispersionFormula Schott → formula_vl_schott
+CONDITIONS: |
+DATA:
+  type: isotropic_dispersion
+  T_ref_C: 20.0
+  refractive_index_absolute: false
+  n: 
+    type: analytic_formula
+    formula: formula_vl_schott
+    wl_min: 0.4
+    wl_max: 0.7
+    coefficients: 
+      - 2.708194
+      - 0.004899893
+      - 0.03147874
+      - -0.002304342
+      - 0.0003414449
+      - -1.465281e-5
+  k: 
+    type: tabulated
+    curve: 
+      type: tabulated_curve
+      x: 
+        - 0.35
+        - 0.36
+        - 0.37
+        - 0.38
+        - 0.39
+        - 0.4
+        - 0.42
+        - 0.44
+        - 0.46
+        - 0.48
+        - 0.5
+        - 0.55
+        - 0.6
+        - 0.65
+        - 0.7
+      x_unit: um
+      interpolator: linear
+      endpoint_low: clamp
+      endpoint_high: clamp
+      interpolator_params: {}
+      channels: 
+        k: 
+          - 8.96524997771858e-6
+          - 3.97144080274773e-6
+          - 1.81427779414923e-6
+          - 9.10524914227393e-7
+          - 4.68082064436926e-7
+          - 2.7928163827271e-7
+          - 1.32957764160505e-7
+          - 1.03042295196684e-7
+          - 8.14314683992703e-8
+          - 5.77298439736737e-8
+          - 3.59719800155286e-8
+          - 2.19386972384782e-8
+          - 1.91368925230917e-8
+          - 2.07316335666827e-8
+          - 5.57321007792184e-9
+  thermal_dispersion: 
+    type: schott_formula_a
+    coefficients: 
+      - "NaN"
+      - "NaN"
+      - "NaN"
+      - "NaN"
+      - "NaN"
+      - "NaN"
+  partial_pressure_water_Pa: "NaN"
+  relative_air: 
+    $ref: vl/Air_Zemax_OS
+  nd: 1.67003
+  Vd: 47.049915
+  density: 3.83
+  name: vl/BAF10_Hikari_2016

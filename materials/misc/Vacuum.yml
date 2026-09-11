@@ -1,0 +1,38 @@
+TAGS:
+  - vl
+  - 'category:misc'
+  - 'state:GasOrVacuum'
+REFERENCES: |
+COMMENTS: |
+  VirtualLab material: Vacuum
+  DispersionFormula ConstantRefractiveIndex → formula_vl_constant
+CONDITIONS: |
+DATA:
+  type: isotropic_dispersion
+  T_ref_C: 20.0
+  refractive_index_absolute: true
+  n: 
+    type: analytic_formula
+    formula: formula_vl_constant
+    wl_min: 1.0e-6
+    wl_max: 100000.0
+    coefficients: 
+      - 1.0
+  k: 
+    type: analytic_formula
+    formula: formula_vl_constant
+    wl_min: "-Infinity"
+    wl_max: "Infinity"
+    coefficients: 
+      - 0.0
+  thermal_dispersion: 
+    type: schott_formula_a
+    coefficients: 
+      - "NaN"
+      - "NaN"
+      - "NaN"
+      - "NaN"
+      - "NaN"
+      - "NaN"
+  partial_pressure_water_Pa: "NaN"
+  name: vl/Vacuum

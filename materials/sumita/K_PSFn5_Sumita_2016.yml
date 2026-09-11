@@ -1,0 +1,91 @@
+TAGS:
+  - vl
+  - 'vendor:sumita'
+  - 'spectrum:Infrared'
+  - 'category:glass'
+  - 'state:Solid'
+REFERENCES: |
+  Imported from ZEMAX - Glass Catalog file: Sumita_2016.agf
+COMMENTS: |
+  VirtualLab material: K-PSFn5_Sumita_2016
+  Absorption: tabulated k from sampled alpha (α→k same points).
+  DispersionFormula Schott → formula_vl_schott
+CONDITIONS: |
+DATA:
+  type: isotropic_dispersion
+  T_ref_C: 20.0
+  refractive_index_absolute: false
+  n: 
+    type: analytic_formula
+    formula: formula_vl_schott
+    wl_min: 0.4
+    wl_max: 1.55
+    coefficients: 
+      - 3.4965005
+      - -0.011373234
+      - 0.059139817
+      - 0.0031967827
+      - -9.7424772e-5
+      - 3.2744737e-5
+  k: 
+    type: tabulated
+    curve: 
+      type: tabulated_curve
+      x: 
+        - 0.37
+        - 0.38
+        - 0.39
+        - 0.4
+        - 0.42
+        - 0.44
+        - 0.46
+        - 0.48
+        - 0.5
+        - 0.55
+        - 0.6
+        - 0.65
+        - 0.7
+        - 0.8
+        - 1.06
+        - 1.5
+        - 2.0
+      x_unit: um
+      interpolator: linear
+      endpoint_low: clamp
+      endpoint_high: clamp
+      interpolator_params: {}
+      channels: 
+        k: 
+          - 1.62572042660801e-5
+          - 7.71422140584863e-6
+          - 4.14506703835798e-6
+          - 2.54881036319242e-6
+          - 1.22086956105157e-6
+          - 7.33500401747136e-7
+          - 4.97176747072664e-7
+          - 3.51854485536367e-7
+          - 2.54669116247358e-7
+          - 9.73637122165188e-8
+          - 9.15912159785631e-8
+          - 1.04499223836216e-7
+          - 7.85369727546782e-8
+          - 5.11343931752971e-8
+          - 3.38085101241287e-8
+          - 8.38501642901293e-8
+          - 4.84773343385303e-7
+  thermal_dispersion: 
+    type: schott_formula_a
+    coefficients: 
+      - 3.38e-6
+      - 2.43e-8
+      - -2.21e-10
+      - 2.2e-6
+      - 1.89e-9
+      - 2.77e-7
+  partial_pressure_water_Pa: "NaN"
+  relative_air: 
+    $ref: vl/Air_Zemax_OS
+  nd: 1.9211
+  Vd: 22.4
+  density: 5.22
+  name: vl/K_PSFn5_Sumita_2016

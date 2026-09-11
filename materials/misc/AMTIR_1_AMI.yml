@@ -1,0 +1,121 @@
+TAGS:
+  - vl
+  - 'spectrum:Infrared'
+  - 'category:misc'
+  - 'state:Solid'
+REFERENCES: |
+COMMENTS: |
+  VirtualLab material: AMTIR-1_AMI
+  Dispersion from VirtualLab SampledRefractiveIndex table.
+  Absorption: tabulated k from sampled alpha (α→k same points).
+CONDITIONS: |
+DATA:
+  type: isotropic_dispersion
+  T_ref_C: 25.0
+  refractive_index_absolute: false
+  n: 
+    type: tabulated
+    curve: 
+      type: tabulated_curve
+      x: 
+        - 1.0
+        - 1.064
+        - 1.5
+        - 2.0
+        - 2.4
+        - 3.0
+        - 4.0
+        - 5.0
+        - 6.0
+        - 7.0
+        - 8.0
+        - 9.0
+        - 10.0
+        - 11.0
+        - 12.0
+        - 13.0
+        - 14.0
+      x_unit: um
+      interpolator: linear
+      endpoint_low: clamp
+      endpoint_high: clamp
+      interpolator_params: {}
+      channels: 
+        n: 
+          - 2.5977
+          - 2.58619999885559
+          - 2.5466
+          - 2.5306
+          - 2.525
+          - 2.5192
+          - 2.5146
+          - 2.5117
+          - 2.5092
+          - 2.5068
+          - 2.5042
+          - 2.5013
+          - 2.4981
+          - 2.4946
+          - 2.4905
+          - 2.486
+          - 2.4825
+  k: 
+    type: tabulated
+    curve: 
+      type: tabulated_curve
+      x: 
+        - 1.0
+        - 1.064
+        - 1.5
+        - 2.0
+        - 2.4
+        - 3.0
+        - 4.0
+        - 5.0
+        - 6.0
+        - 7.0
+        - 8.0
+        - 9.0
+        - 10.0
+        - 11.0
+        - 12.0
+        - 13.0
+        - 14.0
+      x_unit: um
+      interpolator: linear
+      endpoint_low: clamp
+      endpoint_high: clamp
+      interpolator_params: {}
+      channels: 
+        k: 
+          - 5.49084553667039e-7
+          - 5.58824836184263e-7
+          - 3.58098621956765e-7
+          - 4.77464829275686e-7
+          - 1.90985931710274e-7
+          - 2.38732414637843e-7
+          - 3.18309886183791e-7
+          - 7.95774715459477e-7
+          - 4.77464829275686e-7
+          - 5.57042300821634e-7
+          - 6.36619772367581e-7
+          - 7.16197243913529e-7
+          - 7.95774715459477e-7
+          - 2.62605656101627e-6
+          - 1.43239448782706e-5
+          - 1.55176069514598e-5
+          - 1.44830998213625e-5
+  thermal_dispersion: 
+    type: schott_formula_a
+    coefficients: 
+      - 7.3e-5
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  partial_pressure_water_Pa: "NaN"
+  relative_air: 
+    $ref: vl/Air_Zemax_OS
+  density: 4.4
+  name: vl/AMTIR_1_AMI

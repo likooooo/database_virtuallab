@@ -1,0 +1,71 @@
+TAGS:
+  - vl
+  - 'category:misc'
+  - 'spectrum:Infrared'
+  - 'state:Solid'
+REFERENCES: |
+COMMENTS: |
+  VirtualLab material: StyreneAcryloNitrile-SAN
+  Dispersion from VirtualLab SampledRefractiveIndex table.
+CONDITIONS: |
+DATA:
+  type: isotropic_dispersion
+  T_ref_C: 20.0
+  refractive_index_absolute: true
+  n: 
+    type: tabulated
+    curve: 
+      type: tabulated_curve
+      x: 
+        - 0.365
+        - 0.4047
+        - 0.4358
+        - 0.48
+        - 0.4861
+        - 0.5461
+        - 0.5876
+        - 0.5893
+        - 0.6439
+        - 0.6563
+        - 0.7065
+        - 0.8521
+        - 1.014
+      x_unit: um
+      interpolator: linear
+      endpoint_low: clamp
+      endpoint_high: clamp
+      interpolator_params: {}
+      channels: 
+        n: 
+          - 1.6125
+          - 1.5971
+          - 1.5886
+          - 1.58
+          - 1.5789999961853
+          - 1.5713
+          - 1.5674
+          - 1.5673
+          - 1.5634
+          - 1.5627
+          - 1.5601
+          - 1.555
+          - 1.5519
+  k: 
+    type: analytic_formula
+    formula: formula_vl_constant
+    wl_min: "-Infinity"
+    wl_max: "Infinity"
+    coefficients: 
+      - 0.0
+  thermal_dispersion: 
+    type: schott_formula_a
+    coefficients: 
+      - -0.00024
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  partial_pressure_water_Pa: "NaN"
+  Vd: 34.8
+  name: vl/StyreneAcryloNitrile_SAN

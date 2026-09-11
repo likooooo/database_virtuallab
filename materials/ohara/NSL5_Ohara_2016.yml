@@ -1,0 +1,93 @@
+TAGS:
+  - vl
+  - 'vendor:ohara'
+  - 'spectrum:Infrared'
+  - 'category:glass'
+  - 'state:Solid'
+REFERENCES: |
+  Imported from ZEMAX - Glass Catalog file: Ohara_2016.agf
+COMMENTS: |
+  VirtualLab material: NSL5_Ohara_2016
+  Absorption: tabulated k from sampled alpha (α→k same points).
+  DispersionFormula Schott → formula_vl_schott
+CONDITIONS: |
+DATA:
+  type: isotropic_dispersion
+  T_ref_C: 25.0
+  refractive_index_absolute: false
+  n: 
+    type: analytic_formula
+    formula: formula_vl_schott
+    wl_min: 0.365
+    wl_max: 0.9
+    coefficients: 
+      - 2.284302
+      - -0.008132863
+      - 0.01240948
+      - -7.446766e-6
+      - 2.86937e-5
+      - -1.237616e-6
+  k: 
+    type: tabulated
+    curve: 
+      type: tabulated_curve
+      x: 
+        - 0.34
+        - 0.35
+        - 0.36
+        - 0.37
+        - 0.38
+        - 0.39
+        - 0.4
+        - 0.42
+        - 0.44
+        - 0.46
+        - 0.48
+        - 0.5
+        - 0.55
+        - 0.6
+        - 0.65
+        - 0.7
+        - 0.8
+        - 0.9
+      x_unit: um
+      interpolator: linear
+      endpoint_low: clamp
+      endpoint_high: clamp
+      interpolator_params: {}
+      channels: 
+        k: 
+          - 2.46265181899662e-7
+          - 1.28242107208567e-7
+          - 6.66597059344707e-8
+          - 4.45000880630401e-8
+          - 4.26343566382539e-8
+          - 2.18010427154336e-8
+          - 1.27579283487278e-8
+          - 1.33958247661642e-8
+          - 1.75509577907826e-8
+          - 1.4671617601037e-8
+          - 1.53095140184734e-8
+          - 1.19545615536182e-8
+          - 8.7622870808219e-9
+          - 1.43454738643419e-8
+          - 2.07316335666827e-8
+          - 1.67363861750655e-8
+          - 1.91272984857892e-8
+          - 2.5110873244126e-8
+  thermal_dispersion: 
+    type: schott_formula_a
+    coefficients: 
+      - -1.9066e-6
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  partial_pressure_water_Pa: "NaN"
+  relative_air: 
+    $ref: vl/Air_Zemax_OS
+  nd: 1.522494
+  Vd: 59.790926
+  density: 2.56
+  name: vl/NSL5_Ohara_2016

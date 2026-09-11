@@ -1,0 +1,89 @@
+TAGS:
+  - vl
+  - 'vendor:sumita'
+  - 'spectrum:Infrared'
+  - 'category:glass'
+  - 'state:Solid'
+REFERENCES: |
+  Imported from ZEMAX - Glass Catalog file: Sumita_2016.agf
+COMMENTS: |
+  VirtualLab material: K-PSFn203(M)_Sumita_2016
+  Absorption: tabulated k from sampled alpha (α→k same points).
+  DispersionFormula Schott → formula_vl_schott
+CONDITIONS: |
+DATA:
+  type: isotropic_dispersion
+  T_ref_C: 20.0
+  refractive_index_absolute: false
+  n: 
+    type: analytic_formula
+    formula: formula_vl_schott
+    wl_min: 0.4
+    wl_max: 1.55
+    coefficients: 
+      - 3.812992
+      - -0.016672868
+      - 0.067171636
+      - 0.0057116528
+      - -0.00042822929
+      - 7.1278944e-5
+  k: 
+    type: tabulated
+    curve: 
+      type: tabulated_curve
+      x: 
+        - 0.38
+        - 0.39
+        - 0.4
+        - 0.42
+        - 0.44
+        - 0.46
+        - 0.48
+        - 0.5
+        - 0.55
+        - 0.6
+        - 0.65
+        - 0.7
+        - 0.8
+        - 1.06
+        - 1.5
+        - 2.0
+      x_unit: um
+      interpolator: linear
+      endpoint_low: clamp
+      endpoint_high: clamp
+      interpolator_params: {}
+      channels: 
+        k: 
+          - 2.34132668109653e-5
+          - 1.3355323404138e-5
+          - 5.19259281314649e-6
+          - 1.00183731964205e-6
+          - 3.07470085705834e-7
+          - 1.47308175080618e-7
+          - 8.94401752428046e-8
+          - 5.31580347863658e-8
+          - 4.38333923632669e-8
+          - 6.3789641743639e-8
+          - 6.91054452222756e-8
+          - 7.44212487009122e-8
+          - 8.50528556581853e-8
+          - 5.62910563980074e-8
+          - 7.96571552801991e-8
+          - 1.06209540373599e-7
+  thermal_dispersion: 
+    type: schott_formula_a
+    coefficients: 
+      - 1.26e-5
+      - 4.23e-8
+      - -4.24e-10
+      - 2.34e-6
+      - 8.67e-10
+      - 3.08e-7
+  partial_pressure_water_Pa: "NaN"
+  relative_air: 
+    $ref: vl/Air_Zemax_OS
+  nd: 2.01105
+  Vd: 20.8
+  density: 6.17
+  name: vl/K_PSFn203_M_Sumita_2016

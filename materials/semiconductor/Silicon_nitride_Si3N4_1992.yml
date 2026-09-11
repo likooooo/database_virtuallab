@@ -1,0 +1,77 @@
+TAGS:
+  - vl
+  - 'category:semiconductor'
+  - 'state:Solid'
+REFERENCES: |
+COMMENTS: |
+  VirtualLab material: Silicon_nitride-Si3N4_(1992)
+  Dispersion from VirtualLab SampledRefractiveIndex table.
+  Absorption: tabulated k from sampled alpha (α→k same points).
+CONDITIONS: |
+DATA:
+  type: isotropic_dispersion
+  T_ref_C: 20.0
+  refractive_index_absolute: true
+  n: 
+    type: tabulated
+    curve: 
+      type: tabulated_curve
+      x: 
+        - 0.0114000000550618
+        - 0.0135500002329536
+        - 0.0171399996418131
+        - 0.0243000002342342
+        - 0.0303800007372956
+        - 0.0356799993994628
+        - 0.0405899989175396
+      x_unit: um
+      interpolator: linear
+      endpoint_low: clamp
+      endpoint_high: clamp
+      interpolator_params: {}
+      channels: 
+        n: 
+          - 0.985459983348846
+          - 0.975179970264435
+          - 0.952359974384308
+          - 0.921480000019073
+          - 0.862299978733063
+          - 0.835099995136261
+          - 0.789900004863739
+  k: 
+    type: tabulated
+    curve: 
+      type: tabulated_curve
+      x: 
+        - 0.0114000000550618
+        - 0.0135500002329536
+        - 0.0171399996418131
+        - 0.0243000002342342
+        - 0.0303800007372956
+        - 0.0356799993994628
+        - 0.0405899989175396
+      x_unit: um
+      interpolator: linear
+      endpoint_low: clamp
+      endpoint_high: clamp
+      interpolator_params: {}
+      channels: 
+        k: 
+          - 0.0166000007010123
+          - 0.00968800001839131
+          - 0.019663000266281
+          - 0.0491549986794396
+          - 0.0727900031082882
+          - 0.124229993836139
+          - 0.165629999388642
+  thermal_dispersion: 
+    type: schott_formula_a
+    coefficients: 
+      - "NaN"
+      - "NaN"
+      - "NaN"
+      - "NaN"
+      - "NaN"
+      - "NaN"
+  partial_pressure_water_Pa: "NaN"
+  name: vl/Silicon_nitride_Si3N4_1992

@@ -1,0 +1,93 @@
+TAGS:
+  - vl
+  - 'vendor:sumita'
+  - 'spectrum:Infrared'
+  - 'category:glass'
+  - 'state:Solid'
+REFERENCES: |
+  Imported from ZEMAX - Glass Catalog file: Sumita_2016.agf
+COMMENTS: |
+  VirtualLab material: K-SFLDn3_Sumita_2016
+  Absorption: tabulated k from sampled alpha (α→k same points).
+  DispersionFormula Schott → formula_vl_schott
+CONDITIONS: |
+DATA:
+  type: isotropic_dispersion
+  T_ref_C: 20.0
+  refractive_index_absolute: false
+  n: 
+    type: analytic_formula
+    formula: formula_vl_schott
+    wl_min: 0.4
+    wl_max: 1.55
+    coefficients: 
+      - 3.2503692
+      - -0.013195714
+      - 0.049790724
+      - 0.0022430157
+      - -7.7567761e-6
+      - 2.1169316e-5
+  k: 
+    type: tabulated
+    curve: 
+      type: tabulated_curve
+      x: 
+        - 0.36
+        - 0.37
+        - 0.38
+        - 0.39
+        - 0.4
+        - 0.42
+        - 0.44
+        - 0.46
+        - 0.48
+        - 0.5
+        - 0.55
+        - 0.6
+        - 0.65
+        - 0.7
+        - 0.8
+        - 1.06
+        - 1.5
+        - 2.0
+      x_unit: um
+      interpolator: linear
+      endpoint_low: clamp
+      endpoint_high: clamp
+      interpolator_params: {}
+      channels: 
+        k: 
+          - 1.97892611697445e-5
+          - 1.23654707194454e-5
+          - 6.01091816705936e-6
+          - 3.20539307754041e-6
+          - 1.87416775552653e-6
+          - 7.58359394332307e-7
+          - 3.72802848350628e-7
+          - 2.26498856223426e-7
+          - 1.55928533154453e-7
+          - 1.12997918783514e-7
+          - 5.28388019310912e-8
+          - 4.31663760186343e-8
+          - 4.67635740201871e-8
+          - 4.47425940283849e-8
+          - 3.19108323468774e-8
+          - 1.68873169194022e-8
+          - 3.58636846608547e-8
+          - 3.54049862605523e-7
+  thermal_dispersion: 
+    type: schott_formula_a
+    coefficients: 
+      - -6.01e-6
+      - 1.26e-8
+      - -1.23e-10
+      - 1.06e-6
+      - 1.37e-9
+      - 2.94e-7
+  partial_pressure_water_Pa: "NaN"
+  relative_air: 
+    $ref: vl/Air_Zemax_OS
+  nd: 1.84666
+  Vd: 23.9
+  density: 3.49
+  name: vl/K_SFLDn3_Sumita_2016

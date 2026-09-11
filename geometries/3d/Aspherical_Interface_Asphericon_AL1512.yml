@@ -1,0 +1,26 @@
+TAGS:
+  - vl
+  - 'category:3d'
+  - 'state:Solid'
+REFERENCES: |
+COMMENTS: |
+  VirtualLab interface: Aspherical Interface Asphericon AL1512
+  Lossy: AsphericalInterface → sphere using Radius only; asphere/conic terms discarded.
+  ConicalConstant=-230.046762
+CONDITIONS: |
+DATA:
+  type: geometry_collection
+  shapes: 
+    - type: sphere
+      radius: 200000.0
+      center: 
+        - 0.0
+        - 0.0
+        - 0.0
+      euler_angles: 
+        - 0.0
+        - 0.0
+        - 0.0
+      material: 
+        $ref: vl/Air
+  name: vl/Aspherical_Interface_Asphericon_AL1512

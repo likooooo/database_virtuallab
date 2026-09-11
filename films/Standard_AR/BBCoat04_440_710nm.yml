@@ -1,0 +1,27 @@
+TAGS:
+  - vl
+  - 'category:Standard-AR'
+  - 'state:Solid'
+REFERENCES: |
+COMMENTS: |
+  VirtualLab coating: BBCoat04_440-710nm
+CONDITIONS: |
+DATA:
+  type: films
+  layers: 
+    - type: coating
+      depth: 0.084893265
+      background_material: 
+        $ref: vl/Cerium_Fluoride_CeF3_ThinFilm
+      is_incoherent: false
+    - type: coating
+      depth: 0.13424387
+      background_material: 
+        $ref: vl/Zirconium_Dioxide_ZrO2_ThinFilm
+      is_incoherent: false
+    - type: coating
+      depth: 0.09968587
+      background_material: 
+        $ref: vl/Magnesium_Fluoride_MgF2_ThinFilm
+      is_incoherent: false
+  name: vl/BBCoat04_440_710nm
