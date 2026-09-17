@@ -1,0 +1,106 @@
+TAGS:
+  - vl
+  - 'vendor:ohara'
+  - 'spectrum:Infrared'
+  - 'category:glass'
+  - 'state:Solid'
+REFERENCES: |
+  Imported from ZEMAX - Glass Catalog file: Ohara_2016.agf
+COMMENTS: |
+  VirtualLab material: S-TIM25_Ohara_2016
+  Absorption: tabulated k from sampled alpha (α→k same points).
+  DispersionFormula Sellmeier1 → formula_vl_sellmeier_1
+CONDITIONS: |
+DATA:
+  type: isotropic_dispersion
+  T_ref_C: 25.0
+  refractive_index_absolute: false
+  n: 
+    type: analytic_formula
+    formula: formula_vl_sellmeier_1
+    wl_min: 0.36
+    wl_max: 2.4
+    coefficients: 
+      - 1.50659233
+      - 0.0109501562
+      - 0.204786135
+      - 0.0574980285
+      - 1.92036668
+      - 178.128535
+  k: 
+    type: tabulated
+    curve: 
+      type: tabulated_curve
+      x: 
+        - 0.36
+        - 0.37
+        - 0.38
+        - 0.39
+        - 0.4
+        - 0.42
+        - 0.44
+        - 0.46
+        - 0.48
+        - 0.5
+        - 0.55
+        - 0.6
+        - 0.65
+        - 0.7
+        - 0.8
+        - 0.9
+        - 1.0
+        - 1.2
+        - 1.4
+        - 1.6
+        - 1.8
+        - 2.0
+        - 2.2
+        - 2.4
+      x_unit: um
+      interpolator: linear
+      endpoint_low: clamp
+      endpoint_high: clamp
+      interpolator_params: {}
+      channels: 
+        k: 
+          - 1.31928407798297e-5
+          - 4.20195351379728e-6
+          - 1.54470803852681e-6
+          - 6.92530784609361e-7
+          - 3.70938657889947e-7
+          - 1.46898363328258e-7
+          - 9.22410257117502e-8
+          - 7.02199322502317e-8
+          - 5.38539241746365e-8
+          - 4.40101111882932e-8
+          - 2.19386972384782e-8
+          - 1.91368925230917e-8
+          - 2.59275512818379e-8
+          - 2.23263746102737e-8
+          - 6.36938294619639e-9
+          - 1.43382879504358e-8
+          - 1.59314310560398e-8
+          - 1.91177172672478e-8
+          - 5.58439566070355e-8
+          - 6.38216646937549e-8
+          - 1.87432250013907e-7
+          - 3.70331699635948e-7
+          - 1.00891539913464e-6
+          - 1.38599813859212e-6
+  thermal_dispersion: 
+    type: schott_formula_a
+    coefficients: 
+      - -3.93e-7
+      - 1.2e-8
+      - -3.29e-11
+      - 8.13e-7
+      - 1.17e-9
+      - 2.84e-7
+  partial_pressure_water_Pa: "NaN"
+  relative_air: 
+    $ref: vl/Air_Zemax_OS
+  nd: 1.6727
+  Vd: 32.099206
+  density: 2.91
+  glass_code: Recommended
+  name: vl/S_TIM25_Ohara_2016

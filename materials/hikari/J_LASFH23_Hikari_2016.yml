@@ -1,0 +1,111 @@
+TAGS:
+  - vl
+  - 'vendor:hikari'
+  - 'spectrum:Infrared'
+  - 'category:glass'
+  - 'state:Solid'
+REFERENCES: |
+  Imported from ZEMAX - Glass Catalog file: Hikari_2016.agf
+COMMENTS: |
+  VirtualLab material: J-LASFH23_Hikari_2016
+  Absorption: tabulated k from sampled alpha (α→k same points).
+  DispersionFormula PowerSeries → formula_vl_power_series
+CONDITIONS: |
+DATA:
+  type: isotropic_dispersion
+  T_ref_C: 23.0
+  refractive_index_absolute: false
+  n: 
+    type: analytic_formula
+    formula: formula_vl_power_series
+    wl_min: 0.388865
+    wl_max: 2.05809
+    coefficients: 
+      - 3.27710657
+      - -0.0120480934
+      - -0.000105066933
+      - 0.0
+      - 0.0470173769
+      - 0.00095791266
+      - 0.000282409939
+      - -2.89931135e-5
+      - 2.51862401e-6
+      - 0.0
+  k: 
+    type: tabulated
+    curve: 
+      type: tabulated_curve
+      x: 
+        - 0.36
+        - 0.365
+        - 0.37
+        - 0.38
+        - 0.39
+        - 0.4
+        - 0.42
+        - 0.44
+        - 0.46
+        - 0.48
+        - 0.5
+        - 0.55
+        - 0.6
+        - 0.65
+        - 0.7
+        - 0.8
+        - 0.9
+        - 1.0
+        - 1.2
+        - 1.4
+        - 1.6
+        - 1.8
+        - 2.0
+        - 2.2
+        - 2.4
+      x_unit: um
+      interpolator: linear
+      endpoint_low: clamp
+      endpoint_high: clamp
+      interpolator_params: {}
+      channels: 
+        k: 
+          - 1.00455484067352e-5
+          - 5.71072758077078e-6
+          - 3.26430903290619e-6
+          - 1.34954717000799e-6
+          - 6.92530784609361e-7
+          - 4.43284928026482e-7
+          - 2.4254967425362e-7
+          - 1.64886966577429e-7
+          - 1.26624186746829e-7
+          - 1.04550270442691e-7
+          - 8.03840183355507e-8
+          - 5.28388019310912e-8
+          - 4.31663760186343e-8
+          - 4.67635740201871e-8
+          - 5.036077202174e-8
+          - 5.75551680248457e-8
+          - 1.43382879504358e-8
+          - 3.98885404335968e-8
+          - 1.91177172672478e-8
+          - 1.11464201558437e-8
+          - 1.02268786350594e-7
+          - 2.74773647935689e-7
+          - 4.68374069075837e-7
+          - 9.90379617900631e-7
+          - 2.4414375561481e-6
+  thermal_dispersion: 
+    type: schott_formula_a
+    coefficients: 
+      - "NaN"
+      - "NaN"
+      - "NaN"
+      - "NaN"
+      - "NaN"
+      - "NaN"
+  partial_pressure_water_Pa: "NaN"
+  relative_air: 
+    $ref: vl/Air_Zemax_OS
+  nd: 1.85
+  Vd: 27.027002
+  density: 3.9
+  name: vl/J_LASFH23_Hikari_2016

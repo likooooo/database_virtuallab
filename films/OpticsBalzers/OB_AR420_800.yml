@@ -1,0 +1,67 @@
+TAGS:
+  - vl
+  - 'category:OpticsBalzers'
+  - 'state:Solid'
+REFERENCES: |
+COMMENTS: |
+  VirtualLab coating: OB-AR420-800
+CONDITIONS: |
+DATA:
+  type: films
+  layers: 
+    - type: coating
+      depth: 0.19565
+      background_material: 
+        $ref: vl/SiO2_ThinFilm_MSO_measured
+      is_incoherent: false
+    - type: coating
+      depth: 0.01644
+      background_material: 
+        $ref: vl/Ta2O5_ThinFilm_MSO_measured
+      is_incoherent: false
+    - type: coating
+      depth: 0.03333
+      background_material: 
+        $ref: vl/SiO2_ThinFilm_MSO_measured
+      is_incoherent: false
+    - type: coating
+      depth: 0.12025
+      background_material: 
+        $ref: vl/Ta2O5_ThinFilm_MSO_measured
+      is_incoherent: false
+    - type: coating
+      depth: 0.01696
+      background_material: 
+        $ref: vl/SiO2_ThinFilm_MSO_measured
+      is_incoherent: false
+    - type: coating
+      depth: 0.0155
+      background_material: 
+        $ref: vl/Ta2O5_ThinFilm_MSO_measured
+      is_incoherent: false
+    - type: coating
+      depth: 0.1684
+      background_material: 
+        $ref: vl/SiO2_ThinFilm_MSO_measured
+      is_incoherent: false
+    - type: coating
+      depth: 0.01365
+      background_material: 
+        $ref: vl/Ta2O5_ThinFilm_MSO_measured
+      is_incoherent: false
+    - type: coating
+      depth: 0.01475
+      background_material: 
+        $ref: vl/SiO2_ThinFilm_MSO_measured
+      is_incoherent: false
+    - type: coating
+      depth: 0.11095
+      background_material: 
+        $ref: vl/Ta2O5_ThinFilm_MSO_measured
+      is_incoherent: false
+    - type: coating
+      depth: 0.09013
+      background_material: 
+        $ref: vl/SiO2_ThinFilm_MSO_measured
+      is_incoherent: false
+  name: vl/OB_AR420_800

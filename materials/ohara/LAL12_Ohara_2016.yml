@@ -1,0 +1,50 @@
+TAGS:
+  - vl
+  - 'vendor:ohara'
+  - 'spectrum:Infrared'
+  - 'category:glass'
+  - 'state:Solid'
+REFERENCES: |
+  Imported from ZEMAX - Glass Catalog file: Ohara_2016.agf
+COMMENTS: |
+  VirtualLab material: LAL12_Ohara_2016
+  DispersionFormula Schott → formula_vl_schott
+CONDITIONS: |
+DATA:
+  type: isotropic_dispersion
+  T_ref_C: 25.0
+  refractive_index_absolute: false
+  n: 
+    type: analytic_formula
+    formula: formula_vl_schott
+    wl_min: 0.334
+    wl_max: 2.325
+    coefficients: 
+      - 2.7589457
+      - -0.0087787656
+      - 0.021173055
+      - -0.00047262367
+      - 9.6870749e-5
+      - -4.0576545e-6
+  k: 
+    type: analytic_formula
+    formula: formula_vl_constant
+    wl_min: "-Infinity"
+    wl_max: "Infinity"
+    coefficients: 
+      - 0.0
+  thermal_dispersion: 
+    type: schott_formula_a
+    coefficients: 
+      - "NaN"
+      - "NaN"
+      - "NaN"
+      - "NaN"
+      - "NaN"
+      - "NaN"
+  partial_pressure_water_Pa: "NaN"
+  relative_air: 
+    $ref: vl/Air_Zemax_OS
+  nd: 1.6779
+  Vd: 55.337587
+  name: vl/LAL12_Ohara_2016

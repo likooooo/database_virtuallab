@@ -1,0 +1,37 @@
+TAGS:
+  - vl
+  - 'category:Standard-AR'
+  - 'state:Solid'
+REFERENCES: |
+COMMENTS: |
+  VirtualLab coating: BBCoat03_415-710nm
+CONDITIONS: |
+DATA:
+  type: films
+  layers: 
+    - type: coating
+      depth: 0.093173834
+      background_material: 
+        $ref: vl/Silicon_Dioxide_SiO2_ThinFilm
+      is_incoherent: false
+    - type: coating
+      depth: 0.084893265
+      background_material: 
+        $ref: vl/Cerium_Fluoride_CeF3_ThinFilm
+      is_incoherent: false
+    - type: coating
+      depth: 0.069230344
+      background_material: 
+        $ref: vl/Hafnium_Dioxide_HfO2_ThinFilm
+      is_incoherent: false
+    - type: coating
+      depth: 0.073075771
+      background_material: 
+        $ref: vl/Lanthanum_Oxide_La2O3_ThinFilm
+      is_incoherent: false
+    - type: coating
+      depth: 0.09968587
+      background_material: 
+        $ref: vl/Magnesium_Fluoride_MgF2_ThinFilm
+      is_incoherent: false
+  name: vl/BBCoat03_415_710nm

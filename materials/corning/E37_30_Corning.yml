@@ -1,0 +1,96 @@
+TAGS:
+  - vl
+  - 'vendor:corning'
+  - 'spectrum:Infrared'
+  - 'category:glass'
+  - 'state:Solid'
+REFERENCES: |
+COMMENTS: |
+  VirtualLab material: E37-30_Corning
+  Absorption: tabulated k from sampled alpha (α→k same points).
+  DispersionFormula Schott → formula_vl_schott
+CONDITIONS: |
+DATA:
+  type: isotropic_dispersion
+  T_ref_C: 20.0
+  refractive_index_absolute: false
+  n: 
+    type: analytic_formula
+    formula: formula_vl_schott
+    wl_min: 0.35
+    wl_max: 1.8
+    coefficients: 
+      - 3.246553
+      - -0.01310558
+      - 0.03964504
+      - 0.002004431
+      - -0.0001085524
+      - 1.903922e-5
+  k: 
+    type: tabulated
+    curve: 
+      type: tabulated_curve
+      x: 
+        - 0.35
+        - 0.36
+        - 0.37
+        - 0.38
+        - 0.39
+        - 0.4
+        - 0.42
+        - 0.44
+        - 0.46
+        - 0.48
+        - 0.5
+        - 0.55
+        - 0.6
+        - 0.7
+        - 0.8
+        - 1.0
+        - 1.2
+        - 1.4
+        - 1.6
+        - 1.8
+      x_unit: um
+      interpolator: linear
+      endpoint_low: clamp
+      endpoint_high: clamp
+      interpolator_params: {}
+      channels: 
+        k: 
+          - 1.6179691885632e-5
+          - 6.59642038991485e-6
+          - 3.35491207220928e-6
+          - 1.85213322612175e-6
+          - 1.11138508975903e-6
+          - 8.36086464540065e-7
+          - 4.69293055018179e-7
+          - 3.14863157601786e-7
+          - 2.30395145778203e-7
+          - 1.75874889886035e-7
+          - 1.33518199322001e-7
+          - 7.05944487368471e-8
+          - 5.28121334259518e-8
+          - 3.9130076668727e-8
+          - 3.19108323468774e-8
+          - 3.98885404335968e-8
+          - 4.78662485203162e-8
+          - 7.8260153337454e-8
+          - 1.15110336049691e-7
+          - 2.16486914901276e-7
+  thermal_dispersion: 
+    type: schott_formula_a
+    coefficients: 
+      - "NaN"
+      - "NaN"
+      - "NaN"
+      - "NaN"
+      - "NaN"
+      - "NaN"
+  partial_pressure_water_Pa: "NaN"
+  relative_air: 
+    $ref: vl/Air_Zemax_OS
+  nd: 1.8364
+  Vd: 30.200001
+  density: 3.89
+  name: vl/E37_30_Corning

@@ -1,0 +1,90 @@
+TAGS:
+  - vl
+  - 'vendor:schott'
+  - 'spectrum:Infrared'
+  - 'category:glass'
+  - 'state:Solid'
+REFERENCES: |
+  Imported from ZEMAX - Glass Catalog file: Schott_2015.agf
+COMMENTS: |
+  VirtualLab material: P-SF67_Schott_2015
+  Absorption: tabulated k from sampled alpha (α→k same points).
+  DispersionFormula Sellmeier1 → formula_vl_sellmeier_1
+CONDITIONS: |
+DATA:
+  type: isotropic_dispersion
+  T_ref_C: 20.0
+  refractive_index_absolute: false
+  n: 
+    type: analytic_formula
+    formula: formula_vl_sellmeier_1
+    wl_min: 0.39
+    wl_max: 2.5
+    coefficients: 
+      - 1.97464225
+      - 0.0145772324
+      - 0.467095921
+      - 0.0669790359
+      - 2.43154209
+      - 157.444895
+  k: 
+    type: tabulated
+    curve: 
+      type: tabulated_curve
+      x: 
+        - 0.4
+        - 0.405
+        - 0.42
+        - 0.436
+        - 0.46
+        - 0.5
+        - 0.546
+        - 0.58
+        - 0.62
+        - 0.66
+        - 0.7
+        - 1.06
+        - 1.53
+        - 1.97
+        - 2.325
+        - 2.5
+      x_unit: um
+      interpolator: linear
+      endpoint_low: clamp
+      endpoint_high: clamp
+      interpolator_params: {}
+      channels: 
+        k: 
+          - 4.09839998981421e-6
+          - 3.25605580906865e-6
+          - 1.85333904128227e-6
+          - 1.20394427039122e-6
+          - 7.72573303163773e-7
+          - 4.15974941620383e-7
+          - 2.02532507207911e-7
+          - 1.33979820063905e-7
+          - 1.09555515153858e-7
+          - 1.03341090796135e-7
+          - 9.56051723433123e-8
+          - 5.09946955100784e-8
+          - 7.36055510664339e-8
+          - 2.55982675261894e-7
+          - 1.03063745766157e-6
+          - 1.38746017044532e-6
+  thermal_dispersion: 
+    type: schott_formula_a
+    coefficients: 
+      - 4.82e-7
+      - 1.15e-8
+      - -9.95e-12
+      - 1.15e-6
+      - 1.65e-9
+      - 3.15e-7
+  partial_pressure_water_Pa: "NaN"
+  relative_air: 
+    $ref: vl/Air_Zemax_OS
+  nd: 1.9068
+  Vd: 21.4
+  density: 4.236
+  glass_code: suitable
+  name: vl/P_SF67_Schott_2015

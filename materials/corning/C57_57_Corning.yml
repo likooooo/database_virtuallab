@@ -1,0 +1,49 @@
+TAGS:
+  - vl
+  - 'vendor:corning'
+  - 'spectrum:Infrared'
+  - 'category:glass'
+  - 'state:Solid'
+REFERENCES: |
+COMMENTS: |
+  VirtualLab material: C57-57_Corning
+  DispersionFormula Schott → formula_vl_schott
+CONDITIONS: |
+DATA:
+  type: isotropic_dispersion
+  T_ref_C: 20.0
+  refractive_index_absolute: false
+  n: 
+    type: analytic_formula
+    formula: formula_vl_schott
+    wl_min: 0.334
+    wl_max: 2.325
+    coefficients: 
+      - 2.698887
+      - -0.01058802
+      - 0.01741114
+      - 0.0001461034
+      - 1.970273e-5
+      - -7.638269e-7
+  k: 
+    type: analytic_formula
+    formula: formula_vl_constant
+    wl_min: "-Infinity"
+    wl_max: "Infinity"
+    coefficients: 
+      - 0.0
+  thermal_dispersion: 
+    type: schott_formula_a
+    coefficients: 
+      - "NaN"
+      - "NaN"
+      - "NaN"
+      - "NaN"
+      - "NaN"
+      - "NaN"
+  partial_pressure_water_Pa: "NaN"
+  relative_air: 
+    $ref: vl/Air_Zemax_OS
+  nd: 1.6575
+  Vd: 57.200001
+  name: vl/C57_57_Corning

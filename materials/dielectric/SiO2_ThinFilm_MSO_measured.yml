@@ -1,0 +1,169 @@
+TAGS:
+  - vl
+  - 'category:dielectric'
+  - 'category:semiconductor'
+  - 'spectrum:Infrared'
+  - 'state:Solid'
+REFERENCES: |
+COMMENTS: |
+  VirtualLab material: SiO2-ThinFilm_MSO-measured
+  Dispersion from VirtualLab SampledRefractiveIndex table.
+  Absorption: tabulated k from sampled alpha (α→k same points).
+CONDITIONS: |
+DATA:
+  type: isotropic_dispersion
+  T_ref_C: 20.0
+  refractive_index_absolute: false
+  n: 
+    type: tabulated
+    curve: 
+      type: tabulated_curve
+      x: 
+        - 0.3
+        - 0.325
+        - 0.35
+        - 0.375
+        - 0.4
+        - 0.425
+        - 0.45
+        - 0.475
+        - 0.5
+        - 0.525
+        - 0.55
+        - 0.575
+        - 0.6
+        - 0.625
+        - 0.65
+        - 0.675
+        - 0.7
+        - 0.725
+        - 0.75
+        - 0.775
+        - 0.8
+        - 0.825
+        - 0.85
+        - 0.875
+        - 0.9
+        - 0.925
+        - 0.95
+        - 0.975
+        - 1.0
+      x_unit: um
+      interpolator: linear
+      endpoint_low: clamp
+      endpoint_high: clamp
+      interpolator_params: {}
+      channels: 
+        n: 
+          - 1.4865
+          - 1.4809
+          - 1.4766
+          - 1.4732
+          - 1.4704
+          - 1.4681
+          - 1.4662
+          - 1.4645
+          - 1.4632
+          - 1.462
+          - 1.4609
+          - 1.46
+          - 1.4592
+          - 1.4585
+          - 1.4578
+          - 1.4572
+          - 1.4567
+          - 1.4562
+          - 1.4558
+          - 1.4554
+          - 1.455
+          - 1.4546
+          - 1.4543
+          - 1.454
+          - 1.4537
+          - 1.4534
+          - 1.4531
+          - 1.4528
+          - 1.4526
+  k: 
+    type: tabulated
+    curve: 
+      type: tabulated_curve
+      x: 
+        - 0.3
+        - 0.325
+        - 0.35
+        - 0.375
+        - 0.4
+        - 0.425
+        - 0.45
+        - 0.475
+        - 0.5
+        - 0.525
+        - 0.55
+        - 0.575
+        - 0.6
+        - 0.625
+        - 0.65
+        - 0.675
+        - 0.7
+        - 0.725
+        - 0.75
+        - 0.775
+        - 0.8
+        - 0.825
+        - 0.85
+        - 0.875
+        - 0.9
+        - 0.925
+        - 0.95
+        - 0.975
+        - 1.0
+      x_unit: um
+      interpolator: linear
+      endpoint_low: clamp
+      endpoint_high: clamp
+      interpolator_params: {}
+      channels: 
+        k: 
+          - 4.01070456591576e-5
+          - 3.38801085106872e-5
+          - 2.92447207931358e-5
+          - 2.52459528479519e-5
+          - 2.11994384198405e-5
+          - 1.90070790787496e-5
+          - 1.75826423380771e-5
+          - 1.64048957591971e-5
+          - 1.53584520083679e-5
+          - 1.44552477063214e-5
+          - 1.36554941172846e-5
+          - 1.29492440573143e-5
+          - 1.23185925953127e-5
+          - 1.17376770530273e-5
+          - 1.12244023615559e-5
+          - 1.07429586587029e-5
+          - 1.03052825652002e-5
+          - 9.92331070177967e-6
+          - 9.54929658551372e-6
+          - 9.18920852676831e-6
+          - 8.91267681314614e-6
+          - 8.6003352373283e-6
+          - 8.31982465012883e-6
+          - 8.07711336191369e-6
+          - 7.80654995865746e-6
+          - 7.58174360154016e-6
+          - 7.393542881334e-6
+          - 7.19241082200161e-6
+          - 7.01873299035258e-6
+  thermal_dispersion: 
+    type: schott_formula_a
+    coefficients: 
+      - "NaN"
+      - "NaN"
+      - "NaN"
+      - "NaN"
+      - "NaN"
+      - "NaN"
+  partial_pressure_water_Pa: "NaN"
+  relative_air: 
+    $ref: vl/Air
+  name: vl/SiO2_ThinFilm_MSO_measured

@@ -1,0 +1,46 @@
+TAGS:
+  - vl
+  - 'category:misc'
+  - 'spectrum:Infrared'
+  - 'state:Solid'
+REFERENCES: |
+COMMENTS: |
+  VirtualLab material: Pyrex
+  DispersionFormula Conrady → formula_vl_conrady
+CONDITIONS: |
+DATA:
+  type: isotropic_dispersion
+  T_ref_C: 20.0
+  refractive_index_absolute: false
+  n: 
+    type: analytic_formula
+    formula: formula_vl_conrady
+    wl_min: 0.334
+    wl_max: 2.325
+    coefficients: 
+      - 1.45217
+      - 0.01258
+      - 6.659e-5
+  k: 
+    type: analytic_formula
+    formula: formula_vl_constant
+    wl_min: "-Infinity"
+    wl_max: "Infinity"
+    coefficients: 
+      - 0.0
+  thermal_dispersion: 
+    type: schott_formula_a
+    coefficients: 
+      - "NaN"
+      - "NaN"
+      - "NaN"
+      - "NaN"
+      - "NaN"
+      - "NaN"
+  partial_pressure_water_Pa: "NaN"
+  relative_air: 
+    $ref: vl/Air_Zemax_OS
+  nd: 1.474009
+  Vd: 65.386423
+  density: 2.23
+  name: vl/Pyrex

@@ -1,0 +1,32 @@
+TAGS:
+  - vl
+  - 'category:Standard-AR'
+  - 'state:Solid'
+REFERENCES: |
+COMMENTS: |
+  VirtualLab coating: BBCoat01_510-710nm
+CONDITIONS: |
+DATA:
+  type: films
+  layers: 
+    - type: coating
+      depth: 0.013878389
+      background_material: 
+        $ref: vl/Titanium_Dioxide_TiO2_ThinFilm
+      is_incoherent: false
+    - type: coating
+      depth: 0.035770146
+      background_material: 
+        $ref: vl/Silicon_Dioxide_SiO2_ThinFilm
+      is_incoherent: false
+    - type: coating
+      depth: 0.13878388
+      background_material: 
+        $ref: vl/Titanium_Dioxide_TiO2_ThinFilm
+      is_incoherent: false
+    - type: coating
+      depth: 0.10731044
+      background_material: 
+        $ref: vl/Silicon_Dioxide_SiO2_ThinFilm
+      is_incoherent: false
+  name: vl/BBCoat01_510_710nm

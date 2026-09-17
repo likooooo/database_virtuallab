@@ -1,0 +1,92 @@
+TAGS:
+  - vl
+  - 'vendor:hikari'
+  - 'category:glass'
+  - 'state:Solid'
+REFERENCES: |
+  Imported from ZEMAX - Glass Catalog file: Hikari_2016.agf
+COMMENTS: |
+  VirtualLab material: F8_Hikari_2016
+  Absorption: tabulated k from sampled alpha (α→k same points).
+  DispersionFormula Schott → formula_vl_schott
+CONDITIONS: |
+DATA:
+  type: isotropic_dispersion
+  T_ref_C: 20.0
+  refractive_index_absolute: false
+  n: 
+    type: analytic_formula
+    formula: formula_vl_schott
+    wl_min: 0.4
+    wl_max: 0.7
+    coefficients: 
+      - 2.472865
+      - -0.001511927
+      - 0.02760046
+      - -0.001525504
+      - 0.0002907115
+      - -1.284843e-5
+  k: 
+    type: tabulated
+    curve: 
+      type: tabulated_curve
+      x: 
+        - 0.32
+        - 0.33
+        - 0.34
+        - 0.35
+        - 0.36
+        - 0.37
+        - 0.38
+        - 0.39
+        - 0.4
+        - 0.42
+        - 0.44
+        - 0.46
+        - 0.48
+        - 0.5
+        - 0.55
+        - 0.6
+        - 0.65
+        - 0.7
+      x_unit: um
+      interpolator: linear
+      endpoint_low: clamp
+      endpoint_high: clamp
+      interpolator_params: {}
+      channels: 
+        k: 
+          - 5.19537967774469e-6
+          - 1.47615607308848e-6
+          - 4.71736457951407e-7
+          - 1.84213338815101e-7
+          - 9.31720810511739e-8
+          - 5.04845747720501e-8
+          - 3.65068086069357e-8
+          - 1.86772161907089e-8
+          - 9.56364924289459e-9
+          - 1.33958247661642e-8
+          - 7.00982966465752e-9
+          - 7.32845828577832e-9
+          - 3.82162976771783e-9
+          - 3.98086434137274e-9
+          - 4.37895077551002e-9
+          - 4.77703720964729e-9
+          - 1.03554301864259e-8
+          - 5.57321007792184e-9
+  thermal_dispersion: 
+    type: schott_formula_a
+    coefficients: 
+      - "NaN"
+      - "NaN"
+      - "NaN"
+      - "NaN"
+      - "NaN"
+      - "NaN"
+  partial_pressure_water_Pa: "NaN"
+  relative_air: 
+    $ref: vl/Air_Zemax_OS
+  nd: 1.59551
+  Vd: 39.216026
+  density: 3.38
+  name: vl/F8_Hikari_2016

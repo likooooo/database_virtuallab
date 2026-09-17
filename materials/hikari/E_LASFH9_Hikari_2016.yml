@@ -1,0 +1,50 @@
+TAGS:
+  - vl
+  - 'vendor:hikari'
+  - 'category:glass'
+  - 'state:Solid'
+REFERENCES: |
+  Imported from ZEMAX - Glass Catalog file: Hikari_2016.agf
+COMMENTS: |
+  VirtualLab material: E-LASFH9_Hikari_2016
+  DispersionFormula Schott → formula_vl_schott
+CONDITIONS: |
+DATA:
+  type: isotropic_dispersion
+  T_ref_C: 23.0
+  refractive_index_absolute: false
+  n: 
+    type: analytic_formula
+    formula: formula_vl_schott
+    wl_min: 0.4
+    wl_max: 0.7
+    coefficients: 
+      - 3.49989132
+      - -0.014925507
+      - 0.0384731987
+      - 0.00184372906
+      - -9.49882953e-5
+      - 1.04373643e-5
+  k: 
+    type: analytic_formula
+    formula: formula_vl_constant
+    wl_min: "-Infinity"
+    wl_max: "Infinity"
+    coefficients: 
+      - 0.0
+  thermal_dispersion: 
+    type: schott_formula_a
+    coefficients: 
+      - "NaN"
+      - "NaN"
+      - "NaN"
+      - "NaN"
+      - "NaN"
+      - "NaN"
+  partial_pressure_water_Pa: "NaN"
+  relative_air: 
+    $ref: vl/Air_Zemax_OS
+  nd: 1.90265
+  Vd: 35.699754
+  density: 5.52
+  name: vl/E_LASFH9_Hikari_2016

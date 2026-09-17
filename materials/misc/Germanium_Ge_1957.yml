@@ -1,0 +1,47 @@
+TAGS:
+  - vl
+  - 'spectrum:Infrared'
+  - 'category:misc'
+  - 'state:Solid'
+REFERENCES: |
+COMMENTS: |
+  VirtualLab material: Germanium-Ge_(1957)
+  DispersionFormula Herzberger → formula_vl_herzberger
+CONDITIONS: |
+DATA:
+  type: isotropic_dispersion
+  T_ref_C: 20.0
+  refractive_index_absolute: false
+  n: 
+    type: analytic_formula
+    formula: formula_vl_herzberger
+    wl_min: 6.0
+    wl_max: 12.0
+    coefficients: 
+      - 4.10394779
+      - -4.31523858
+      - 77.8489771
+      - -0.00110046901
+      - 5.51258845e-6
+      - -1.04612042e-8
+  k: 
+    type: analytic_formula
+    formula: formula_vl_constant
+    wl_min: "-Infinity"
+    wl_max: "Infinity"
+    coefficients: 
+      - 0.0
+  thermal_dispersion: 
+    type: schott_formula_a
+    coefficients: 
+      - 0.00022
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  partial_pressure_water_Pa: "NaN"
+  relative_air: 
+    $ref: vl/Air_Zemax_OS
+  density: 5.327
+  name: vl/Germanium_Ge_1957

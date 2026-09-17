@@ -1,0 +1,99 @@
+TAGS:
+  - vl
+  - 'vendor:sumita'
+  - 'spectrum:Infrared'
+  - 'category:glass'
+  - 'state:Solid'
+REFERENCES: |
+  Imported from ZEMAX - Glass Catalog file: Sumita_2016.agf
+COMMENTS: |
+  VirtualLab material: K-VC90(M)_Sumita_2016
+  Absorption: tabulated k from sampled alpha (α→k same points).
+  DispersionFormula Schott → formula_vl_schott
+CONDITIONS: |
+DATA:
+  type: isotropic_dispersion
+  T_ref_C: 20.0
+  refractive_index_absolute: false
+  n: 
+    type: analytic_formula
+    formula: formula_vl_schott
+    wl_min: 0.36
+    wl_max: 1.55
+    coefficients: 
+      - 3.3149515
+      - -0.013619007
+      - 0.033842693
+      - 0.001108869
+      - -2.8110622e-5
+      - 5.1120171e-6
+  k: 
+    type: tabulated
+    curve: 
+      type: tabulated_curve
+      x: 
+        - 0.33
+        - 0.34
+        - 0.35
+        - 0.36
+        - 0.37
+        - 0.38
+        - 0.39
+        - 0.4
+        - 0.42
+        - 0.44
+        - 0.46
+        - 0.48
+        - 0.5
+        - 0.55
+        - 0.6
+        - 0.65
+        - 0.7
+        - 0.8
+        - 1.06
+        - 1.5
+        - 2.0
+      x_unit: um
+      interpolator: linear
+      endpoint_low: clamp
+      endpoint_high: clamp
+      interpolator_params: {}
+      channels: 
+        k: 
+          - 1.81401560722658e-5
+          - 8.51342673512794e-6
+          - 3.47670449595569e-6
+          - 1.69709318967435e-6
+          - 9.63149791950742e-7
+          - 5.89061488217936e-7
+          - 4.00262337069226e-7
+          - 2.89723743411367e-7
+          - 1.82006394178842e-7
+          - 1.50236699396633e-7
+          - 1.26624186746829e-7
+          - 8.88796079126276e-8
+          - 7.22721427892466e-8
+          - 3.95691780170814e-8
+          - 6.24774166713024e-8
+          - 6.76838680605776e-8
+          - 3.9130076668727e-8
+          - 4.47200876214023e-8
+          - 1.68873169194022e-8
+          - 2.38971465840597e-8
+          - 2.89088571156987e-7
+  thermal_dispersion: 
+    type: schott_formula_a
+    coefficients: 
+      - 4.39e-7
+      - 1.31e-8
+      - -1.78e-10
+      - 7.82e-7
+      - 9.78e-10
+      - 2.32e-7
+  partial_pressure_water_Pa: "NaN"
+  relative_air: 
+    $ref: vl/Air_Zemax_OS
+  nd: 1.84859
+  Vd: 38.9
+  density: 4.98
+  name: vl/K_VC90_M_Sumita_2016

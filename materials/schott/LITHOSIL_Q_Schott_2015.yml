@@ -1,0 +1,116 @@
+TAGS:
+  - vl
+  - 'vendor:schott'
+  - 'spectrum:Infrared'
+  - 'category:glass'
+  - 'state:Solid'
+REFERENCES: |
+  Imported from ZEMAX - Glass Catalog file: Schott_2015.agf
+COMMENTS: |
+  VirtualLab material: LITHOSIL-Q_Schott_2015
+  Absorption: tabulated k from sampled alpha (α→k same points).
+  DispersionFormula Sellmeier1 → formula_vl_sellmeier_1
+CONDITIONS: |
+DATA:
+  type: isotropic_dispersion
+  T_ref_C: 20.0
+  refractive_index_absolute: false
+  n: 
+    type: analytic_formula
+    formula: formula_vl_sellmeier_1
+    wl_min: 0.25
+    wl_max: 2.5
+    coefficients: 
+      - 0.67071081
+      - 0.00449192312
+      - 0.433322857
+      - 0.0132812976
+      - 0.877379057
+      - 95.8899878
+  k: 
+    type: tabulated
+    curve: 
+      type: tabulated_curve
+      x: 
+        - 0.25
+        - 0.26
+        - 0.27
+        - 0.28
+        - 0.29
+        - 0.3
+        - 0.31
+        - 0.32
+        - 0.334
+        - 0.35
+        - 0.365
+        - 0.37
+        - 0.38
+        - 0.39
+        - 0.4
+        - 0.405
+        - 0.42
+        - 0.436
+        - 0.46
+        - 0.5
+        - 0.546
+        - 0.58
+        - 0.62
+        - 0.66
+        - 0.7
+        - 1.06
+        - 1.53
+        - 1.97
+        - 2.325
+      x_unit: um
+      interpolator: linear
+      endpoint_low: clamp
+      endpoint_high: clamp
+      interpolator_params: {}
+      channels: 
+        k: 
+          - 7.96172868274549e-10
+          - 8.2801978300553e-10
+          - 8.59866697736512e-10
+          - 8.91713612467494e-10
+          - 9.23560527198476e-10
+          - 9.55407441929458e-10
+          - 9.8725435666044e-10
+          - 1.01910127139142e-9
+          - 1.0636869520148e-9
+          - 1.11464201558437e-9
+          - 1.16241238768084e-9
+          - 1.17833584504633e-9
+          - 1.21018275977731e-9
+          - 1.2420296745083e-9
+          - 1.27387658923928e-9
+          - 1.28980004660477e-9
+          - 1.33757041870124e-9
+          - 1.38852548227081e-9
+          - 1.46495807762517e-9
+          - 1.5923457365491e-9
+          - 1.73884154431161e-9
+          - 1.84712105439695e-9
+          - 1.97450871332088e-9
+          - 2.10189637224481e-9
+          - 2.22928403116874e-9
+          - 1.88664076482914e-9
+          - 2.72317016055527e-9
+          - 8.85055890293373e-8
+          - 1.68164833842358e-6
+  thermal_dispersion: 
+    type: schott_formula_a
+    coefficients: 
+      - 2.06e-5
+      - 2.51e-8
+      - -2.47e-11
+      - 3.12e-7
+      - 4.22e-10
+      - 1.6e-7
+  partial_pressure_water_Pa: "NaN"
+  relative_air: 
+    $ref: vl/Air_Zemax_OS
+  nd: 1.45844
+  Vd: 67.83
+  density: 2.2
+  glass_code: obsolet
+  name: vl/LITHOSIL_Q_Schott_2015

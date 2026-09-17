@@ -1,0 +1,49 @@
+TAGS:
+  - vl
+  - 'spectrum:Infrared'
+  - 'category:metal'
+  - 'state:Solid'
+REFERENCES: |
+COMMENTS: |
+  VirtualLab material: Silver_chloride_AgCl
+  DispersionFormula Sellmeier1 → formula_vl_sellmeier_1
+CONDITIONS: |
+DATA:
+  type: isotropic_dispersion
+  T_ref_C: 20.0
+  refractive_index_absolute: false
+  n: 
+    type: analytic_formula
+    formula: formula_vl_sellmeier_1
+    wl_min: 0.54
+    wl_max: 21.0
+    coefficients: 
+      - 2.062508
+      - 0.0107963322
+      - 0.9461465
+      - 0.0594721379
+      - 4.300785
+      - 5020.74704
+  k: 
+    type: analytic_formula
+    formula: formula_vl_constant
+    wl_min: "-Infinity"
+    wl_max: "Infinity"
+    coefficients: 
+      - 0.0
+  thermal_dispersion: 
+    type: schott_formula_a
+    coefficients: 
+      - -8.015e-5
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  partial_pressure_water_Pa: "NaN"
+  relative_air: 
+    $ref: vl/Air_Zemax_OS
+  nd: 2.066847
+  Vd: 20.869692
+  density: 5.578
+  name: vl/Silver_chloride_AgCl

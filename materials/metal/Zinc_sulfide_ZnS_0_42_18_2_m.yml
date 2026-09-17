@@ -1,0 +1,49 @@
+TAGS:
+  - vl
+  - 'spectrum:Infrared'
+  - 'category:metal'
+  - 'state:Solid'
+REFERENCES: |
+COMMENTS: |
+  VirtualLab material: Zinc_sulfide-ZnS_0.42-18.2µm
+  DispersionFormula Herzberger → formula_vl_herzberger
+CONDITIONS: |
+DATA:
+  type: isotropic_dispersion
+  T_ref_C: 20.0
+  refractive_index_absolute: false
+  n: 
+    type: analytic_formula
+    formula: formula_vl_herzberger
+    wl_min: 0.42
+    wl_max: 18.2
+    coefficients: 
+      - 2.25967042
+      - 0.0308908108
+      - 0.00104615832
+      - -0.000567944951
+      - -1.7888889e-7
+      - -1.48598858e-9
+  k: 
+    type: analytic_formula
+    formula: formula_vl_constant
+    wl_min: "-Infinity"
+    wl_max: "Infinity"
+    coefficients: 
+      - 0.0
+  thermal_dispersion: 
+    type: schott_formula_a
+    coefficients: 
+      - 4.4e-5
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  partial_pressure_water_Pa: "NaN"
+  relative_air: 
+    $ref: vl/Air_Zemax_OS
+  nd: 2.346838
+  Vd: 32.650913
+  density: 4.09
+  name: vl/Zinc_sulfide_ZnS_0_42_18_2_m

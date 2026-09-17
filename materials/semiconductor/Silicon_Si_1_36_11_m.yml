@@ -1,0 +1,47 @@
+TAGS:
+  - vl
+  - 'spectrum:Infrared'
+  - 'category:semiconductor'
+  - 'state:Solid'
+REFERENCES: |
+COMMENTS: |
+  VirtualLab material: Silicon-Si_1.36-11µm
+  DispersionFormula Sellmeier1 → formula_vl_sellmeier_1
+CONDITIONS: |
+DATA:
+  type: isotropic_dispersion
+  T_ref_C: 20.0
+  refractive_index_absolute: false
+  n: 
+    type: analytic_formula
+    formula: formula_vl_sellmeier_1
+    wl_min: 1.36
+    wl_max: 11.0
+    coefficients: 
+      - 10.6684293
+      - 0.0909121907
+      - 0.003043475
+      - 1.28766017
+      - 1.54133408
+      - 1218816.0
+  k: 
+    type: analytic_formula
+    formula: formula_vl_constant
+    wl_min: "-Infinity"
+    wl_max: "Infinity"
+    coefficients: 
+      - 0.0
+  thermal_dispersion: 
+    type: schott_formula_a
+    coefficients: 
+      - 9.96e-5
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  partial_pressure_water_Pa: "NaN"
+  relative_air: 
+    $ref: vl/Air_Zemax_OS
+  density: 2.329
+  name: vl/Silicon_Si_1_36_11_m

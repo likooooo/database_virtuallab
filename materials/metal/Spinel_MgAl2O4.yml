@@ -1,0 +1,49 @@
+TAGS:
+  - vl
+  - 'spectrum:Infrared'
+  - 'category:metal'
+  - 'state:Solid'
+REFERENCES: |
+COMMENTS: |
+  VirtualLab material: Spinel-MgAl2O4
+  DispersionFormula Sellmeier1 → formula_vl_sellmeier_1
+CONDITIONS: |
+DATA:
+  type: isotropic_dispersion
+  T_ref_C: 20.0
+  refractive_index_absolute: false
+  n: 
+    type: analytic_formula
+    formula: formula_vl_sellmeier_1
+    wl_min: 0.35
+    wl_max: 5.5
+    coefficients: 
+      - 1.8938
+      - 0.0098943364
+      - 3.0755
+      - 250.462276
+      - 0.0
+      - 0.0
+  k: 
+    type: analytic_formula
+    formula: formula_vl_constant
+    wl_min: "-Infinity"
+    wl_max: "Infinity"
+    coefficients: 
+      - 0.0
+  thermal_dispersion: 
+    type: schott_formula_a
+    coefficients: 
+      - 1.33176e-5
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  partial_pressure_water_Pa: "NaN"
+  relative_air: 
+    $ref: vl/Air_Zemax_OS
+  nd: 1.716226
+  Vd: 60.607355
+  density: 3.577
+  name: vl/Spinel_MgAl2O4

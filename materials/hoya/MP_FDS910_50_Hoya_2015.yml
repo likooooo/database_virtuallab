@@ -1,0 +1,115 @@
+TAGS:
+  - vl
+  - 'vendor:hoya'
+  - 'spectrum:Infrared'
+  - 'category:glass'
+  - 'state:Solid'
+REFERENCES: |
+  Imported from ZEMAX - Glass Catalog file: Hoya_2015.agf
+COMMENTS: |
+  VirtualLab material: MP-FDS910-50_Hoya_2015
+  Absorption: tabulated k from sampled alpha (α→k same points).
+  DispersionFormula Schott → formula_vl_schott
+CONDITIONS: |
+DATA:
+  type: isotropic_dispersion
+  T_ref_C: 20.0
+  refractive_index_absolute: false
+  n: 
+    type: analytic_formula
+    formula: formula_vl_schott
+    wl_min: 0.36501
+    wl_max: 1.01398
+    coefficients: 
+      - 3.1667902
+      - -0.013141416
+      - 0.047178656
+      - 0.0022684284
+      - -5.3672387e-5
+      - 2.5328422e-5
+  k: 
+    type: tabulated
+    curve: 
+      type: tabulated_curve
+      x: 
+        - 0.37
+        - 0.38
+        - 0.39
+        - 0.4
+        - 0.42
+        - 0.44
+        - 0.46
+        - 0.48
+        - 0.5
+        - 0.55
+        - 0.6
+        - 0.65
+        - 0.7
+        - 0.75
+        - 0.78
+        - 0.8
+        - 0.83
+        - 0.85
+        - 0.9
+        - 0.95
+        - 1.0
+        - 1.05
+        - 1.06
+        - 1.1
+        - 1.2
+        - 1.3
+        - 1.4
+        - 1.5
+        - 1.55
+      x_unit: um
+      interpolator: linear
+      endpoint_low: clamp
+      endpoint_high: clamp
+      interpolator_params: {}
+      channels: 
+        k: 
+          - 1.16694555328184e-5
+          - 5.73678444142718e-6
+          - 2.90642742039944e-6
+          - 1.64730017217681e-6
+          - 7.66757021375592e-7
+          - 4.59553898898952e-7
+          - 3.13190099624994e-7
+          - 2.20126996174831e-7
+          - 1.5414485815086e-7
+          - 5.28388019310912e-8
+          - 2.39331242601581e-8
+          - 2.59275512818379e-8
+          - 1.67363861750655e-8
+          - 1.19485732920299e-8
+          - 1.24265162237111e-8
+          - 6.36938294619639e-9
+          - 6.60823480667875e-9
+          - 6.76746938033366e-9
+          - 7.16555581447094e-9
+          - 7.56364224860821e-9
+          - 7.96172868274549e-9
+          - 8.35981511688276e-9
+          - 8.43943240371022e-9
+          - 8.75790155102004e-9
+          - 9.55407441929458e-9
+          - 1.03502472875691e-8
+          - 1.11464201558437e-8
+          - 1.19425930241182e-8
+          - 1.23406794582555e-8
+  thermal_dispersion: 
+    type: schott_formula_a
+    coefficients: 
+      - -2.8056e-6
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  partial_pressure_water_Pa: "NaN"
+  relative_air: 
+    $ref: vl/Air_Zemax_OS
+  nd: 1.82165
+  density: 3.69
+  glass_code: Preforms
+  name: vl/MP_FDS910_50_Hoya_2015

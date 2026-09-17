@@ -1,0 +1,32 @@
+TAGS:
+  - vl
+  - 'category:Standard-AR'
+  - 'state:Solid'
+REFERENCES: |
+COMMENTS: |
+  VirtualLab coating: BBCoat02_470-710nm
+CONDITIONS: |
+DATA:
+  type: films
+  layers: 
+    - type: coating
+      depth: 0.023686288
+      background_material: 
+        $ref: vl/Titanium_Dioxide_TiO2_ThinFilm
+      is_incoherent: false
+    - type: coating
+      depth: 0.040963799
+      background_material: 
+        $ref: vl/Magnesium_Fluoride_MgF2_ThinFilm
+      is_incoherent: false
+    - type: coating
+      depth: 0.034432791
+      background_material: 
+        $ref: vl/Titanium_Dioxide_TiO2_ThinFilm
+      is_incoherent: false
+    - type: coating
+      depth: 0.1167287
+      background_material: 
+        $ref: vl/Magnesium_Fluoride_MgF2_ThinFilm
+      is_incoherent: false
+  name: vl/BBCoat02_470_710nm

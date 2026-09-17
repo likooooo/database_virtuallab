@@ -1,0 +1,92 @@
+TAGS:
+  - vl
+  - 'vendor:schott'
+  - 'spectrum:Infrared'
+  - 'category:glass'
+  - 'state:Solid'
+REFERENCES: |
+  Imported from ZEMAX - Glass Catalog file: Schott_2015.agf
+COMMENTS: |
+  VirtualLab material: LF5G15_Schott_2015
+  Absorption: tabulated k from sampled alpha (α→k same points).
+  DispersionFormula Sellmeier1 → formula_vl_sellmeier_1
+CONDITIONS: |
+DATA:
+  type: isotropic_dispersion
+  T_ref_C: 20.0
+  refractive_index_absolute: false
+  n: 
+    type: analytic_formula
+    formula: formula_vl_sellmeier_1
+    wl_min: 0.38
+    wl_max: 2.5
+    coefficients: 
+      - 1.28887331
+      - 0.0092001566
+      - 0.162818811
+      - 0.0456954308
+      - 10.5579792
+      - 1275.44015
+  k: 
+    type: tabulated
+    curve: 
+      type: tabulated_curve
+      x: 
+        - 0.39
+        - 0.4
+        - 0.405
+        - 0.42
+        - 0.436
+        - 0.46
+        - 0.5
+        - 0.546
+        - 0.58
+        - 0.62
+        - 0.66
+        - 0.7
+        - 1.06
+        - 1.53
+        - 1.97
+        - 2.325
+        - 2.5
+      x_unit: um
+      interpolator: linear
+      endpoint_low: clamp
+      endpoint_high: clamp
+      interpolator_params: {}
+      channels: 
+        k: 
+          - 3.30122816278778e-6
+          - 1.79601521804821e-6
+          - 1.35338348189772e-6
+          - 6.13458499817277e-7
+          - 3.01038610380157e-7
+          - 1.25276039849997e-7
+          - 6.00043852612955e-8
+          - 3.6886085436146e-8
+          - 2.97780220126337e-8
+          - 2.5823998890805e-8
+          - 2.32373387074188e-8
+          - 1.7897037611354e-8
+          - 6.75492676776088e-9
+          - 7.36055510664339e-8
+          - 1.43858222105706e-6
+          - 4.83951678134722e-6
+          - 7.29160996435311e-6
+  thermal_dispersion: 
+    type: schott_formula_a
+    coefficients: 
+      - "NaN"
+      - "NaN"
+      - "NaN"
+      - "NaN"
+      - "NaN"
+      - "NaN"
+  partial_pressure_water_Pa: "NaN"
+  relative_air: 
+    $ref: vl/Air_Zemax_OS
+  nd: 1.58397
+  Vd: 40.83
+  density: 3.221
+  glass_code: inquiry
+  name: vl/LF5G15_Schott_2015

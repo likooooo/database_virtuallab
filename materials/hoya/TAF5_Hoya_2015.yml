@@ -1,0 +1,96 @@
+TAGS:
+  - vl
+  - 'vendor:hoya'
+  - 'category:glass'
+  - 'state:Solid'
+REFERENCES: |
+  Imported from ZEMAX - Glass Catalog file: Hoya_2015.agf
+COMMENTS: |
+  VirtualLab material: TAF5_Hoya_2015
+  Absorption: tabulated k from sampled alpha (α→k same points).
+  DispersionFormula Schott → formula_vl_schott
+CONDITIONS: |
+DATA:
+  type: isotropic_dispersion
+  T_ref_C: 20.0
+  refractive_index_absolute: false
+  n: 
+    type: analytic_formula
+    formula: formula_vl_schott
+    wl_min: 0.36501
+    wl_max: 1.01398
+    coefficients: 
+      - 3.2191571
+      - -0.015310562
+      - 0.02636257
+      - 0.0010534452
+      - -6.1660412e-5
+      - 3.9733897e-6
+  k: 
+    type: tabulated
+    curve: 
+      type: tabulated_curve
+      x: 
+        - 0.3
+        - 0.31
+        - 0.32
+        - 0.33
+        - 0.34
+        - 0.35
+        - 0.36
+        - 0.37
+        - 0.38
+        - 0.39
+        - 0.4
+        - 0.42
+        - 0.44
+        - 0.46
+        - 0.48
+        - 0.5
+        - 0.55
+        - 0.6
+        - 0.65
+        - 0.7
+      x_unit: um
+      interpolator: linear
+      endpoint_low: clamp
+      endpoint_high: clamp
+      interpolator_params: {}
+      channels: 
+        k: 
+          - 9.33926698204653e-6
+          - 6.94040744906112e-6
+          - 4.22901729140215e-6
+          - 2.8330151893335e-6
+          - 1.82182393895085e-6
+          - 1.15729839465664e-6
+          - 7.48754894916689e-7
+          - 4.44077856004263e-7
+          - 2.52141309286501e-7
+          - 1.72284882701631e-7
+          - 1.16705086923656e-7
+          - 5.05136134769645e-8
+          - 3.16553424136651e-8
+          - 1.4671617601037e-8
+          - 1.53095140184734e-8
+          - 1.19545615536182e-8
+          - 1.75421514795007e-8
+          - 3.35400657160517e-8
+          - 2.07316335666827e-8
+          - 1.67363861750655e-8
+  thermal_dispersion: 
+    type: schott_formula_a
+    coefficients: 
+      - 4.56416e-6
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  partial_pressure_water_Pa: "NaN"
+  relative_air: 
+    $ref: vl/Air_Zemax_OS
+  nd: 1.816
+  density: 5.06
+  glass_code: Not
+  name: vl/TAF5_Hoya_2015

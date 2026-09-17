@@ -1,0 +1,93 @@
+TAGS:
+  - vl
+  - 'category:misc'
+  - 'spectrum:Infrared'
+  - 'state:Liquid'
+REFERENCES: |
+COMMENTS: |
+  VirtualLab material: Water-H2O_(pure)
+  Absorption: tabulated k from sampled alpha (α→k same points).
+  DispersionFormula Schott → formula_vl_schott
+  SampledRefractiveIndex present but unused; keeping formula.
+CONDITIONS: |
+DATA:
+  type: isotropic_dispersion
+  T_ref_C: 20.0
+  refractive_index_absolute: false
+  n: 
+    type: analytic_formula
+    formula: formula_vl_schott
+    wl_min: 0.2
+    wl_max: 1.1
+    coefficients: 
+      - 1.766499
+      - -0.01484022
+      - 0.004454459
+      - 0.0003904621
+      - -1.630518e-5
+      - 4.134407e-7
+  k: 
+    type: tabulated
+    curve: 
+      type: tabulated_curve
+      x: 
+        - 1.0e-5
+        - 0.0001
+        - 0.001
+        - 0.01
+        - 0.1
+        - 0.2
+        - 0.3
+        - 0.4
+        - 0.5
+        - 0.6
+        - 0.7
+        - 0.8
+        - 0.9
+        - 1.0
+        - 10.0
+        - 100.0
+        - 1000.0
+        - 10000.0
+        - 100000.0
+        - 1000000.0
+      x_unit: um
+      interpolator: linear
+      endpoint_low: clamp
+      endpoint_high: clamp
+      interpolator_params: {}
+      channels: 
+        k: 
+          - 1.03450713009732e-11
+          - 5.1725356504866e-9
+          - 7.48028232531908e-6
+          - 0.00278521150410817
+          - 0.397887357729738
+          - 4.88605675292119e-8
+          - 3.36612704639359e-9
+          - 5.44309905374282e-10
+          - 1.02257050936543e-9
+          - 1.16501418343267e-8
+          - 3.62077495534062e-8
+          - 1.31780292880089e-7
+          - 5.0133807073947e-7
+          - 2.62605656101627e-6
+          - 0.0557042300821634
+          - 0.51725356504866
+          - 1.03450713009732
+          - 2.86478897565412
+          - 0.397887357729738
+          - 0.198943678864869
+  thermal_dispersion: 
+    type: schott_formula_a
+    coefficients: 
+      - "NaN"
+      - "NaN"
+      - "NaN"
+      - "NaN"
+      - "NaN"
+      - "NaN"
+  partial_pressure_water_Pa: "NaN"
+  relative_air: 
+    $ref: vl/Air
+  name: vl/Water_H2O_pure

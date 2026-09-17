@@ -1,0 +1,17 @@
+TAGS:
+  - vl
+  - 'category:Standard-AR'
+  - 'state:Solid'
+REFERENCES: |
+COMMENTS: |
+  VirtualLab coating: SingleCoat_632.8nm
+CONDITIONS: |
+DATA:
+  type: films
+  layers: 
+    - type: coating
+      depth: 0.11469864
+      background_material: 
+        $ref: vl/Magnesium_Fluoride_MgF2_ThinFilm
+      is_incoherent: false
+  name: vl/SingleCoat_632_8nm

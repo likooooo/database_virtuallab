@@ -1,0 +1,49 @@
+TAGS:
+  - vl
+  - 'spectrum:Infrared'
+  - 'category:metal'
+  - 'state:Solid'
+REFERENCES: |
+COMMENTS: |
+  VirtualLab material: ZBLAN
+  DispersionFormula Sellmeier1 → formula_vl_sellmeier_1
+CONDITIONS: |
+DATA:
+  type: isotropic_dispersion
+  T_ref_C: 20.0
+  refractive_index_absolute: false
+  n: 
+    type: analytic_formula
+    formula: formula_vl_sellmeier_1
+    wl_min: 0.5
+    wl_max: 4.8
+    coefficients: 
+      - 1.168
+      - 0.00910116
+      - 2.77
+      - 625.0
+      - 0.0
+      - 0.0
+  k: 
+    type: analytic_formula
+    formula: formula_vl_constant
+    wl_min: "-Infinity"
+    wl_max: "Infinity"
+    coefficients: 
+      - 0.0
+  thermal_dispersion: 
+    type: schott_formula_a
+    coefficients: 
+      - -3.944e-5
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  partial_pressure_water_Pa: "NaN"
+  relative_air: 
+    $ref: vl/Air_Zemax_OS
+  nd: 1.482597
+  Vd: 63.859901
+  density: 4.52
+  name: vl/ZBLAN

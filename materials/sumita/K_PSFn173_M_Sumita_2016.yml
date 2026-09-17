@@ -1,0 +1,85 @@
+TAGS:
+  - vl
+  - 'vendor:sumita'
+  - 'spectrum:Infrared'
+  - 'category:glass'
+  - 'state:Solid'
+REFERENCES: |
+  Imported from ZEMAX - Glass Catalog file: Sumita_2016.agf
+COMMENTS: |
+  VirtualLab material: K-PSFn173(M)_Sumita_2016
+  Absorption: tabulated k from sampled alpha (α→k same points).
+  DispersionFormula Schott → formula_vl_schott
+CONDITIONS: |
+DATA:
+  type: isotropic_dispersion
+  T_ref_C: 20.0
+  refractive_index_absolute: false
+  n: 
+    type: analytic_formula
+    formula: formula_vl_schott
+    wl_min: 0.4
+    wl_max: 1.55
+    coefficients: 
+      - 4.2616161
+      - -0.013994195
+      - 0.095197887
+      - 0.0078651735
+      - -0.00053525936
+      - 0.00012395474
+  k: 
+    type: tabulated
+    curve: 
+      type: tabulated_curve
+      x: 
+        - 0.4
+        - 0.42
+        - 0.44
+        - 0.46
+        - 0.48
+        - 0.5
+        - 0.55
+        - 0.6
+        - 0.65
+        - 0.7
+        - 0.8
+        - 1.06
+        - 1.5
+        - 2.0
+      x_unit: um
+      interpolator: linear
+      endpoint_low: clamp
+      endpoint_high: clamp
+      interpolator_params: {}
+      channels: 
+        k: 
+          - 2.76260108897613e-5
+          - 6.78261425779329e-6
+          - 1.2167397893989e-6
+          - 3.59086786291475e-7
+          - 1.79513080582122e-7
+          - 1.06529985781869e-7
+          - 7.31289907949275e-8
+          - 7.97770808671936e-8
+          - 1.03762312170605e-7
+          - 1.11744028491421e-7
+          - 1.06369441156258e-7
+          - 5.62910563980074e-8
+          - 7.96571552801991e-8
+          - 3.72667396845019e-7
+  thermal_dispersion: 
+    type: schott_formula_a
+    coefficients: 
+      - 1.59e-5
+      - 2.25e-8
+      - -1.48e-10
+      - 3.28e-6
+      - 3.23e-9
+      - 3.33e-7
+  partial_pressure_water_Pa: "NaN"
+  relative_air: 
+    $ref: vl/Air_Zemax_OS
+  nd: 2.14342
+  Vd: 17.3
+  density: 7.03
+  name: vl/K_PSFn173_M_Sumita_2016

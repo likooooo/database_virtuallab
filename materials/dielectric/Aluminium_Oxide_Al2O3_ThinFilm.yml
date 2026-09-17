@@ -1,0 +1,76 @@
+TAGS:
+  - vl
+  - 'category:dielectric'
+  - 'category:metal'
+  - 'spectrum:Infrared'
+  - 'state:Solid'
+REFERENCES: |
+COMMENTS: |
+  VirtualLab material: Aluminium_Oxide-Al2O3-ThinFilm
+  Absorption: tabulated k from sampled alpha (α→k same points).
+  DispersionFormula Cauchy → formula_vl_cauchy
+  SampledRefractiveIndex present but unused; keeping formula.
+CONDITIONS: |
+DATA:
+  type: isotropic_dispersion
+  T_ref_C: 20.0
+  refractive_index_absolute: false
+  n: 
+    type: analytic_formula
+    formula: formula_vl_cauchy
+    wl_min: 0.2
+    wl_max: 1.2
+    coefficients: 
+      - 1.63
+      - 0.00225
+      - 0.0002016
+      - 0.0
+  k: 
+    type: tabulated
+    curve: 
+      type: tabulated_curve
+      x: 
+        - 0.2
+        - 0.22
+        - 0.3
+        - 0.4
+        - 0.5
+        - 0.6
+        - 0.7
+        - 0.8
+        - 0.9
+        - 1.0
+        - 1.1
+        - 1.2
+      x_unit: um
+      interpolator: linear
+      endpoint_low: clamp
+      endpoint_high: clamp
+      interpolator_params: {}
+      channels: 
+        k: 
+          - 0.00290935235971985
+          - 0.0023406917480525
+          - 0.00119008108696965
+          - 0.000369239467973197
+          - 0.000169897901750598
+          - 0.0
+          - 0.0
+          - 0.0
+          - 0.0
+          - 0.0
+          - 0.0
+          - 0.0
+  thermal_dispersion: 
+    type: schott_formula_a
+    coefficients: 
+      - "NaN"
+      - "NaN"
+      - "NaN"
+      - "NaN"
+      - "NaN"
+      - "NaN"
+  partial_pressure_water_Pa: "NaN"
+  relative_air: 
+    $ref: vl/Air
+  name: vl/Aluminium_Oxide_Al2O3_ThinFilm

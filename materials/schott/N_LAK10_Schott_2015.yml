@@ -1,0 +1,99 @@
+TAGS:
+  - vl
+  - 'vendor:schott'
+  - 'spectrum:Infrared'
+  - 'category:glass'
+  - 'state:Solid'
+REFERENCES: |
+  Imported from ZEMAX - Glass Catalog file: Schott_2015.agf
+COMMENTS: |
+  VirtualLab material: N-LAK10_Schott_2015
+  Absorption: tabulated k from sampled alpha (α→k same points).
+  DispersionFormula Sellmeier1 → formula_vl_sellmeier_1
+CONDITIONS: |
+DATA:
+  type: isotropic_dispersion
+  T_ref_C: 20.0
+  refractive_index_absolute: false
+  n: 
+    type: analytic_formula
+    formula: formula_vl_sellmeier_1
+    wl_min: 0.35
+    wl_max: 2.5
+    coefficients: 
+      - 1.72878017
+      - 0.00886014635
+      - 0.169257825
+      - 0.0363416509
+      - 1.19386956
+      - 82.9009069
+  k: 
+    type: tabulated
+    curve: 
+      type: tabulated_curve
+      x: 
+        - 0.35
+        - 0.365
+        - 0.37
+        - 0.38
+        - 0.39
+        - 0.4
+        - 0.405
+        - 0.42
+        - 0.436
+        - 0.46
+        - 0.5
+        - 0.546
+        - 0.58
+        - 0.62
+        - 0.66
+        - 0.7
+        - 1.06
+        - 1.53
+        - 1.97
+        - 2.325
+        - 2.5
+      x_unit: um
+      interpolator: linear
+      endpoint_low: clamp
+      endpoint_high: clamp
+      interpolator_params: {}
+      channels: 
+        k: 
+          - 2.2729786090133e-6
+          - 7.5975209685666e-7
+          - 5.44160681861107e-7
+          - 3.16140955631491e-7
+          - 2.01752389609478e-7
+          - 1.34149174989233e-7
+          - 1.21581087676047e-7
+          - 8.27213214033382e-8
+          - 5.23238239478497e-8
+          - 3.40705163665072e-8
+          - 1.92141097931241e-8
+          - 1.0459241066797e-8
+          - 1.29688254102067e-8
+          - 1.18767938853739e-8
+          - 1.26430386521722e-8
+          - 1.11687913214071e-8
+          - 1.6912741143845e-8
+          - 1.133215000886e-7
+          - 8.01605330935293e-7
+          - 6.07583475655654e-6
+          - 1.68725211221873e-5
+  thermal_dispersion: 
+    type: schott_formula_a
+    coefficients: 
+      - 4.1e-6
+      - 1.23e-8
+      - -7.85e-12
+      - 5.08e-7
+      - 5.76e-10
+      - 2.05e-7
+  partial_pressure_water_Pa: "NaN"
+  relative_air: 
+    $ref: vl/Air_Zemax_OS
+  nd: 1.72003
+  Vd: 50.62
+  density: 3.689
+  name: vl/N_LAK10_Schott_2015

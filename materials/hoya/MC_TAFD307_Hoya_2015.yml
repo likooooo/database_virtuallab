@@ -1,0 +1,119 @@
+TAGS:
+  - vl
+  - 'vendor:hoya'
+  - 'spectrum:Infrared'
+  - 'category:glass'
+  - 'state:Solid'
+REFERENCES: |
+  Imported from ZEMAX - Glass Catalog file: Hoya_2015.agf
+COMMENTS: |
+  VirtualLab material: MC-TAFD307_Hoya_2015
+  Absorption: tabulated k from sampled alpha (α→k same points).
+  DispersionFormula Schott → formula_vl_schott
+CONDITIONS: |
+DATA:
+  type: isotropic_dispersion
+  T_ref_C: 20.0
+  refractive_index_absolute: false
+  n: 
+    type: analytic_formula
+    formula: formula_vl_schott
+    wl_min: 0.36501
+    wl_max: 1.01398
+    coefficients: 
+      - 3.4286062
+      - -0.013845333
+      - 0.037363009
+      - 0.0011894554
+      - -1.5979979e-5
+      - 5.1827398e-6
+  k: 
+    type: tabulated
+    curve: 
+      type: tabulated_curve
+      x: 
+        - 0.35
+        - 0.36
+        - 0.37
+        - 0.38
+        - 0.39
+        - 0.4
+        - 0.42
+        - 0.44
+        - 0.46
+        - 0.48
+        - 0.5
+        - 0.55
+        - 0.6
+        - 0.65
+        - 0.7
+        - 0.75
+        - 0.78
+        - 0.8
+        - 0.83
+        - 0.85
+        - 0.9
+        - 0.95
+        - 1.0
+        - 1.05
+        - 1.06
+        - 1.1
+        - 1.2
+        - 1.3
+        - 1.4
+        - 1.5
+        - 1.55
+      x_unit: um
+      interpolator: linear
+      endpoint_low: clamp
+      endpoint_high: clamp
+      interpolator_params: {}
+      channels: 
+        k: 
+          - 8.89647582906539e-6
+          - 3.89232917667082e-6
+          - 1.64992305267323e-6
+          - 8.73969069089638e-7
+          - 5.15353954424452e-7
+          - 3.424543616659e-7
+          - 1.85537565986372e-7
+          - 1.24745311467052e-7
+          - 9.26774486458774e-8
+          - 7.32729727828505e-8
+          - 5.6097837681913e-8
+          - 3.07450602397141e-8
+          - 2.87341787549368e-8
+          - 3.11286936511815e-8
+          - 2.79219783035178e-8
+          - 2.39211156538646e-8
+          - 2.48779602800192e-8
+          - 2.55158566974556e-8
+          - 1.3223087776513e-8
+          - 1.35417163976338e-8
+          - 2.15182107965128e-8
+          - 2.27136669518747e-8
+          - 2.39091231072365e-8
+          - 2.51045792625983e-8
+          - 1.68873169194022e-8
+          - 2.63000354179601e-8
+          - 1.91177172672478e-8
+          - 3.10818600394074e-8
+          - 4.46527492205473e-8
+          - 7.1835446887342e-8
+          - 6.18272376720751e-8
+  thermal_dispersion: 
+    type: schott_formula_a
+    coefficients: 
+      - 7.80622e-6
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  partial_pressure_water_Pa: "NaN"
+  relative_air: 
+    $ref: vl/Air_Zemax_OS
+  nd: 1.88202
+  density: 5.49
+  glass_code: Preforms
+  name: vl/MC_TAFD307_Hoya_2015

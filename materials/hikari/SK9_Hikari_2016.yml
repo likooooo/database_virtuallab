@@ -1,0 +1,90 @@
+TAGS:
+  - vl
+  - 'vendor:hikari'
+  - 'category:glass'
+  - 'state:Solid'
+REFERENCES: |
+  Imported from ZEMAX - Glass Catalog file: Hikari_2016.agf
+COMMENTS: |
+  VirtualLab material: SK9_Hikari_2016
+  Absorption: tabulated k from sampled alpha (α→k same points).
+  DispersionFormula Schott → formula_vl_schott
+CONDITIONS: |
+DATA:
+  type: isotropic_dispersion
+  T_ref_C: 20.0
+  refractive_index_absolute: false
+  n: 
+    type: analytic_formula
+    formula: formula_vl_schott
+    wl_min: 0.4
+    wl_max: 0.7
+    coefficients: 
+      - 2.564248
+      - -0.01337038
+      - 0.01398205
+      - 0.0007030773
+      - -4.206054e-5
+      - 2.098576e-6
+  k: 
+    type: tabulated
+    curve: 
+      type: tabulated_curve
+      x: 
+        - 0.33
+        - 0.34
+        - 0.35
+        - 0.36
+        - 0.37
+        - 0.38
+        - 0.39
+        - 0.4
+        - 0.42
+        - 0.44
+        - 0.46
+        - 0.48
+        - 0.5
+        - 0.55
+        - 0.6
+        - 0.65
+        - 0.7
+      x_unit: um
+      interpolator: linear
+      endpoint_low: clamp
+      endpoint_high: clamp
+      interpolator_params: {}
+      channels: 
+        k: 
+          - 2.7568922779398e-6
+          - 1.20748957316504e-6
+          - 5.1896728473457e-7
+          - 2.57615310765098e-7
+          - 1.32488734458842e-7
+          - 8.58784182754709e-8
+          - 5.32134707056744e-8
+          - 3.52080889506345e-8
+          - 2.6845556417031e-8
+          - 2.45960481917713e-8
+          - 1.83487285994545e-8
+          - 1.91464994081265e-8
+          - 1.59474104359097e-8
+          - 1.31500177089801e-8
+          - 1.43454738643419e-8
+          - 1.03554301864259e-8
+          - 5.57045086049171e-11
+  thermal_dispersion: 
+    type: schott_formula_a
+    coefficients: 
+      - "NaN"
+      - "NaN"
+      - "NaN"
+      - "NaN"
+      - "NaN"
+      - "NaN"
+  partial_pressure_water_Pa: "NaN"
+  relative_air: 
+    $ref: vl/Air_Zemax_OS
+  nd: 1.61405
+  Vd: 55.0612
+  density: 3.57
+  name: vl/SK9_Hikari_2016

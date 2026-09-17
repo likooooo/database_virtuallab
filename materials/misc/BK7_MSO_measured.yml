@@ -1,0 +1,168 @@
+TAGS:
+  - vl
+  - 'category:misc'
+  - 'spectrum:Infrared'
+  - 'state:Solid'
+REFERENCES: |
+COMMENTS: |
+  VirtualLab material: BK7_MSO-measured
+  Dispersion from VirtualLab SampledRefractiveIndex table.
+  Absorption: tabulated k from sampled alpha (α→k same points).
+CONDITIONS: |
+DATA:
+  type: isotropic_dispersion
+  T_ref_C: 20.0
+  refractive_index_absolute: false
+  n: 
+    type: tabulated
+    curve: 
+      type: tabulated_curve
+      x: 
+        - 0.3
+        - 0.325
+        - 0.35
+        - 0.375
+        - 0.4
+        - 0.425
+        - 0.45
+        - 0.475
+        - 0.5
+        - 0.525
+        - 0.55
+        - 0.575
+        - 0.6
+        - 0.625
+        - 0.65
+        - 0.675
+        - 0.7
+        - 0.725
+        - 0.75
+        - 0.775
+        - 0.8
+        - 0.825
+        - 0.85
+        - 0.875
+        - 0.9
+        - 0.925
+        - 0.95
+        - 0.975
+        - 1.0
+      x_unit: um
+      interpolator: linear
+      endpoint_low: clamp
+      endpoint_high: clamp
+      interpolator_params: {}
+      channels: 
+        n: 
+          - 1.5556
+          - 1.5466
+          - 1.5399
+          - 1.5348
+          - 1.5309
+          - 1.5278
+          - 1.5252
+          - 1.5231
+          - 1.5214
+          - 1.5199
+          - 1.5186
+          - 1.5175
+          - 1.5166
+          - 1.5158
+          - 1.515
+          - 1.5144
+          - 1.5138
+          - 1.5133
+          - 1.5129
+          - 1.5125
+          - 1.5121
+          - 1.5118
+          - 1.5114
+          - 1.5112
+          - 1.5109
+          - 1.5107
+          - 1.5105
+          - 1.5103
+          - 1.5101
+  k: 
+    type: tabulated
+    curve: 
+      type: tabulated_curve
+      x: 
+        - 0.3
+        - 0.325
+        - 0.35
+        - 0.375
+        - 0.4
+        - 0.425
+        - 0.45
+        - 0.475
+        - 0.5
+        - 0.525
+        - 0.55
+        - 0.575
+        - 0.6
+        - 0.625
+        - 0.65
+        - 0.675
+        - 0.7
+        - 0.725
+        - 0.75
+        - 0.775
+        - 0.8
+        - 0.825
+        - 0.85
+        - 0.875
+        - 0.9
+        - 0.925
+        - 0.95
+        - 0.975
+        - 1.0
+      x_unit: um
+      interpolator: linear
+      endpoint_low: clamp
+      endpoint_high: clamp
+      interpolator_params: {}
+      channels: 
+        k: 
+          - 2.16530300076524e-6
+          - 2.71558121650546e-7
+          - 3.50936649517629e-8
+          - 1.96357411039626e-8
+          - 1.49287336620198e-8
+          - 1.35619905882181e-8
+          - 1.24618320440954e-8
+          - 1.15287861902192e-8
+          - 1.070316992293e-8
+          - 1.00267614147894e-8
+          - 9.45380361965858e-9
+          - 8.92262399708938e-9
+          - 8.45112747817964e-9
+          - 8.00748307431098e-9
+          - 7.65535276272017e-9
+          - 7.305211887918e-9
+          - 7.01873299035258e-9
+          - 6.6924653570142e-9
+          - 6.44577519522176e-9
+          - 6.22892658525905e-9
+          - 5.99695825570262e-9
+          - 5.79045471704088e-9
+          - 5.59389836232239e-9
+          - 5.41723637549039e-9
+          - 5.24972579788617e-9
+          - 5.09375395365611e-9
+          - 4.94414830714973e-9
+          - 4.81045815495254e-9
+          - 4.67915532690172e-9
+  thermal_dispersion: 
+    type: schott_formula_a
+    coefficients: 
+      - "NaN"
+      - "NaN"
+      - "NaN"
+      - "NaN"
+      - "NaN"
+      - "NaN"
+  partial_pressure_water_Pa: "NaN"
+  relative_air: 
+    $ref: vl/Air
+  name: vl/BK7_MSO_measured

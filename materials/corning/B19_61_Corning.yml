@@ -1,0 +1,96 @@
+TAGS:
+  - vl
+  - 'vendor:corning'
+  - 'spectrum:Infrared'
+  - 'category:glass'
+  - 'state:Solid'
+REFERENCES: |
+COMMENTS: |
+  VirtualLab material: B19-61_Corning
+  Absorption: tabulated k from sampled alpha (α→k same points).
+  DispersionFormula Schott → formula_vl_schott
+CONDITIONS: |
+DATA:
+  type: isotropic_dispersion
+  T_ref_C: 20.0
+  refractive_index_absolute: false
+  n: 
+    type: analytic_formula
+    formula: formula_vl_schott
+    wl_min: 0.35
+    wl_max: 1.8
+    coefficients: 
+      - 2.274841
+      - -0.005597262
+      - 0.01128397
+      - 0.0002403065
+      - -9.003564e-6
+      - 2.210049e-6
+  k: 
+    type: tabulated
+    curve: 
+      type: tabulated_curve
+      x: 
+        - 0.35
+        - 0.36
+        - 0.37
+        - 0.38
+        - 0.39
+        - 0.4
+        - 0.42
+        - 0.44
+        - 0.46
+        - 0.48
+        - 0.5
+        - 0.55
+        - 0.6
+        - 0.7
+        - 0.8
+        - 1.0
+        - 1.2
+        - 1.4
+        - 1.6
+        - 1.8
+      x_unit: um
+      interpolator: linear
+      endpoint_low: clamp
+      endpoint_high: clamp
+      interpolator_params: {}
+      channels: 
+        k: 
+          - 1.59015954466726e-6
+          - 1.0341024990246e-6
+          - 5.66413346095542e-7
+          - 2.88515048126479e-7
+          - 1.59189836310306e-7
+          - 1.03524534501304e-7
+          - 7.09347796848961e-8
+          - 6.71668917176129e-8
+          - 5.90426298526358e-8
+          - 4.99819333370419e-8
+          - 3.99890157704615e-8
+          - 3.07450602397141e-8
+          - 4.31663760186343e-8
+          - 5.59846220786461e-8
+          - 6.39824252327383e-8
+          - 5.59001095267529e-8
+          - 7.67015897629456e-8
+          - 5.58439566070355e-8
+          - 8.94401752428046e-8
+          - 5.74106775692751e-8
+  thermal_dispersion: 
+    type: schott_formula_a
+    coefficients: 
+      - -1.6e-5
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  partial_pressure_water_Pa: "NaN"
+  relative_air: 
+    $ref: vl/Air_Zemax_OS
+  nd: 1.51906
+  Vd: 61.360001
+  density: 3.51
+  name: vl/B19_61_Corning

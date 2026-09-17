@@ -1,0 +1,115 @@
+TAGS:
+  - vl
+  - 'vendor:cdgm'
+  - 'spectrum:Infrared'
+  - 'category:glass'
+  - 'state:Solid'
+REFERENCES: |
+  Imported from ZEMAX - Glass Catalog file: CDGM_2016.agf
+COMMENTS: |
+  VirtualLab material: ZF10_CDGM_2016
+  Absorption: tabulated k from sampled alpha (α→k same points).
+  DispersionFormula Schott → formula_vl_schott
+CONDITIONS: |
+DATA:
+  type: isotropic_dispersion
+  T_ref_C: 20.0
+  refractive_index_absolute: false
+  n: 
+    type: analytic_formula
+    formula: formula_vl_schott
+    wl_min: 0.365
+    wl_max: 1.014
+    coefficients: 
+      - 2.75929053
+      - -0.00920455833
+      - 0.0293164338
+      - 0.00148740799
+      - -7.05223488e-5
+      - 9.9538848e-6
+  k: 
+    type: tabulated
+    curve: 
+      type: tabulated_curve
+      x: 
+        - 0.34
+        - 0.35
+        - 0.36
+        - 0.37
+        - 0.38
+        - 0.39
+        - 0.4
+        - 0.42
+        - 0.44
+        - 0.46
+        - 0.48
+        - 0.5
+        - 0.55
+        - 0.6
+        - 0.65
+        - 0.7
+        - 0.8
+        - 0.85
+        - 0.9
+        - 0.95
+        - 1.0
+        - 1.06
+        - 1.2
+        - 1.4
+        - 1.6
+        - 1.8
+        - 2.0
+        - 2.2
+        - 2.4
+      x_unit: um
+      interpolator: linear
+      endpoint_low: clamp
+      endpoint_high: clamp
+      interpolator_params: {}
+      channels: 
+        k: 
+          - 7.61205978284123e-6
+          - 2.76920286970304e-6
+          - 1.2341021489218e-6
+          - 6.20439934325201e-7
+          - 3.76269578820778e-7
+          - 2.48672892960945e-7
+          - 1.69979951621341e-7
+          - 1.01802402110914e-7
+          - 7.78909697732151e-8
+          - 6.27646064733596e-8
+          - 4.99819333370419e-8
+          - 4.40101111882932e-8
+          - 3.07450602397141e-8
+          - 3.35400657160517e-8
+          - 3.63350711923894e-8
+          - 3.35232085474263e-8
+          - 3.19108323468774e-8
+          - 2.71105977410466e-8
+          - 2.15182107965128e-8
+          - 2.27136669518747e-8
+          - 2.39091231072365e-8
+          - 1.68873169194022e-8
+          - 1.91177172672478e-8
+          - 3.34727723501311e-8
+          - 7.66244766798314e-8
+          - 2.89382466007983e-7
+          - 5.50539942377517e-7
+          - 1.30818839166828e-6
+          - 1.78022535701441e-6
+  thermal_dispersion: 
+    type: schott_formula_a
+    coefficients: 
+      - 4.02e-6
+      - 3.02e-8
+      - -2.4e-10
+      - 1.33e-6
+      - -1.33e-10
+      - 2.47e-7
+  partial_pressure_water_Pa: "NaN"
+  relative_air: 
+    $ref: vl/Air_Zemax_OS
+  nd: 1.68893
+  Vd: 31.18
+  density: 4.21
+  name: vl/ZF10_CDGM_2016

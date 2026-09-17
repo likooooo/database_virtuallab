@@ -1,0 +1,90 @@
+TAGS:
+  - vl
+  - 'vendor:ohara'
+  - 'category:glass'
+  - 'state:Solid'
+REFERENCES: |
+  Imported from ZEMAX - Glass Catalog file: Ohara_2016.agf
+COMMENTS: |
+  VirtualLab material: BAH22_Ohara_2016
+  Absorption: tabulated k from sampled alpha (α→k same points).
+  DispersionFormula Schott → formula_vl_schott
+CONDITIONS: |
+DATA:
+  type: isotropic_dispersion
+  T_ref_C: 25.0
+  refractive_index_absolute: false
+  n: 
+    type: analytic_formula
+    formula: formula_vl_schott
+    wl_min: 0.3
+    wl_max: 2.4
+    coefficients: 
+      - 2.6928266
+      - -0.0090141372
+      - 0.025058968
+      - 0.0010140502
+      - -3.2164637e-5
+      - 5.6431441e-6
+  k: 
+    type: tabulated
+    curve: 
+      type: tabulated_curve
+      x: 
+        - 0.33
+        - 0.34
+        - 0.35
+        - 0.36
+        - 0.37
+        - 0.38
+        - 0.39
+        - 0.4
+        - 0.42
+        - 0.44
+        - 0.46
+        - 0.48
+        - 0.5
+        - 0.55
+        - 0.6
+        - 0.65
+        - 0.7
+      x_unit: um
+      interpolator: linear
+      endpoint_low: clamp
+      endpoint_high: clamp
+      interpolator_params: {}
+      channels: 
+        k: 
+          - 1.02731936802512e-5
+          - 3.6446883063062e-6
+          - 1.51718039564049e-6
+          - 7.86203650079693e-7
+          - 4.78515283048121e-7
+          - 3.18604290599428e-7
+          - 2.2856361273331e-7
+          - 1.59922758857161e-7
+          - 9.49182517781521e-8
+          - 6.71668917176129e-8
+          - 4.41924525241853e-8
+          - 3.06806359051782e-8
+          - 1.99442702167984e-8
+          - 8.7622870808219e-9
+          - 9.55885863362389e-9
+          - 1.03554301864259e-8
+          - 1.11520017392279e-8
+  thermal_dispersion: 
+    type: schott_formula_a
+    coefficients: 
+      - 4.851e-6
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  partial_pressure_water_Pa: "NaN"
+  relative_air: 
+    $ref: vl/Air_Zemax_OS
+  nd: 1.664459
+  Vd: 35.812757
+  density: 3.96
+  name: vl/BAH22_Ohara_2016

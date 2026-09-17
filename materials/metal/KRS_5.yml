@@ -1,0 +1,51 @@
+TAGS:
+  - vl
+  - 'spectrum:Infrared'
+  - 'category:metal'
+  - 'state:Solid'
+REFERENCES: |
+COMMENTS: |
+  VirtualLab material: KRS-5
+  DispersionFormula Sellmeier5 → formula_vl_sellmeier_5
+CONDITIONS: |
+DATA:
+  type: isotropic_dispersion
+  T_ref_C: 20.0
+  refractive_index_absolute: false
+  n: 
+    type: analytic_formula
+    formula: formula_vl_sellmeier_5
+    wl_min: 0.58
+    wl_max: 39.4
+    coefficients: 
+      - 1.8293958
+      - 0.0225
+      - 1.6675593
+      - 0.0625
+      - 1.1210424
+      - 0.1225
+      - 0.04513366
+      - 0.2025
+      - 12.380234
+      - 27089.8681
+  k: 
+    type: analytic_formula
+    formula: formula_vl_constant
+    wl_min: "-Infinity"
+    wl_max: "Infinity"
+    coefficients: 
+      - 0.0
+  thermal_dispersion: 
+    type: schott_formula_a
+    coefficients: 
+      - -0.00024
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  partial_pressure_water_Pa: "NaN"
+  relative_air: 
+    $ref: vl/Air_Zemax_OS
+  density: 7.372
+  name: vl/KRS_5

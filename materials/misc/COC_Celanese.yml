@@ -1,0 +1,49 @@
+TAGS:
+  - vl
+  - 'category:misc'
+  - 'spectrum:Infrared'
+  - 'state:Solid'
+REFERENCES: |
+COMMENTS: |
+  VirtualLab material: COC-(Celanese)
+  DispersionFormula Schott → formula_vl_schott
+CONDITIONS: |
+DATA:
+  type: isotropic_dispersion
+  T_ref_C: 20.0
+  refractive_index_absolute: false
+  n: 
+    type: analytic_formula
+    formula: formula_vl_schott
+    wl_min: 0.334
+    wl_max: 2.325
+    coefficients: 
+      - 2.28448546
+      - 0.0102952211
+      - 0.0373493703
+      - -0.00928409653
+      - 0.00173289808
+      - -0.000115203047
+  k: 
+    type: analytic_formula
+    formula: formula_vl_constant
+    wl_min: "-Infinity"
+    wl_max: "Infinity"
+    coefficients: 
+      - 0.0
+  thermal_dispersion: 
+    type: schott_formula_a
+    coefficients: 
+      - -0.0002278
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  partial_pressure_water_Pa: "NaN"
+  relative_air: 
+    $ref: vl/Air_Zemax_OS
+  nd: 1.533732
+  Vd: 56.227932
+  density: 1.02
+  name: vl/COC_Celanese

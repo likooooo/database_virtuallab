@@ -1,0 +1,24 @@
+TAGS:
+  - vl
+  - 'category:2d'
+  - 'state:Solid'
+REFERENCES: |
+COMMENTS: |
+  VirtualLab interface: Sawtooth Grating Interface
+  Lossy: BlazedGratingInterface1D → rect from DefinitionArea size (period profile discarded).
+  Period1D_m=1E-05
+CONDITIONS: |
+DATA:
+  type: geometry_collection
+  shapes: 
+    - type: rect
+      halfwidth: 
+        - 15.0
+        - 15.0
+      center: 
+        - 0.0
+        - 0.0
+      angle: 0.0
+      material: 
+        $ref: vl/Air
+  name: vl/Sawtooth_Grating_Interface

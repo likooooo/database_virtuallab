@@ -1,0 +1,94 @@
+TAGS:
+  - vl
+  - 'vendor:ohara'
+  - 'category:glass'
+  - 'state:Solid'
+REFERENCES: |
+  Imported from ZEMAX - Glass Catalog file: Ohara_2016.agf
+COMMENTS: |
+  VirtualLab material: PBL2_Ohara_2016
+  Absorption: tabulated k from sampled alpha (α→k same points).
+  DispersionFormula Schott → formula_vl_schott
+CONDITIONS: |
+DATA:
+  type: isotropic_dispersion
+  T_ref_C: 25.0
+  refractive_index_absolute: false
+  n: 
+    type: analytic_formula
+    formula: formula_vl_schott
+    wl_min: 0.3
+    wl_max: 2.4
+    coefficients: 
+      - 2.3302166
+      - -0.0085474969
+      - 0.014788612
+      - 0.00048017066
+      - -1.9221577e-5
+      - 2.1710005e-6
+  k: 
+    type: tabulated
+    curve: 
+      type: tabulated_curve
+      x: 
+        - 0.31
+        - 0.32
+        - 0.33
+        - 0.34
+        - 0.35
+        - 0.36
+        - 0.37
+        - 0.38
+        - 0.39
+        - 0.4
+        - 0.42
+        - 0.44
+        - 0.46
+        - 0.48
+        - 0.5
+        - 0.55
+        - 0.6
+        - 0.65
+        - 0.7
+      x_unit: um
+      interpolator: linear
+      endpoint_low: clamp
+      endpoint_high: clamp
+      interpolator_params: {}
+      channels: 
+        k: 
+          - 4.37124320025391e-6
+          - 1.21730817111955e-6
+          - 3.96069439138937e-7
+          - 1.47338509573348e-7
+          - 6.19587259559665e-8
+          - 3.45853976276233e-8
+          - 2.36496568435749e-8
+          - 2.12420416201661e-8
+          - 1.24389801400096e-8
+          - 9.56364924289459e-9
+          - 1.33958247661642e-8
+          - 1.40337211836006e-8
+          - 1.09981966293288e-8
+          - 1.14763790914735e-8
+          - 7.96571552801991e-9
+          - 8.7622870808219e-9
+          - 9.55885863362389e-9
+          - 1.03554301864259e-8
+          - 1.11520017392279e-8
+  thermal_dispersion: 
+    type: schott_formula_a
+    coefficients: 
+      - "NaN"
+      - "NaN"
+      - "NaN"
+      - "NaN"
+      - "NaN"
+      - "NaN"
+  partial_pressure_water_Pa: "NaN"
+  relative_air: 
+    $ref: vl/Air_Zemax_OS
+  nd: 1.54072
+  Vd: 47.23368
+  density: 2.86
+  name: vl/PBL2_Ohara_2016

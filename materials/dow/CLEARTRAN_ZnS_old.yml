@@ -1,0 +1,52 @@
+TAGS:
+  - vl
+  - 'vendor:dow'
+  - 'spectrum:Infrared'
+  - 'category:metal'
+  - 'category:glass'
+  - 'state:Solid'
+REFERENCES: |
+COMMENTS: |
+  VirtualLab material: CLEARTRAN-ZnS_old
+  DispersionFormula Herzberger → formula_vl_herzberger
+CONDITIONS: |
+DATA:
+  type: isotropic_dispersion
+  T_ref_C: 20.0
+  refractive_index_absolute: false
+  n: 
+    type: analytic_formula
+    formula: formula_vl_herzberger
+    wl_min: 0.334
+    wl_max: 2.325
+    coefficients: 
+      - 2.2596285
+      - 0.0311097853
+      - 0.0010251756
+      - -0.000594355286
+      - 4.49796618e-7
+      - -4.12852834e-9
+  k: 
+    type: analytic_formula
+    formula: formula_vl_constant
+    wl_min: "-Infinity"
+    wl_max: "Infinity"
+    coefficients: 
+      - 0.0
+  thermal_dispersion: 
+    type: schott_formula_a
+    coefficients: 
+      - 4.33e-5
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  partial_pressure_water_Pa: "NaN"
+  relative_air: 
+    $ref: vl/Air_Zemax_OS
+  nd: 2.367678
+  Vd: 15.282309
+  density: 4.36
+  glass_code: 'source:'
+  name: vl/CLEARTRAN_ZnS_old

@@ -1,0 +1,141 @@
+TAGS:
+  - vl
+  - 'category:dielectric'
+  - 'category:metal'
+  - 'spectrum:Infrared'
+  - 'state:Solid'
+REFERENCES: |
+COMMENTS: |
+  VirtualLab material: Thorium_Fluoride-ThF4-ThinFilm
+  Dispersion from VirtualLab SampledRefractiveIndex table.
+  Absorption: tabulated k from sampled alpha (α→k same points).
+CONDITIONS: |
+DATA:
+  type: isotropic_dispersion
+  T_ref_C: 20.0
+  refractive_index_absolute: false
+  n: 
+    type: tabulated
+    curve: 
+      type: tabulated_curve
+      x: 
+        - 0.22
+        - 0.23
+        - 0.24
+        - 0.25
+        - 0.26
+        - 0.27
+        - 0.28
+        - 0.29
+        - 0.3
+        - 0.31
+        - 0.32
+        - 0.33
+        - 0.34
+        - 0.35
+        - 0.36
+        - 0.37
+        - 0.38
+        - 0.39
+        - 0.4
+        - 0.41
+        - 0.42
+        - 0.43
+        - 0.44
+        - 0.45
+        - 0.46
+        - 0.47
+        - 0.48
+        - 0.49
+        - 0.5
+        - 0.51
+        - 0.52
+        - 0.54
+        - 0.56
+        - 0.58
+        - 0.6
+        - 0.62
+        - 0.64
+        - 0.66
+        - 0.7
+        - 0.74
+        - 0.78
+        - 0.8
+      x_unit: um
+      interpolator: linear
+      endpoint_low: clamp
+      endpoint_high: clamp
+      interpolator_params: {}
+      channels: 
+        n: 
+          - 1.613
+          - 1.599
+          - 1.587
+          - 1.577
+          - 1.569
+          - 1.563
+          - 1.557
+          - 1.553
+          - 1.549
+          - 1.545
+          - 1.542
+          - 1.54
+          - 1.538
+          - 1.536
+          - 1.534
+          - 1.532
+          - 1.531
+          - 1.53
+          - 1.529
+          - 1.528
+          - 1.527
+          - 1.526
+          - 1.526
+          - 1.525
+          - 1.524
+          - 1.524
+          - 1.523
+          - 1.523
+          - 1.523
+          - 1.522
+          - 1.522
+          - 1.521
+          - 1.521
+          - 1.52
+          - 1.52
+          - 1.52
+          - 1.519
+          - 1.519
+          - 1.519
+          - 1.518
+          - 1.518
+          - 1.518
+  k: 
+    type: tabulated
+    curve: 
+      type: tabulated_curve
+      x: 
+        - 0.515
+        - 1.06
+      x_unit: um
+      interpolator: linear
+      endpoint_low: clamp
+      endpoint_high: clamp
+      interpolator_params: {}
+      channels: 
+        k: 
+          - 3.27859182769304e-6
+          - 1.26528179758057e-6
+  thermal_dispersion: 
+    type: schott_formula_a
+    coefficients: 
+      - "NaN"
+      - "NaN"
+      - "NaN"
+      - "NaN"
+      - "NaN"
+      - "NaN"
+  partial_pressure_water_Pa: "NaN"
+  relative_air: 
+    $ref: vl/Air
+  name: vl/Thorium_Fluoride_ThF4_ThinFilm

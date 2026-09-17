@@ -1,0 +1,112 @@
+TAGS:
+  - vl
+  - 'category:Standard-HR'
+  - 'state:Solid'
+REFERENCES: |
+COMMENTS: |
+  VirtualLab coating: Stack01_632.8nm
+CONDITIONS: |
+DATA:
+  type: films
+  layers: 
+    - type: coating
+      depth: 0.10731044
+      background_material: 
+        $ref: vl/Silicon_Dioxide_SiO2_ThinFilm
+      is_incoherent: false
+    - type: coating
+      depth: 0.069391942
+      background_material: 
+        $ref: vl/Titanium_Dioxide_TiO2_ThinFilm
+      is_incoherent: false
+    - type: coating
+      depth: 0.10731044
+      background_material: 
+        $ref: vl/Silicon_Dioxide_SiO2_ThinFilm
+      is_incoherent: false
+    - type: coating
+      depth: 0.069391942
+      background_material: 
+        $ref: vl/Titanium_Dioxide_TiO2_ThinFilm
+      is_incoherent: false
+    - type: coating
+      depth: 0.10731044
+      background_material: 
+        $ref: vl/Silicon_Dioxide_SiO2_ThinFilm
+      is_incoherent: false
+    - type: coating
+      depth: 0.069391942
+      background_material: 
+        $ref: vl/Titanium_Dioxide_TiO2_ThinFilm
+      is_incoherent: false
+    - type: coating
+      depth: 0.10731044
+      background_material: 
+        $ref: vl/Silicon_Dioxide_SiO2_ThinFilm
+      is_incoherent: false
+    - type: coating
+      depth: 0.069391942
+      background_material: 
+        $ref: vl/Titanium_Dioxide_TiO2_ThinFilm
+      is_incoherent: false
+    - type: coating
+      depth: 0.10731044
+      background_material: 
+        $ref: vl/Silicon_Dioxide_SiO2_ThinFilm
+      is_incoherent: false
+    - type: coating
+      depth: 0.069391942
+      background_material: 
+        $ref: vl/Titanium_Dioxide_TiO2_ThinFilm
+      is_incoherent: false
+    - type: coating
+      depth: 0.10731044
+      background_material: 
+        $ref: vl/Silicon_Dioxide_SiO2_ThinFilm
+      is_incoherent: false
+    - type: coating
+      depth: 0.069391942
+      background_material: 
+        $ref: vl/Titanium_Dioxide_TiO2_ThinFilm
+      is_incoherent: false
+    - type: coating
+      depth: 0.10731044
+      background_material: 
+        $ref: vl/Silicon_Dioxide_SiO2_ThinFilm
+      is_incoherent: false
+    - type: coating
+      depth: 0.069391942
+      background_material: 
+        $ref: vl/Titanium_Dioxide_TiO2_ThinFilm
+      is_incoherent: false
+    - type: coating
+      depth: 0.10731044
+      background_material: 
+        $ref: vl/Silicon_Dioxide_SiO2_ThinFilm
+      is_incoherent: false
+    - type: coating
+      depth: 0.069391942
+      background_material: 
+        $ref: vl/Titanium_Dioxide_TiO2_ThinFilm
+      is_incoherent: false
+    - type: coating
+      depth: 0.10731044
+      background_material: 
+        $ref: vl/Silicon_Dioxide_SiO2_ThinFilm
+      is_incoherent: false
+    - type: coating
+      depth: 0.069391942
+      background_material: 
+        $ref: vl/Titanium_Dioxide_TiO2_ThinFilm
+      is_incoherent: false
+    - type: coating
+      depth: 0.10731044
+      background_material: 
+        $ref: vl/Silicon_Dioxide_SiO2_ThinFilm
+      is_incoherent: false
+    - type: coating
+      depth: 0.069391942
+      background_material: 
+        $ref: vl/Titanium_Dioxide_TiO2_ThinFilm
+      is_incoherent: false
+  name: vl/Stack01_632_8nm

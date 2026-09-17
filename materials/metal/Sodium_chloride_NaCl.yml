@@ -1,0 +1,47 @@
+TAGS:
+  - vl
+  - 'spectrum:Infrared'
+  - 'category:metal'
+  - 'state:Solid'
+REFERENCES: |
+COMMENTS: |
+  VirtualLab material: Sodium_chloride-NaCl
+  DispersionFormula Herzberger → formula_vl_herzberger
+CONDITIONS: |
+DATA:
+  type: isotropic_dispersion
+  T_ref_C: 20.0
+  refractive_index_absolute: false
+  n: 
+    type: analytic_formula
+    formula: formula_vl_herzberger
+    wl_min: 1.0
+    wl_max: 20.0
+    coefficients: 
+      - 1.52622845
+      - 0.00603188287
+      - -0.000120091689
+      - -0.000303390814
+      - -1.13982878e-7
+      - -6.99966217e-11
+  k: 
+    type: analytic_formula
+    formula: formula_vl_constant
+    wl_min: "-Infinity"
+    wl_max: "Infinity"
+    coefficients: 
+      - 0.0
+  thermal_dispersion: 
+    type: schott_formula_a
+    coefficients: 
+      - -8.7e-5
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  partial_pressure_water_Pa: "NaN"
+  relative_air: 
+    $ref: vl/Air_Zemax_OS
+  density: 2.164
+  name: vl/Sodium_chloride_NaCl

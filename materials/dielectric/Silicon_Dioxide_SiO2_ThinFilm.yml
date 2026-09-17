@@ -1,0 +1,84 @@
+TAGS:
+  - vl
+  - 'category:dielectric'
+  - 'category:semiconductor'
+  - 'state:Solid'
+REFERENCES: |
+COMMENTS: |
+  VirtualLab material: Silicon_Dioxide-SiO2-ThinFilm
+  Dispersion from VirtualLab SampledRefractiveIndex table.
+CONDITIONS: |
+DATA:
+  type: isotropic_dispersion
+  T_ref_C: 20.0
+  refractive_index_absolute: false
+  n: 
+    type: tabulated
+    curve: 
+      type: tabulated_curve
+      x: 
+        - 0.32
+        - 0.3255
+        - 0.3364
+        - 0.3493
+        - 0.361
+        - 0.3654
+        - 0.38
+        - 0.3868
+        - 0.403
+        - 0.415
+        - 0.43
+        - 0.448
+        - 0.4611
+        - 0.48
+        - 0.5
+        - 0.54
+        - 0.57
+        - 0.604
+        - 0.72
+      x_unit: um
+      interpolator: linear
+      endpoint_low: clamp
+      endpoint_high: clamp
+      interpolator_params: {}
+      channels: 
+        n: 
+          - 1.5131
+          - 1.51
+          - 1.505
+          - 1.5
+          - 1.4963
+          - 1.495
+          - 1.4915
+          - 1.49
+          - 1.4869
+          - 1.485
+          - 1.4831
+          - 1.4812
+          - 1.48
+          - 1.4785
+          - 1.4774
+          - 1.4756
+          - 1.4748
+          - 1.4741
+          - 1.473
+  k: 
+    type: analytic_formula
+    formula: formula_vl_constant
+    wl_min: "-Infinity"
+    wl_max: "Infinity"
+    coefficients: 
+      - 0.0
+  thermal_dispersion: 
+    type: schott_formula_a
+    coefficients: 
+      - "NaN"
+      - "NaN"
+      - "NaN"
+      - "NaN"
+      - "NaN"
+      - "NaN"
+  partial_pressure_water_Pa: "NaN"
+  relative_air: 
+    $ref: vl/Air
+  name: vl/Silicon_Dioxide_SiO2_ThinFilm

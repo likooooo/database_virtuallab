@@ -1,0 +1,107 @@
+TAGS:
+  - vl
+  - 'category:dielectric'
+  - 'category:metal'
+  - 'spectrum:Infrared'
+  - 'state:Solid'
+REFERENCES: |
+COMMENTS: |
+  VirtualLab material: Lead_Fluoride-PbF2-ThinFilm
+  Dispersion from VirtualLab SampledRefractiveIndex table.
+  Absorption: tabulated k from sampled alpha (α→k same points).
+CONDITIONS: |
+DATA:
+  type: isotropic_dispersion
+  T_ref_C: 20.0
+  refractive_index_absolute: false
+  n: 
+    type: tabulated
+    curve: 
+      type: tabulated_curve
+      x: 
+        - 0.3088
+        - 0.3645
+        - 0.381
+        - 0.4045
+        - 0.4266
+        - 0.4565
+        - 0.4876
+        - 0.5277
+        - 0.5711
+        - 0.6259
+        - 0.693
+        - 0.7775
+        - 0.8861
+        - 1.031
+        - 1.237
+        - 1.545
+        - 2.058
+      x_unit: um
+      interpolator: linear
+      endpoint_low: clamp
+      endpoint_high: clamp
+      interpolator_params: {}
+      channels: 
+        n: 
+          - 1.915
+          - 1.849
+          - 1.826
+          - 1.824
+          - 1.804
+          - 1.801
+          - 1.787
+          - 1.785
+          - 1.771
+          - 1.764
+          - 1.758
+          - 1.753
+          - 1.748
+          - 1.744
+          - 1.743
+          - 1.742
+          - 1.74
+  k: 
+    type: tabulated
+    curve: 
+      type: tabulated_curve
+      x: 
+        - 0.3088
+        - 0.4266
+        - 0.4565
+        - 0.4876
+        - 0.5277
+        - 0.6259
+        - 0.693
+        - 0.7775
+        - 0.8861
+        - 2.058
+      x_unit: um
+      interpolator: linear
+      endpoint_low: clamp
+      endpoint_high: clamp
+      interpolator_params: {}
+      channels: 
+        k: 
+          - 0.00638911603548105
+          - 0.00179923071615957
+          - 0.00210697271412206
+          - 0.00139687110452895
+          - 0.00138577004724829
+          - 0.000896535709930956
+          - 0.000297794814019245
+          - 0.000197988749206318
+          - 0.0
+          - 0.0
+  thermal_dispersion: 
+    type: schott_formula_a
+    coefficients: 
+      - "NaN"
+      - "NaN"
+      - "NaN"
+      - "NaN"
+      - "NaN"
+      - "NaN"
+  partial_pressure_water_Pa: "NaN"
+  relative_air: 
+    $ref: vl/Air
+  name: vl/Lead_Fluoride_PbF2_ThinFilm

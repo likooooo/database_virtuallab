@@ -1,0 +1,121 @@
+TAGS:
+  - vl
+  - 'vendor:hoya'
+  - 'spectrum:Infrared'
+  - 'category:glass'
+  - 'state:Solid'
+REFERENCES: |
+  Imported from ZEMAX - Glass Catalog file: Hoya_2015.agf
+COMMENTS: |
+  VirtualLab material: MC-NBFD135_Hoya_2015
+  Absorption: tabulated k from sampled alpha (α→k same points).
+  DispersionFormula Schott → formula_vl_schott
+CONDITIONS: |
+DATA:
+  type: isotropic_dispersion
+  T_ref_C: 20.0
+  refractive_index_absolute: false
+  n: 
+    type: analytic_formula
+    formula: formula_vl_schott
+    wl_min: 0.36501
+    wl_max: 1.01398
+    coefficients: 
+      - 3.1819698
+      - -0.014926522
+      - 0.028987649
+      - 0.0012223654
+      - -5.2916688e-5
+      - 4.7807227e-6
+  k: 
+    type: tabulated
+    curve: 
+      type: tabulated_curve
+      x: 
+        - 0.34
+        - 0.35
+        - 0.36
+        - 0.37
+        - 0.38
+        - 0.39
+        - 0.4
+        - 0.42
+        - 0.44
+        - 0.46
+        - 0.48
+        - 0.5
+        - 0.55
+        - 0.6
+        - 0.65
+        - 0.7
+        - 0.75
+        - 0.78
+        - 0.8
+        - 0.83
+        - 0.85
+        - 0.9
+        - 0.95
+        - 1.0
+        - 1.05
+        - 1.06
+        - 1.1
+        - 1.2
+        - 1.3
+        - 1.4
+        - 1.5
+        - 1.55
+      x_unit: um
+      interpolator: linear
+      endpoint_low: clamp
+      endpoint_high: clamp
+      interpolator_params: {}
+      channels: 
+        k: 
+          - 5.28120342488674e-6
+          - 2.21783032962078e-6
+          - 9.69083220777131e-7
+          - 4.85451367403408e-7
+          - 2.7192727247427e-7
+          - 1.75567295900566e-7
+          - 1.20008770522591e-7
+          - 7.43504711471598e-8
+          - 5.29190236425342e-8
+          - 4.04893022932297e-8
+          - 2.29873430039494e-8
+          - 1.99442702167984e-8
+          - 4.37895077551002e-9
+          - 4.77703720964729e-9
+          - 5.17512364378457e-9
+          - 5.57321007792184e-9
+          - 5.97129651205911e-9
+          - 1.24265162237111e-8
+          - 6.36938294619639e-9
+          - 1.3223087776513e-8
+          - 6.76746938033366e-9
+          - 7.16555581447094e-9
+          - 7.56364224860821e-9
+          - 7.96172868274549e-9
+          - 8.35981511688276e-9
+          - 8.43943240371022e-9
+          - 8.75790155102004e-9
+          - 9.55407441929458e-9
+          - 1.03502472875691e-8
+          - 3.34727723501311e-8
+          - 3.58636846608547e-8
+          - 3.70591408162165e-8
+  thermal_dispersion: 
+    type: schott_formula_a
+    coefficients: 
+      - 9.98837e-6
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  partial_pressure_water_Pa: "NaN"
+  relative_air: 
+    $ref: vl/Air_Zemax_OS
+  nd: 1.80834
+  density: 4.67
+  glass_code: Preforms
+  name: vl/MC_NBFD135_Hoya_2015

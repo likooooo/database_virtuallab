@@ -1,0 +1,50 @@
+TAGS:
+  - vl
+  - 'category:misc'
+  - 'spectrum:Infrared'
+  - 'state:GasOrVacuum'
+REFERENCES: |
+COMMENTS: |
+  VirtualLab material: Air
+  Edlen: using standard 12 formula coeffs; dump params are T/P not coeffs.
+CONDITIONS: |
+DATA:
+  type: isotropic_dispersion
+  T_ref_C: 20.0
+  refractive_index_absolute: true
+  n: 
+    type: analytic_formula_gas
+    formula: formula_vl_gases_edlen
+    wl_min: 0.193
+    wl_max: 50.0
+    coefficients: 
+      - 1.0e-8
+      - 8342.13
+      - 2406030.0
+      - 130.0
+      - 15997.0
+      - 38.9
+      - 760.0
+      - 1.049
+      - 0.0157
+      - 1.0e-6
+      - 720.775
+      - 0.003661
+  k: 
+    type: analytic_formula
+    formula: formula_vl_constant
+    wl_min: "-Infinity"
+    wl_max: "Infinity"
+    coefficients: 
+      - 0.0
+  thermal_dispersion: 
+    type: schott_formula_a
+    coefficients: 
+      - "NaN"
+      - "NaN"
+      - "NaN"
+      - "NaN"
+      - "NaN"
+      - "NaN"
+  partial_pressure_water_Pa: "NaN"
+  name: vl/Air

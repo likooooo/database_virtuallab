@@ -1,0 +1,51 @@
+TAGS:
+  - vl
+  - 'spectrum:Infrared'
+  - 'category:metal'
+  - 'state:Solid'
+REFERENCES: |
+COMMENTS: |
+  VirtualLab material: Calcite(ordinaryRay)-CaCO3
+  DispersionFormula Sellmeier3 → formula_vl_sellmeier_3
+CONDITIONS: |
+DATA:
+  type: isotropic_dispersion
+  T_ref_C: 20.0
+  refractive_index_absolute: false
+  n: 
+    type: analytic_formula
+    formula: formula_vl_sellmeier_3
+    wl_min: 0.2
+    wl_max: 2.2
+    coefficients: 
+      - 0.8559
+      - 0.00345744
+      - 0.8391
+      - 0.019881
+      - 0.0009
+      - 0.038809
+      - 0.6845
+      - 49.070025
+  k: 
+    type: analytic_formula
+    formula: formula_vl_constant
+    wl_min: "-Infinity"
+    wl_max: "Infinity"
+    coefficients: 
+      - 0.0
+  thermal_dispersion: 
+    type: schott_formula_a
+    coefficients: 
+      - 1.05e-6
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  partial_pressure_water_Pa: "NaN"
+  relative_air: 
+    $ref: vl/Air_Zemax_OS
+  nd: 1.658338
+  Vd: 48.604351
+  density: 2.711
+  name: vl/Calcite_ordinaryRay_CaCO3

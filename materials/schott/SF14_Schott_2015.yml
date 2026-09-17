@@ -1,0 +1,92 @@
+TAGS:
+  - vl
+  - 'vendor:schott'
+  - 'spectrum:Infrared'
+  - 'category:glass'
+  - 'state:Solid'
+REFERENCES: |
+  Imported from ZEMAX - Glass Catalog file: Schott_2015.agf
+COMMENTS: |
+  VirtualLab material: SF14_Schott_2015
+  Absorption: tabulated k from sampled alpha (α→k same points).
+  DispersionFormula Sellmeier1 → formula_vl_sellmeier_1
+CONDITIONS: |
+DATA:
+  type: isotropic_dispersion
+  T_ref_C: 20.0
+  refractive_index_absolute: false
+  n: 
+    type: analytic_formula
+    formula: formula_vl_sellmeier_1
+    wl_min: 0.39
+    wl_max: 2.5
+    coefficients: 
+      - 1.69182538
+      - 0.0133151542
+      - 0.285919934
+      - 0.0612647445
+      - 1.12595145
+      - 118.405242
+  k: 
+    type: tabulated
+    curve: 
+      type: tabulated_curve
+      x: 
+        - 0.39
+        - 0.4
+        - 0.405
+        - 0.42
+        - 0.436
+        - 0.46
+        - 0.5
+        - 0.546
+        - 0.58
+        - 0.62
+        - 0.66
+        - 0.7
+        - 1.06
+        - 1.53
+        - 1.97
+        - 2.325
+        - 2.5
+      x_unit: um
+      interpolator: linear
+      endpoint_low: clamp
+      endpoint_high: clamp
+      interpolator_params: {}
+      channels: 
+        k: 
+          - 3.99593999006885e-6
+          - 1.62079023753549e-6
+          - 1.14940820827716e-6
+          - 4.02547856816321e-7
+          - 1.93272228619546e-7
+          - 9.05995424893705e-8
+          - 4.19277389598865e-8
+          - 2.09818078940915e-8
+          - 1.85549033174941e-8
+          - 1.98345518221489e-8
+          - 2.11142003268037e-8
+          - 1.7897037611354e-8
+          - 1.01374681974683e-8
+          - 8.84611027740379e-8
+          - 5.2286145188885e-7
+          - 2.74613278792806e-6
+          - 4.06502115401791e-6
+  thermal_dispersion: 
+    type: schott_formula_a
+    coefficients: 
+      - 8.85e-6
+      - 1.81e-8
+      - -4.12e-11
+      - 1.39e-6
+      - 1.53e-9
+      - 2.79e-7
+  partial_pressure_water_Pa: "NaN"
+  relative_air: 
+    $ref: vl/Air_Zemax_OS
+  nd: 1.76182
+  Vd: 26.53
+  density: 4.54
+  glass_code: was
+  name: vl/SF14_Schott_2015
