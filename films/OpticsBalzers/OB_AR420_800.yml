@@ -4,11 +4,16 @@ TAGS:
   - 'state:Solid'
 REFERENCES: |
 COMMENTS: |
-  VirtualLab coating: OB-AR420-800
+  VirtualLab coating (Air|Fused_Silica depth=0 half-space bookends (VL Fresnel defaults)): OB-AR420-800
 CONDITIONS: |
 DATA:
   type: films
   layers: 
+    - type: coating
+      depth: 0
+      background_material: 
+        $ref: vl/Air
+      is_incoherent: false
     - type: coating
       depth: 0.19565
       background_material: 
@@ -63,5 +68,10 @@ DATA:
       depth: 0.09013
       background_material: 
         $ref: vl/SiO2_ThinFilm_MSO_measured
+      is_incoherent: false
+    - type: coating
+      depth: 0
+      background_material: 
+        $ref: vl/Fused_Silica
       is_incoherent: false
   name: vl/OB_AR420_800

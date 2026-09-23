@@ -4,11 +4,16 @@ TAGS:
   - 'state:Solid'
 REFERENCES: |
 COMMENTS: |
-  VirtualLab coating: VCoat01_450nm
+  VirtualLab coating (Air|Fused_Silica depth=0 half-space bookends (VL Fresnel defaults)): VCoat01_450nm
 CONDITIONS: |
 DATA:
   type: films
   layers: 
+    - type: coating
+      depth: 0
+      background_material: 
+        $ref: vl/Air
+      is_incoherent: false
     - type: coating
       depth: 0.061095171
       background_material: 
@@ -18,5 +23,10 @@ DATA:
       depth: 0.081402031
       background_material: 
         $ref: vl/Magnesium_Fluoride_MgF2_ThinFilm
+      is_incoherent: false
+    - type: coating
+      depth: 0
+      background_material: 
+        $ref: vl/Fused_Silica
       is_incoherent: false
   name: vl/VCoat01_450nm

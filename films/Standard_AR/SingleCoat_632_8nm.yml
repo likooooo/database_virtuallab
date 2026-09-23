@@ -4,14 +4,24 @@ TAGS:
   - 'state:Solid'
 REFERENCES: |
 COMMENTS: |
-  VirtualLab coating: SingleCoat_632.8nm
+  VirtualLab coating (Air|Fused_Silica depth=0 half-space bookends (VL Fresnel defaults)): SingleCoat_632.8nm
 CONDITIONS: |
 DATA:
   type: films
   layers: 
     - type: coating
+      depth: 0
+      background_material: 
+        $ref: vl/Air
+      is_incoherent: false
+    - type: coating
       depth: 0.11469864
       background_material: 
         $ref: vl/Magnesium_Fluoride_MgF2_ThinFilm
+      is_incoherent: false
+    - type: coating
+      depth: 0
+      background_material: 
+        $ref: vl/Fused_Silica
       is_incoherent: false
   name: vl/SingleCoat_632_8nm

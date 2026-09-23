@@ -28,7 +28,7 @@ Both `--install-dir` and `--out` are required (no defaults / no fallback).
 | Kind | Rule |
 |------|------|
 | materials | `DATA.name=virtuallab/<stem>`；`formula_vl_*` / Sampled；α→k same-grid；catalog fields in DATA |
-| films | coatings live → `type: films` + layer `background_material.$ref` |
+| films | coatings live → `type: films` + layer `background_material.$ref`; injects `depth: 0` Air (incident) + Fused_Silica (substrate) half-space bookends — same defaults as VL `ControlFresnelCoeffDiagram` / Fresnel calculator (`LayerList` is finite films only) |
 | geometries | lossy subset；skips → `notes/geo_skip.txt` |
 | TAGS | 见仓库 [`docs/tag_taxonomy.md`](../../../docs/tag_taxonomy.md)（`vl` + 闭集 category / 小写 vendor / spectrum / state） |
 | HASH | never written |

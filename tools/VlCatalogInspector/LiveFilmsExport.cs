@@ -10,6 +10,13 @@ namespace VlCatalogInspector
     /// <summary>Live CoatingsCatalog → films YAML (same payload shape as former dump exporter).</summary>
     internal static class LiveFilmsExport
     {
+        // VL ControlFresnelCoeffDiagram / FormFresnelEffectsCalculator defaults:
+        // front = Air, back = Fused_Silica (PublicResources.Material_FusedSilica).
+        // CoatingsCatalog LayerList is finite films only; inject those half-spaces for TMM.
+        private static readonly string[] IncidentCatalogNames = { "Air", "Vacuum" };
+
+        private static readonly string[] SubstrateCatalogNames = { "Fused_Silica" };
+
         public static int Run(
             string installDir,
             string outRoot,
@@ -99,16 +106,14 @@ namespace VlCatalogInspector
                 if (!nameToDir.TryGetValue(matName, out dir))
                     throw new InvalidOperationException("material not in materials catalog: " + matName);
                 string matKey = TagLayout.ObjectKey(dir);
-                layersOut.Add(new Dictionary<string, object>
-                {
-                    { "type", "coating" },
-                    { "depth", depthUm },
-                    { "background_material", new Dictionary<string, object> { { "$ref", matKey } } },
-                    { "is_incoherent", false },
-                });
+                layersOut.Add(CoatingLayerDict(depthUm, matKey));
             }
             if (layersOut.Count == 0)
                 throw new InvalidOperationException("empty LayerList");
+
+            string incidentKey = ResolveBookendMaterialRef(nameToDir, IncidentCatalogNames, "incident");
+            string substrateKey = ResolveBookendMaterialRef(nameToDir, SubstrateCatalogNames, "substrate");
+            EnsureHalfSpaceBookends(layersOut, incidentKey, substrateKey);
 
             var payload = new Dictionary<string, object>
             {
@@ -118,6 +123,65 @@ namespace VlCatalogInspector
             string primary = TagLayout.PrimaryTag(tags);
             string outPath = Path.Combine(outRoot, "films", primary, TagLayout.KeySafeStem(stem) + ".yml");
             YamlWriter.WriteObject(outPath, tags, "", "VirtualLab coating: " + rawName, "", payload, key, null);
+        }
+
+        /// <summary>
+        /// TMM convention: first/last coating depth=0 are incident / substrate half-spaces.
+        /// VL CoatingsCatalog has no surrounding/substrate fields; use the same defaults as
+        /// ControlFresnelCoeffDiagram (Air | Fused_Silica) when bookends are missing.
+        /// </summary>
+        private static void EnsureHalfSpaceBookends(
+            List<object> layersOut, string incidentMaterialKey, string substrateMaterialKey)
+        {
+            if (!IsDepthZeroCoating(layersOut[0]))
+                layersOut.Insert(0, CoatingLayerDict(0.0, incidentMaterialKey));
+            if (!IsDepthZeroCoating(layersOut[layersOut.Count - 1]))
+                layersOut.Add(CoatingLayerDict(0.0, substrateMaterialKey));
+        }
+
+        private static bool IsDepthZeroCoating(object layerObj)
+        {
+            var layer = layerObj as Dictionary<string, object>;
+            if (layer == null) return false;
+            object depthObj;
+            if (!layer.TryGetValue("depth", out depthObj) || depthObj == null) return false;
+            double depth = Convert.ToDouble(depthObj, CultureInfo.InvariantCulture);
+            return depth == 0.0;
+        }
+
+        private static Dictionary<string, object> CoatingLayerDict(double depthUm, string materialKey)
+        {
+            return new Dictionary<string, object>
+            {
+                { "type", "coating" },
+                { "depth", depthUm },
+                { "background_material", new Dictionary<string, object> { { "$ref", materialKey } } },
+                { "is_incoherent", false },
+            };
+        }
+
+        private static string ResolveBookendMaterialRef(
+            IDictionary<string, string> nameToDir, string[] catalogNames, string role)
+        {
+            for (int i = 0; i < catalogNames.Length; i++)
+            {
+                string name = catalogNames[i];
+                string dir;
+                if (nameToDir.TryGetValue(name, out dir))
+                    return TagLayout.ObjectKey(dir);
+            }
+            // Dir stems after SafeDirName (e.g. N-BK7_Schott_2015 → N_BK7_Schott_2015).
+            foreach (KeyValuePair<string, string> kv in nameToDir)
+            {
+                for (int i = 0; i < catalogNames.Length; i++)
+                {
+                    if (string.Equals(kv.Value, TagLayout.SafeDirName(catalogNames[i]), StringComparison.OrdinalIgnoreCase)
+                        || string.Equals(kv.Key, catalogNames[i], StringComparison.OrdinalIgnoreCase))
+                        return TagLayout.ObjectKey(kv.Value);
+                }
+            }
+            throw new InvalidOperationException(
+                "cannot resolve " + role + " half-space material; tried: " + string.Join(", ", catalogNames));
         }
 
         private static IEnumerable AsEnumerable(object o)

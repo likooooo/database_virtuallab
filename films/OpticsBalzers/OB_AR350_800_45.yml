@@ -4,11 +4,16 @@ TAGS:
   - 'state:Solid'
 REFERENCES: |
 COMMENTS: |
-  VirtualLab coating: OB-AR350-800-45
+  VirtualLab coating (Air|Fused_Silica depth=0 half-space bookends (VL Fresnel defaults)): OB-AR350-800-45
 CONDITIONS: |
 DATA:
   type: films
   layers: 
+    - type: coating
+      depth: 0
+      background_material: 
+        $ref: vl/Air
+      is_incoherent: false
     - type: coating
       depth: 0.1908
       background_material: 
@@ -83,5 +88,10 @@ DATA:
       depth: 0.0946
       background_material: 
         $ref: vl/SiO2_ThinFilm_MSO_measured
+      is_incoherent: false
+    - type: coating
+      depth: 0
+      background_material: 
+        $ref: vl/Fused_Silica
       is_incoherent: false
   name: vl/OB_AR350_800_45

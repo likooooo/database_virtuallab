@@ -4,11 +4,16 @@ TAGS:
   - 'state:Solid'
 REFERENCES: |
 COMMENTS: |
-  VirtualLab coating: BBCoat01_510-710nm
+  VirtualLab coating (Air|Fused_Silica depth=0 half-space bookends (VL Fresnel defaults)): BBCoat01_510-710nm
 CONDITIONS: |
 DATA:
   type: films
   layers: 
+    - type: coating
+      depth: 0
+      background_material: 
+        $ref: vl/Air
+      is_incoherent: false
     - type: coating
       depth: 0.013878389
       background_material: 
@@ -28,5 +33,10 @@ DATA:
       depth: 0.10731044
       background_material: 
         $ref: vl/Silicon_Dioxide_SiO2_ThinFilm
+      is_incoherent: false
+    - type: coating
+      depth: 0
+      background_material: 
+        $ref: vl/Fused_Silica
       is_incoherent: false
   name: vl/BBCoat01_510_710nm
