@@ -2,8 +2,6 @@ __pycache__/
 *.py[cod]
 .cache/
 .DS_Store
-tools/VlCatalogInspector/**/bin/
-tools/VlCatalogInspector/**/obj/
 .vs/
 *.user
 _export_log/

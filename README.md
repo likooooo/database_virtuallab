@@ -9,6 +9,7 @@ VirtualLab source for the assets harness.
 | `materials/{primary_tag}/{SafeName}.yml` | Materials YAML (~2055; a few VL formulas logged as fail) |
 | `films/{primary_tag}/{stem}.yml` | Coatings → `type: films` (13) |
 | `geometries/{2d\|3d}/` | Lossy subset (8); skips in `_export_log/geo_skip.txt` |
+| `notes/geo_lossy_map.md` | Geometry lossy mapping notes |
 
 ## Refresh YAML
 
@@ -16,26 +17,27 @@ VirtualLab source for the assets harness.
 
 ```bash
 cd database_virtuallab
-python3 update_current_database.py
+python3 update_current_database.py \
+  --config "$SIMULATION_TOOL_DATABASE/clients/gui/assets/config.example.yaml" \
+  --remote SimulationToolkits.Public.Database.Readwrite
 ```
 
-行为（对齐 `fmm_mp.sh` vl-build，无 SSH）：
+行为：
 
 1. 要求 WSL + `cmd.exe` / `wslpath`
-2. 写死 `dotnet.exe`：`/mnt/c/Program Files/dotnet/dotnet.exe`
-3. 源码 sync 到 Windows `%TEMP%\VlCatalogInspector`（禁止 `\\wsl$` 作编译目录）
-4. `dotnet build -c Release`
-5. 从暂存目录跑 `VlCatalogInspector.exe`：
+2. 固定 `ensure_runtime(virtuallab_runtime, win-x86_64, latest_trial)` 下载已发布包（源码真源在 `simulation_vl_plugin`；本仓**不**含 VlCatalogInspector C#；**无** YAML 配置项）
+3. 将解包缓存 rsync 到 Windows `%TEMP%\virtuallab_runtime`（禁止 `\\wsl$` 作运行目录，Fusion DLL 旁路解析）
+4. 跑 `VlCatalogInspector.exe`：
    - `--install-dir` 写死  
      `C:\Program Files\Wyrowski Photonics\VirtualLab Fusion (7.5.0) Trial`
    - `--out` 在 `%TEMP%` 下；再 rsync `materials|films|geometries` 回本目录
-6. 仅 live 安装目录导出（无 `--datas` / 无 dumper）
+5. 仅 live 安装目录导出（无 `--datas` / 无 dumper）
 
-工具源码：[tools/VlCatalogInspector/](tools/VlCatalogInspector/)（materials + films + geometries）。
+`scripts/harness.sh` Phase 0 在 sources 含本源时同次 ensure `virtuallab_runtime`；Phase 1 对本源传 `--config` / `--remote`（仅解析 ingest 连接）。
 
 ## Harness ingest
 
-Config `harness.<remote>.sources` 含 `database_virtuallab` 时：
+Config `harness.<remote>.sources` 含 `database_virtuallab` 即可；不必也不允许顶层 `virtuallab:` 块。
 
 ```bash
 # 全量 = 刷新 YAML + reinit（reinit 内含 deploy）
