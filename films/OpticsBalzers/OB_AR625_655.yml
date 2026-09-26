@@ -4,28 +4,18 @@ TAGS:
   - 'state:Solid'
 REFERENCES: |
 COMMENTS: |
-  VirtualLab coating (Air|Fused_Silica depth=0 half-space bookends (VL Fresnel defaults)): OB-AR625-655
+  VirtualLab coating: OB-AR625-655
 CONDITIONS: |
 DATA:
   type: films
   layers: 
     - type: coating
-      depth: 0
+      depth: 0.0
       background_material: 
         $ref: vl/Air
       is_incoherent: false
     - type: coating
-      depth: 0.24735
-      background_material: 
-        $ref: vl/SiO2_ThinFilm_MSO_measured
-      is_incoherent: false
-    - type: coating
-      depth: 0.01699
-      background_material: 
-        $ref: vl/Ta2O5_ThinFilm_MSO_measured
-      is_incoherent: false
-    - type: coating
-      depth: 0.27602
+      depth: 0.12874
       background_material: 
         $ref: vl/SiO2_ThinFilm_MSO_measured
       is_incoherent: false
@@ -35,12 +25,22 @@ DATA:
         $ref: vl/Ta2O5_ThinFilm_MSO_measured
       is_incoherent: false
     - type: coating
-      depth: 0.12874
+      depth: 0.27602
       background_material: 
         $ref: vl/SiO2_ThinFilm_MSO_measured
       is_incoherent: false
     - type: coating
-      depth: 0
+      depth: 0.01699
+      background_material: 
+        $ref: vl/Ta2O5_ThinFilm_MSO_measured
+      is_incoherent: false
+    - type: coating
+      depth: 0.24735
+      background_material: 
+        $ref: vl/SiO2_ThinFilm_MSO_measured
+      is_incoherent: false
+    - type: coating
+      depth: 0.0
       background_material: 
         $ref: vl/Fused_Silica
       is_incoherent: false
